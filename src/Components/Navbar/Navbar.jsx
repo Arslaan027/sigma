@@ -103,7 +103,7 @@ const Navbar = () => {
         isVisible={scrollDirection === "up" || !isFixed}
       />
 
-      <Navbar1 />
+      {/* <Navbar1 /> */}
 
       <div
         className={`fixed inset-y-0 left-0 bg-white text-black dark:bg-gray-900 dark:text-gray-100 p-6 transform z-50 ${
