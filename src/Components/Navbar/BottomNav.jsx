@@ -1,13 +1,12 @@
-import React from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const BottomNavbar = ({
   isFixed,
   activeLink,
   handleLinkClick,
   handleDropdownToggle,
-  dropdownOpen,
   isVisible,
 }) => {
   return (
@@ -79,6 +78,15 @@ const BottomNavbar = ({
       </nav>
     </div>
   );
+};
+
+BottomNavbar.propTypes = {
+  isFixed: PropTypes.bool.isRequired,
+  activeLink: PropTypes.string.isRequired,
+  handleLinkClick: PropTypes.func.isRequired,
+  handleDropdownToggle: PropTypes.func.isRequired,
+  dropdownOpen: PropTypes.bool.isRequired,
+  isVisible: PropTypes.bool.isRequired,
 };
 
 export default BottomNavbar;

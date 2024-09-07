@@ -1,5 +1,3 @@
-import React from "react";
-import HeroVid from "../../assets/Vedio/HeroVid.mp4";
 import newhero from "../../assets/Vedio/newhero.mp4";
 
 const HeroSection = () => {
@@ -7,7 +5,7 @@ const HeroSection = () => {
     <div className="relative overflow-hidden py-40 px-6 lg:px-20">
       {/* Hero Video with clipPath */}
       <div
-        className="absolute inset-0 w-full h-full overflow-hidden border border-red-500" // Debugging border
+        className="absolute inset-0 w-full h-full overflow-hidden" // Debugging border
         // style={{
         //   clipPath: "polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%)",
         //   // For mobile devices, remove clipPath
@@ -17,7 +15,7 @@ const HeroSection = () => {
         // }}
       >
         <video
-          className="w-full h-full object-cover opacity-60 border border-blue-500" // Debugging border
+          className="w-full h-full object-cover opacity-60" // Debugging border
           autoPlay
           loop
           muted

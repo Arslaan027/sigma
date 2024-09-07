@@ -1,44 +1,25 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import MainNavbar from "./MainNavbar";
-import BottomNavbar from "./BottomNav";
 import { Link } from "react-router-dom";
 import { IoSearchSharp } from "react-icons/io5";
 import BottomBar from "./BottomBar";
-import Navbar1 from "./Nav";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
-  const [isDarkMode, setIsDarkMode] = useState(
-    localStorage.getItem("theme") === "dark" || false
-  );
   const [dropdownOpen, setDropdownOpen] = useState(null);
   const [isFixed, setIsFixed] = useState(false);
-  const [scrollDirection, setScrollDirection] = useState("up");
   const [prevScrollY, setPrevScrollY] = useState(0);
   const [searchQuery, setSearchQuery] = useState(""); // State for search query
 
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDarkMode);
-    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-  }, [isDarkMode]);
-
-  useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      if (currentScrollY > prevScrollY) {
-        setScrollDirection("up");
-      } else {
-        setScrollDirection("down");
-      }
-
       setPrevScrollY(currentScrollY);
       setIsFixed(currentScrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -46,19 +27,14 @@ const Navbar = () => {
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
-    if (isSidebarOpen) {
-      setIsSidebarOpen(false);
-    }
+    if (isSidebarOpen) setIsSidebarOpen(false);
     setDropdownOpen(null);
   };
 
-  const handleSidebarToggle = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+  const handleSidebarToggle = () => setIsSidebarOpen((prev) => !prev);
 
-  const handleDropdownToggle = (index) => {
+  const handleDropdownToggle = (index) =>
     setDropdownOpen(dropdownOpen === index ? null : index);
-  };
 
   // Filter links based on the search query
   const filteredLinks = [
@@ -93,17 +69,6 @@ const Navbar = () => {
         handleDropdownToggle={handleDropdownToggle}
         dropdownOpen={dropdownOpen}
       />
-
-      <BottomNavbar
-        isFixed={isFixed}
-        activeLink={activeLink}
-        handleLinkClick={handleLinkClick}
-        handleDropdownToggle={handleDropdownToggle}
-        dropdownOpen={dropdownOpen}
-        isVisible={scrollDirection === "up" || !isFixed}
-      />
-
-      {/* <Navbar1 /> */}
 
       <div
         className={`fixed inset-y-0 left-0 bg-white text-black dark:bg-gray-900 dark:text-gray-100 p-6 transform z-50 ${
