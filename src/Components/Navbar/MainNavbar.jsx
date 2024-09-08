@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "../../assets/Image/logo.jpg";
+import logo from "../../assets/Image/logorbg.png";
 import Hamburger from "hamburger-react";
 import { Link } from "react-router-dom";
 import { IoHomeOutline } from "react-icons/io5";
@@ -61,10 +61,10 @@ const MainNavbar = ({
       <div className="flex items-center justify-between px-4 py-4">
         {/* Left Side with Logo */}
         <div className="flex items-center space-x-2 text-sm">
-          <img src={logo} alt="SS Logo" className="h-10 w-auto" />
-          <div className="font-bold tracking-wider text-xl md:text-2xl dark:text-gray-400 lg:block">
+          <img src={logo} alt="SS Logo" className="h-20 w-auto" />
+          {/* <div className="font-bold tracking-wider text-xl md:text-2xl dark:text-gray-400 lg:block">
             <h1 className="dark:text-gray-400">Sigma-Solution</h1>
-          </div>
+          </div> */}
         </div>
 
         {/* Hamburger Menu for Mobile */}
