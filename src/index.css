@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes shake {
+  0% { transform: translateX(5px); }
+  25% { transform: translateY(5px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateY(-5px); }
+  100% { transform: translateX(5px); }
+}
+
+.animation-shake {
+  animation: shake 0.6s ease-in-out infinite;
+}
+
+
 /* Add these to your global CSS file or Tailwind's custom classes */
 html.dark {
   background-color: #1a202c; /* Dark background for dark mode */
