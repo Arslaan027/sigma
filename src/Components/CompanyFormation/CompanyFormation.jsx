@@ -1,12 +1,12 @@
-import React from "react";
 import BestBusiness from "../Home/BestBusiness";
-import FAQs from "./FAQs";
 import Requirement from "./Requirement";
 import Roadmap from "./Roadmap";
+import FAQs from "./FAQs";
 
-const Biz = () => {
+const CompanyFormation = () => {
   return (
     <div>
+      {" "}
       <Requirement />
       <Roadmap />
       <BestBusiness />
@@ -15,4 +15,4 @@ const Biz = () => {
   );
 };
 
-export default Biz;
+export default CompanyFormation;

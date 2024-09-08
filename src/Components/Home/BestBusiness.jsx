@@ -3,7 +3,7 @@ import React from "react";
 const BestBusiness = () => {
   return (
     <div className="py-8 bg-gray-100">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="mb-12 text-center">
           <h3 className="text-3xl font-bold text-gray-800">
             Find Your Ideal{" "}

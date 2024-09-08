@@ -1,11 +1,10 @@
-import React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
-export default function AccordionExpandIcon() {
+export default function FAQ() {
   return (
     <div className="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 py-16 px-4">
       <div className="max-w-4xl mx-auto">
@@ -191,6 +190,8 @@ export default function AccordionExpandIcon() {
               </Typography>
             </AccordionDetails>
           </Accordion>
+
+          {/* Add more FAQs as needed */}
         </div>
       </div>
     </div>
