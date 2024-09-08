@@ -413,7 +413,7 @@ const MainNavbar = ({
                   to="/decor-items"
                   className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
-                  Decor Items
+                  Decoration Items
                 </Link>
                 {showDecor && (
                   <div className="absolute left-full top-0 mt-1 w-64 bg-white dark:bg-gray-800 rounded-md shadow-lg transition-opacity duration-300">
