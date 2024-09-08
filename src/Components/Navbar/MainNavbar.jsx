@@ -61,7 +61,7 @@ const MainNavbar = ({
       <div className="flex items-center justify-between px-4 py-4">
         {/* Left Side with Logo */}
         <div className="flex items-center space-x-2 text-sm">
-          <img src={logo} alt="SS Logo" className="h-20 w-auto" />
+          <img src={logo} alt="SS Logo" className="h-16 w-auto" />
           {/* <div className="font-bold tracking-wider text-xl md:text-2xl dark:text-gray-400 lg:block">
             <h1 className="dark:text-gray-400">Sigma-Solution</h1>
           </div> */}
