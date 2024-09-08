@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "../../assets/Image/DummyLogo.png";
+import logo from "../../assets/Image/logo.jpg";
 import Hamburger from "hamburger-react";
 import { Link } from "react-router-dom";
 import { IoHomeOutline } from "react-icons/io5";
