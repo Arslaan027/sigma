@@ -60,11 +60,12 @@ const MainNavbar = ({
     >
       <div className="flex items-center justify-between px-4 py-4">
         {/* Left Side with Logo */}
-        <div className="flex items-center space-x-2 text-sm">
-          <img src={logo} alt="SS Logo" className="h-16 w-auto" />
-          {/* <div className="font-bold tracking-wider text-xl md:text-2xl dark:text-gray-400 lg:block">
-            <h1 className="dark:text-gray-400">Sigma-Solution</h1>
-          </div> */}
+        <div className="flex items-center space-x-4 text-sm">
+          <img
+            src={logo}
+            alt="SS Logo"
+            className="h-16 w-auto object-contain" // Increase height to h-20 (or more)
+          />
         </div>
 
         {/* Hamburger Menu for Mobile */}
@@ -982,6 +983,18 @@ const MainNavbar = ({
             >
               <span>Architecture</span>
             </button>
+          </div>
+          <div className="relative group">
+            <Link
+              to="/about"
+              className={`flex items-center space-x-2 px-4 py-2 rounded-md ${
+                activeLink === "LogisticsSetup"
+                  ? "bg-black text-white"
+                  : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+              }`}
+            >
+              <span>About Us</span>
+            </Link>
           </div>
         </div>
       </div>
