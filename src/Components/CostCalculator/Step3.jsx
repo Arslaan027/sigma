@@ -56,9 +56,10 @@ const Step3 = ({ nextStep, prevStep, setReason }) => {
         </button>
         <button
           onClick={handleNext}
-          className="py-3 bg-green-500 text-white font-bold rounded-lg px-6"
+          className="py-3 bg-green-500 text-white font-bold rounded-lg px-6 flex gap-2 justify-center items-center"
         >
-          <FaArrowRight /> OK
+          <FaArrowRight />
+          OK
         </button>
       </div>
     </div>

@@ -3,9 +3,10 @@ import { IoHomeOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { MdOutlineSupportAgent } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { CiCalculator1 } from "react-icons/ci";
 
 const BottomNavBar = () => {
-  const [activeLink, setActiveLink] = useState("Home");
+  const [activeLink, setActiveLink] = useState("");
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
@@ -50,6 +51,17 @@ const BottomNavBar = () => {
       >
         <MdOutlineSupportAgent className="text-md" />
         <span className="text-xs">Help</span>
+      </Link>
+      <Link
+        to="/cost-calculator"
+        className={`${
+          activeLink === "Calculator"
+            ? "bg-gray-300 text-black dark:bg-gray-500 dark:text-gray-100 rounded-full scale-105 shadow-lg"
+            : "hover:bg-gray-200 dark:hover:bg-gray-700 hover:shadow-md"
+        } flex flex-col items-center p-4 transition-all duration-300 ease-in-out transform rounded-full`}
+      >
+        <CiCalculator1 className="text-md" />
+        <span className="text-xs">Calculator</span>
       </Link>
     </div>
   );

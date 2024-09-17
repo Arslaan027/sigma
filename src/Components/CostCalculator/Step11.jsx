@@ -49,9 +49,10 @@ const Step11 = ({ prevStep, submitForm, setAnnualTurnover }) => {
         </button>
         <button
           onClick={handleSubmit}
-          className="py-3 bg-green-500 text-white font-bold rounded-lg px-6"
+          className="py-3 bg-green-500 text-white font-bold rounded-lg px-6 flex gap-2 justify-center items-center"
         >
-          <FaArrowRight /> Submitted
+          <FaArrowRight />
+          Submit
         </button>
       </div>
     </div>

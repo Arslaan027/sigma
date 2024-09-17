@@ -2,9 +2,14 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const Step2 = ({ nextStep, prevStep, setActivity }) => {
   const activities = [
-    "Agriculture", "Apparel", "Banking", "Biotechnology", "Business Accelerator", "Chemicals",
+    "Agriculture",
+    "Apparel",
+    "Banking",
+    "Biotechnology",
+    "Business Accelerator",
+    "Chemicals",
     // Add the rest of the activities here
-    "Web3/Crypto"
+    "Web3/Crypto",
   ];
 
   const handleNext = () => {
@@ -23,11 +28,16 @@ const Step2 = ({ nextStep, prevStep, setActivity }) => {
         </h2>
       </div>
       <p className="text-gray-500 mb-6">
-        Choose the business activity that you would like to carry out in the UAE. This will help identify the location and licence that suit your company, as well as estimate setup costs.
+        Choose the business activity that you would like to carry out in the
+        UAE. This will help identify the location and licence that suit your
+        company, as well as estimate setup costs.
       </p>
       <div className="space-y-4">
-        <select id="activity" className="w-full p-3 border border-gray-300 rounded-lg">
-          {activities.map(activity => (
+        <select
+          id="activity"
+          className="w-full p-3 border border-gray-300 rounded-lg"
+        >
+          {activities.map((activity) => (
             <option key={activity} value={activity}>
               {activity}
             </option>
@@ -43,9 +53,10 @@ const Step2 = ({ nextStep, prevStep, setActivity }) => {
         </button>
         <button
           onClick={handleNext}
-          className="py-3 bg-green-500 text-white font-bold rounded-lg px-6"
+          className="py-3 bg-green-500 text-white font-bold rounded-lg px-6 flex gap-2 justify-center items-center"
         >
-          <FaArrowRight /> OK
+          <FaArrowRight />
+          OK
         </button>
       </div>
     </div>

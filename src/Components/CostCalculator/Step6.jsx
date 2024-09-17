@@ -42,9 +42,10 @@ const Step6 = ({ nextStep, prevStep, setVisaRequirement }) => {
         </button>
         <button
           onClick={handleNext}
-          className="py-3 bg-green-500 text-white font-bold rounded-lg px-6 flex items-center"
+          className="py-3 bg-green-500 text-white font-bold rounded-lg px-6 flex gap-2 justify-center items-center"
         >
-          Next <FaArrowRight className="ml-2" />
+          <FaArrowRight />
+          OK
         </button>
       </div>
     </div>
