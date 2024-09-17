@@ -6,7 +6,7 @@ const Step11 = ({ prevStep, submitForm, setAnnualTurnover }) => {
 
   const handleSubmit = () => {
     setAnnualTurnover(selectedOption);
-    submitForm();
+    submitForm(); // Ensure that submitForm is called after updating the state
   };
 
   return (

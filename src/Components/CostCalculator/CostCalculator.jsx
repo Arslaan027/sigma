@@ -24,7 +24,7 @@ const CostCalculator = () => {
     officeSpaceType: "",
     businessStartDate: "",
     jurisdiction: "",
-    annualTurnover: "",
+    annualTurnover: "", // Ensure this is included
   }); // Consolidated form data for all 11 steps
 
   // Handle next step
@@ -48,7 +48,8 @@ const CostCalculator = () => {
   // Handle form submission
   const submitForm = () => {
     console.log("Submitted Data:", formData);
-    alert("Form Submitted");
+    // Custom notification or confirmation here
+    alert("Form Submitted"); // Replace with a styled notification if desired
   };
 
   // Switch to render the correct step based on current step state
@@ -112,7 +113,6 @@ const CostCalculator = () => {
           }
         />
       );
-
     case 8:
       return (
         <Step8
