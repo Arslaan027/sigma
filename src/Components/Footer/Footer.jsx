@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Start a Business */}
           <div>
-            <h3 className="text-red-700 text-lg font-bold mb-4">
+            <h3 className="text-green-700 text-lg font-bold mb-4">
               START A BUSINESS
             </h3>
             <ul className="space-y-2">
@@ -59,7 +59,7 @@ const Footer = () => {
 
           {/* Government Registration */}
           <div>
-            <h3 className="text-red-500 text-lg font-bold mb-4">
+            <h3 className="text-green-500 text-lg font-bold mb-4">
               GOVERNMENT REGISTRATION
             </h3>
             <ul className="space-y-2">
@@ -88,7 +88,7 @@ const Footer = () => {
 
           {/* Compliance & Tax */}
           <div>
-            <h3 className="text-red-500 text-lg font-bold mb-4">
+            <h3 className="text-green-500 text-lg font-bold mb-4">
               COMPLIANCE & TAX
             </h3>
             <ul className="space-y-2">
@@ -112,7 +112,9 @@ const Footer = () => {
 
           {/* BIS & CDSCO */}
           <div>
-            <h3 className="text-red-500 text-lg font-bold mb-4">BIS & CDSCO</h3>
+            <h3 className="text-green-500 text-lg font-bold mb-4">
+              BIS & CDSCO
+            </h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="hover:underline">
@@ -150,18 +152,18 @@ const Footer = () => {
 
         {/* Button */}
         <div className="text-center my-8">
-          <button className="bg-transparent border border-red-500 text-red-500 px-6 py-2 rounded hover:bg-red-500 hover:text-gray-900 transition duration-300">
+          <button className="bg-transparent border border-green-500 text-green-500 px-6 py-2 rounded hover:bg-green-500 hover:text-gray-900 transition duration-300">
             See all the services
           </button>
         </div>
 
         {/* Social Media Links */}
         <div className="flex justify-center space-x-6 mb-8">
-          <FaFacebookF className="text-red-500 cursor-pointer hover:text-red-600" />
-          <FaInstagram className="text-red-500 cursor-pointer hover:text-red-600" />
-          <FaTwitter className="text-red-500 cursor-pointer hover:text-red-600" />
-          <FaLinkedinIn className="text-red-500 cursor-pointer hover:text-red-600" />
-          <FaYoutube className="text-red-500 cursor-pointer hover:text-red-600" />
+          <FaFacebookF className="text-green-500 cursor-pointer hover:text-green-600" />
+          <FaInstagram className="text-green-500 cursor-pointer hover:text-green-600" />
+          <FaTwitter className="text-green-500 cursor-pointer hover:text-green-600" />
+          <FaLinkedinIn className="text-green-500 cursor-pointer hover:text-green-600" />
+          <FaYoutube className="text-green-500 cursor-pointer hover:text-green-600" />
         </div>
 
         {/* Horizontal Line */}

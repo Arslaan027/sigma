@@ -796,69 +796,13 @@ const MainNavbar = ({
                     >
                       Inventory/Staff Management
                     </Link>
-                    <div
-                      className="relative"
-                      // onMouseEnter={() => setDegreeSolution(true)}
-                      // onMouseLeave={() => setDegreeSolution(false)}
-                    >
+                    <div className="relative">
                       <Link
                         to="/360-degree-solutions"
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
                       >
                         360 Degree Solutions
                       </Link>
-                      {/* {degreeSolution && (
-                        <div className="absolute left-full top-0 mt-1 w-64 bg-white dark:bg-gray-800 rounded-md shadow-lg transition-opacity duration-300">
-                          <Link
-                            to="/billing"
-                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-                          >
-                            Billing
-                          </Link>
-                          <Link
-                            to="/reporting"
-                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-                          >
-                            Reporting
-                          </Link>
-                          <Link
-                            to="/order-management"
-                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-                          >
-                            Order Management
-                          </Link>
-                          <Link
-                            to="/restaurants"
-                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-                          >
-                            Restaurants
-                          </Link>
-                          <Link
-                            to="/retail-outlets"
-                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-                          >
-                            Retail Outlets
-                          </Link>
-                          <Link
-                            to="/supermarkets"
-                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-                          >
-                            Supermarkets
-                          </Link>
-                          <Link
-                            to="/bakery"
-                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-                          >
-                            Bakery
-                          </Link>
-                          <Link
-                            to="/bars"
-                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-                          >
-                            Bars
-                          </Link>
-                        </div>
-                      )} */}
                     </div>
                   </div>
                 )}
@@ -994,6 +938,14 @@ const MainNavbar = ({
               }`}
             >
               <span>About Us</span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link
+              to="/cost-calculator"
+              className="flex items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100 bg-gray-200"
+            >
+              <span>Cost Calculator</span>
             </Link>
           </div>
         </div>
