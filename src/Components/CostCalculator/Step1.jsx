@@ -10,8 +10,8 @@ const Step1 = ({ nextStep, setCategory }) => {
   };
 
   return (
-    <div className="w-full max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
-      <div className="flex items-center mb-4 text-gray-700">
+    <div className="w-full max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg h-screen">
+      <div className="flex items-center mb-4 text-gray-700 ">
         <span className="text-lg font-bold">1</span>
         <span className="ml-2 text-lg">→</span>
         <h2 className="ml-4 text-xl font-bold">

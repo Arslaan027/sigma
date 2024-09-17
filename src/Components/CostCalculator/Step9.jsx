@@ -10,7 +10,7 @@ const Step9 = ({ nextStep, prevStep, setBusinessStartDate }) => {
   };
 
   return (
-    <div className="w-full max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
+    <div className="w-full max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg h-screen">
       <div className="flex items-center mb-4 text-gray-700">
         <span className="text-lg font-bold">9</span>
         <span className="ml-2 text-lg">→</span>
