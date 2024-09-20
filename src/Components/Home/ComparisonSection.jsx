@@ -1,6 +1,7 @@
 import React from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import "./style.css"; // Import the updated stylesheet
 
 const ComparisonSection = () => {
@@ -26,29 +27,49 @@ const ComparisonSection = () => {
   ];
 
   return (
-    <section className="bg-white py-16" ref={ref}>
+    <section className="bg-white dark:bg-black py-16" ref={ref}>
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-2xl md:text-4xl font-bold  text-gray-800 mb-8 text-center">
-          <span className="text-red-500">Grow Your Business</span> instead of{" "}
+        <motion.h2
+          className="text-2xl md:text-4xl font-bold text-gray-800 dark:text-gray-100 mb-8 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <span className="text-green-500">Grow Your Business</span> instead of{" "}
           Complex Registration processes and leave it for{" "}
-          <span className="text-red-500">Sigma Solution</span>
-        </h2>
-        <p className="text-center text-gray-600 mb-12">
+          <span className="text-green-500">Sigma Solution</span>
+        </motion.h2>
+        <motion.p
+          className="text-center text-gray-600 dark:text-gray-400 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
           With other service providers you would have to pay for each compliance
           filing individually!
-        </p>
+        </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Column */}
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md scrollable-list">
+          <motion.div
+            className="bg-gray-100 dark:bg-neutral-900 p-6 rounded-lg shadow-md scrollable-list"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <ul className="space-y-4">
-              {listItems.concat(listItems).map((item, index) => (
-                <li
+              {listItems.map((item, index) => (
+                <motion.li
                   key={index}
-                  className="flex justify-between items-center bg-white rounded-lg shadow hover:bg-gray-50"
+                  className="flex justify-between items-center bg-white dark:bg-neutral-700 rounded-lg shadow hover:bg-gray-50 dark:hover:bg-gray-600"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
                 >
-                  <span>{item.label}</span>
-                  <span>
+                  <span className="text-gray-800 dark:text-gray-200">
+                    {item.label}
+                  </span>
+                  <span className="text-gray-800 dark:text-gray-200">
                     ₹
                     {inView ? (
                       <CountUp start={0} end={item.amount} duration={4} />
@@ -56,36 +77,51 @@ const ComparisonSection = () => {
                       "0"
                     )}
                   </span>
-                </li>
+                </motion.li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Right Column */}
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md flex flex-col justify-center">
+          <motion.div
+            className="bg-gray-100 dark:bg-neutral-900 p-6 rounded-lg shadow-md flex flex-col justify-center"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
             <div className="flex items-center mb-4">
               <input
                 type="checkbox"
                 id="useSigmaSolution"
-                className="w-6 h-6 text-red-400 bg-white border-gray-300 rounded focus:ring-red-400"
+                className="w-6 h-6 text-green-400 dark:bg-neutral-900 bg-white border-gray-300 dark:border-gray-600 rounded focus:ring-green-400"
               />
               <label
                 htmlFor="useSigmaSolution"
-                className="ml-3 text-lg font-medium text-gray-700"
+                className="ml-3 text-lg font-medium text-gray-700 dark:text-gray-300"
               >
                 Use SigmaSolution
               </label>
             </div>
-            <p className="text-gray-600 mb-6">
+            <motion.p
+              className="text-gray-600 dark:text-gray-400 mb-6"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
               Get all your Compliance done with the help of Industry Experts and
               channelize that precious time to grow your business.
-            </p>
+            </motion.p>
             <div className="text-center">
-              <button className="bg-red-400 text-white px-6 py-2 rounded-lg shadow hover:bg-red-500 transition duration-300">
+              <motion.button
+                className="bg-green-400 text-white px-6 py-2 rounded-lg shadow hover:bg-green-500 dark:hover:bg-green-600 transition duration-300"
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 Get Started!
-              </button>
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

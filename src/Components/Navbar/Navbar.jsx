@@ -775,6 +775,24 @@ const Navbar = () => {
               </div>
             </div>
           </div>
+          <div className="relative">
+            <h3
+              className="font-semibold text-lg mb-2 cursor-pointer"
+              // onClick={() => handleDropdownToggle(5)}
+            >
+              Sigma Solution
+            </h3>
+            <Link
+              to="/about"
+              className={`${
+                activeLink === "Furniture"
+                  ? "bg-black text-white"
+                  : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+              } w-full text-left block px-4 py-2 rounded-md`}
+            >
+              About Us
+            </Link>
+          </div>
         </div>
       </div>
       <BottomBar />

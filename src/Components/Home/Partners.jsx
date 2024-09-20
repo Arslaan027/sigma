@@ -20,7 +20,11 @@ const brandLogos = [
 
 const BrandLogo = ({ src, alt }) => (
   <div className="flex-shrink-0 w-32 mx-4">
-    <img src={src} alt={alt} className="w-full h-auto object-contain" />
+    <img
+      src={src}
+      alt={alt}
+      className="w-full h-auto object-contain transition-transform transform hover:scale-110"
+    />
   </div>
 );
 
@@ -30,21 +34,21 @@ const BrandInfo = () => {
   }, []);
 
   return (
-    <section className="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 py-12 text-center mb-10">
+    <section className="bg-gray-300 py-12 text-center dark:bg-black">
       {/* Heading and Paragraph */}
       <div>
-        <h2 className="text-xl font-semibold text-gray-800">
+        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
           Our proudly collaborate <span className="">Partners</span>.
         </h2>
-        <h3 className="text-3xl font-bold text-gray-800 mb-4">
-          Discover the <span className="text-red-500">partners</span>{" "}
+        <h3 className="text-3xl font-bold text-gray-800 mb-4 dark:text-gray-200">
+          Discover the <span className="text-green-500">partners</span>{" "}
           contributing with Sigma
-          <span className="text-red-500">Solutions</span>.
+          <span className="text-green-500">Solutions</span>.
         </h3>
       </div>
 
       {/* Brand Logos Slider */}
-      <div className="relative mt-10">
+      <div className="relative mt-10 overflow-hidden">
         <div className="marquee-wrapper">
           <div className="animate-marquee">
             {brandLogos.concat(brandLogos).map((logo, index) => (

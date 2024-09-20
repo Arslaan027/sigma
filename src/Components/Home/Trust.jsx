@@ -8,17 +8,16 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Trust = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true, // Only trigger the animation once
-    threshold: 0.1, // Trigger when 10% of the section is visible
+    triggerOnce: true,
+    threshold: 0.1,
   });
 
-  // Create a ref for the Slider component
   const sliderRef = useRef(null);
 
-  // Slider settings
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -30,115 +29,119 @@ const Trust = () => {
     arrows: false,
     responsive: [
       {
-        breakpoint: 768, // Tablet
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480, // Mobile
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: true, // Enable arrows on mobile if needed
-          dots: true, // Ensure dots are visible on mobile
+          arrows: true,
+          dots: true,
         },
       },
     ],
   };
 
   return (
-    <div className="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 py-24 hidden md:block">
+    <div className="bg-gray-300 py-24 hidden md:block dark:bg-neutral-900">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-32">
           {/* Text Content on the Left */}
-          <div
+          <motion.div
             className="md:w-1/2 mb-8 md:mb-0 md:pr-8"
-            ref={ref} // Attach the ref here
+            ref={ref}
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8 }}
           >
-            <h2 className="text-xl font-semibold text-gray-800 mb-6">
+            <h2 className="text-xl font-semibold text-gray-800 mb-6 dark:text-gray-100">
               Hear What Our Customers Have To Say
             </h2>
-            <h3 className="text-4xl font-bold text-gray-800 mb-4">
-              Sigma<span className="text-red-500">Solutions</span> is used by
-              tens of thousands of founders to start, manage, and grow their
-              business
+            <h3 className="text-4xl font-bold text-gray-800 mb-4 dark:text-gray-100">
+              Sigma
+              <span className="text-green-500 dark:text-green-400">
+                Solutions
+              </span>{" "}
+              is used by tens of thousands of founders to start, manage, and
+              grow their business
             </h3>
-            <p className="text-red-500 text-3xl font-bold mb-4">
+            <p className="text-green-500 text-3xl font-bold mb-4 dark:text-green-400">
               {inView ? <CountUp start={0} end={20000} duration={7} /> : "0"}+
               Happy Customers
             </p>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6 dark:text-gray-300">
               We are one of India's highest rated service providers, known for
               completing Business incorporations and other compliance services
               in record time. Don’t just take our word for it—read it for
               yourself.
             </p>
-            <p className="text-gray-500 text-sm mb-6">
+            <p className="text-gray-500 text-sm mb-6 dark:text-gray-400">
               Sigma Solution is a startup India registered company
             </p>
-          </div>
+          </motion.div>
 
           {/* Testimonial Box on the Right */}
-          <div className="md:w-1/2 flex flex-col items-center md:items-end">
-            <div className="relative w-full bg-white p-6 shadow-xl rounded-xl">
+          <motion.div
+            className="md:w-1/2 flex flex-col items-center md:items-end"
+            initial={{ opacity: 0, scale: 1.5 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="relative w-full bg-white p-6 shadow-xl rounded-xl dark:bg-neutral-800">
               {/* Slider Component */}
               <Slider {...sliderSettings} ref={sliderRef}>
-                <div className="px-4">
-                  <div className="flex items-center mb-4">
-                    <img src={google} alt="Google" className="w-10 h-10 mr-4" />
-                    <span className="text-sm text-gray-500">Posted on</span>
+                {[
+                  {
+                    text: "Great experience to have associated with SIGMA SOLUTION team. All documentation for registration was done online with prompt updates. Thanks to the entire team, especially Priyanka ma'am, for personally updating me and Himanshi for coordinating... Thank you...",
+                    author: "Trinity Finserv LLP",
+                  },
+                  {
+                    text: "Fantastic service and very professional. The process was smooth, and the team was very responsive to all my queries. Highly recommend SigmaSolutions for anyone looking to start their business with ease.",
+                    author: "Future Tech Ltd.",
+                  },
+                  {
+                    text: "Excellent support and quick turnaround time. The team at SigmaSolutions made the entire process hassle-free. I’m impressed with their professionalism and dedication to customer satisfaction.",
+                    author: "Global Enterprises",
+                  },
+                ].map((testimonial, index) => (
+                  <div className="px-4" key={index}>
+                    <div className="flex items-center mb-4">
+                      <img
+                        src={google}
+                        alt="Google"
+                        className="w-10 h-10 mr-4"
+                      />
+                      <span className="text-sm text-gray-500 dark:text-gray-400">
+                        Posted on
+                      </span>
+                    </div>
+                    <p className="text-gray-700 mb-4 dark:text-gray-300">
+                      {testimonial.text}
+                    </p>
+                    <p className="font-bold text-gray-800 dark:text-gray-100">
+                      {testimonial.author}
+                    </p>
                   </div>
-                  <p className="text-gray-700 mb-4">
-                    Great experience to have associated with SIGMA SOLUTION
-                    team. All documentations for registration was done online
-                    with prompt updates. Thanks to entire team, especially
-                    Priyanka ma'am, for personally updating me and Himanshi for
-                    coordinating... Thank you...
-                  </p>
-                  <p className="font-bold text-gray-800">Trinity Finserv LLP</p>
-                </div>
-                <div className="px-4">
-                  <div className="flex items-center mb-4">
-                    <img src={google} alt="Google" className="w-10 h-10 mr-4" />
-                    <span className="text-sm text-gray-500">Posted on</span>
-                  </div>
-                  <p className="text-gray-700 mb-4">
-                    Fantastic service and very professional. The process was
-                    smooth, and the team was very responsive to all my queries.
-                    Highly recommend SigmaSolutions for anyone looking to start
-                    their business with ease.
-                  </p>
-                  <p className="font-bold text-gray-800">Future Tech Ltd.</p>
-                </div>
-                <div className="px-4">
-                  <div className="flex items-center mb-4">
-                    <img src={google} alt="Google" className="w-10 h-10 mr-4" />
-                    <span className="text-sm text-gray-500">Posted on</span>
-                  </div>
-                  <p className="text-gray-700 mb-4">
-                    Excellent support and quick turnaround time. The team at
-                    SigmaSolutions made the entire process hassle-free. I’m
-                    impressed with their professionalism and dedication to
-                    customer satisfaction.
-                  </p>
-                  <p className="font-bold text-gray-800">Global Enterprises</p>
-                </div>
+                ))}
               </Slider>
 
               {/* Navigation Arrows */}
-              <div className="absolute bottom--3 right-28 transform translate-x-full">
+              <div className="absolute bottom-[-3px] right-28 transform translate-x-full">
                 <div className="absolute top-1/2 transform -translate-y-1/10 flex space-x-2">
                   <button
-                    className="w-10 h-10 rounded-full bg-red-500 text-white flex items-center justify-center"
-                    onClick={() => sliderRef.current.slickPrev()} // Go to previous slide
+                    className="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center dark:bg-green-400"
+                    onClick={() => sliderRef.current.slickPrev()}
                   >
                     <FaArrowLeft />
                   </button>
                   <button
-                    className="w-10 h-10 rounded-full bg-red-500 text-white flex items-center justify-center"
-                    onClick={() => sliderRef.current.slickNext()} // Go to next slide
+                    className="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center dark:bg-green-400"
+                    onClick={() => sliderRef.current.slickNext()}
                   >
                     <FaArrowRight />
                   </button>
@@ -166,7 +169,7 @@ const Trust = () => {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

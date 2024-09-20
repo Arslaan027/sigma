@@ -52,10 +52,10 @@ const MainNavbar = ({
     <div
       className={`${
         isFixed
-          ? `fixed top-0 left-0 w-full bg-white dark:bg-gray-900 text-black dark:text-white border-b border-gray-200 dark:border-gray-800 shadow-md dark:shadow-gray-900 z-50 transition-transform duration-300 ${
+          ? `fixed top-0 left-0 w-full bg-white dark:bg-black text-black dark:text-white border-b border-gray-200 dark:border-gray-800 shadow-md dark:shadow-gray-900 z-50 transition-transform duration-300 ${
               scrollDirection === "up" ? "-translate-y-full" : "translate-y-0"
             }`
-          : "relative"
+          : "relative bg-none"
       }`}
     >
       <div className="flex items-center justify-between px-4 py-4">
@@ -84,10 +84,10 @@ const MainNavbar = ({
           <Link
             to="/"
             onClick={() => handleLinkClick("Home")}
-            className={`flex items-center space-x-2 px-4 py-2 rounded-md ${
+            className={`flex dark:bg-gray-800 dark:text-gray-100 items-center space-x-2 px-4 py-2 rounded-md ${
               activeLink === "Home"
                 ? "bg-gray-200 text-black"
-                : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+                : "hover:bg-gray-200"
             }`}
           >
             <IoHomeOutline className="text-xl" />
@@ -933,7 +933,7 @@ const MainNavbar = ({
           <div className="relative group">
             <Link
               to="/cost-calculator"
-              className="flex items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100 bg-gray-200"
+              className="flex items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100 bg-gray-200"
             >
               <span>Cost Calculator</span>
             </Link>
