@@ -36,7 +36,7 @@ const App = () => {
     <div className={`${isDarkMode ? "dark" : ""}`}>
       <div className="bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text min-h-screen">
         <button
-          className="fixed bottom-6 right-6 p-4 bg-gray-200 dark:bg-gray-800 z-50 text-black dark:text-yellow-500 rounded-full shadow-md text-2xl"
+          className="fixed md:bottom-6 right-10 md:right-6 bottom-24 p-4 bg-gray-200 dark:bg-gray-800 z-50 text-black dark:text-yellow-500 rounded-full shadow-md text-2xl"
           onClick={handleToggleDarkMode}
         >
           {isDarkMode ? <IoSunnySharp /> : <PiMoonStarsFill />}
