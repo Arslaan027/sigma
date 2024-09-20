@@ -18,7 +18,7 @@ const RegistrationForm = () => {
       <div className="max-w-4xl mx-auto px-4">
         {/* Title Section */}
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-8">
-          Trade <span className="text-red-500">Registration Form</span>
+          Trade <span className="text-green-500">Registration Form</span>
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12">
           Register your business with ease and start growing today. Sigma
@@ -53,7 +53,7 @@ const RegistrationForm = () => {
                 <input
                   type="text"
                   id="name"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 dark:bg-neutral-700 dark:text-white sm:text-sm transition duration-200 hover:border-red-400"
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 dark:bg-neutral-700 dark:text-white sm:text-sm transition duration-200 hover:border-green-400"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -68,7 +68,7 @@ const RegistrationForm = () => {
                 <input
                   type="email"
                   id="email"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 dark:bg-neutral-700 dark:text-white sm:text-sm transition duration-200 hover:border-red-400"
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 dark:bg-neutral-700 dark:text-white sm:text-sm transition duration-200 hover:border-green-400"
                   placeholder="Enter your email address"
                 />
               </div>
@@ -83,7 +83,7 @@ const RegistrationForm = () => {
                 <input
                   type="text"
                   id="company"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 dark:bg-neutral-700 dark:text-white sm:text-sm transition duration-200 hover:border-red-400"
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 dark:bg-neutral-700 dark:text-white sm:text-sm transition duration-200 hover:border-green-400"
                   placeholder="Enter your company name"
                 />
               </div>
@@ -91,7 +91,7 @@ const RegistrationForm = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-full bg-red-500 text-white font-bold py-2 px-4 rounded-md hover:bg-red-600 transition duration-200 transform hover:scale-105"
+                  className="w-full bg-green-500 text-white font-bold py-2 px-4 rounded-md hover:bg-green-600 transition duration-200 transform hover:scale-105"
                 >
                   Register Now
                 </button>
