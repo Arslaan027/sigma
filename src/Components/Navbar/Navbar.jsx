@@ -64,7 +64,7 @@ const Navbar = () => {
       )}
 
       <div
-        className={`fixed inset-y-0 left-0 bg-white text-black dark:bg-gray-900 dark:text-gray-100 p-6 transform z-50 ${
+        className={`fixed inset-y-0 left-0 bg-white text-black dark:bg-neutral-900 dark:text-gray-100 p-6 transform z-50 ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out lg:hidden shadow-md dark:shadow-gray-900 overflow-y-auto`}
       >
@@ -75,7 +75,7 @@ const Navbar = () => {
             placeholder="Search..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-2 rounded-md bg-gray-100 dark:bg-gray-800 text-black dark:text-gray-200 focus:outline-none"
+            className="w-full px-4 py-2 rounded-md bg-gray-100 dark:bg-neutral-800 text-black dark:text-gray-200 focus:outline-none"
           />
           <button className="absolute h-10 right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white">
             <IoSearchSharp className="text-xl" />
@@ -97,7 +97,7 @@ const Navbar = () => {
                 className={`${
                   activeLink === "Biz Registrations"
                     ? "bg-black text-white"
-                    : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+                    : "hover:bg-gray-200 dark:hover:bg-neutral-800 dark:hover:text-gray-100"
                 } w-full text-left block px-4 py-2 rounded-md`}
               >
                 Biz Registrations
@@ -107,7 +107,7 @@ const Navbar = () => {
                   dropdownOpen === 0
                     ? "max-h-[500px] opacity-100 transform scale-y-100"
                     : "max-h-0 opacity-0 transform scale-y-75"
-                } bg-white dark:bg-gray-800 rounded-md shadow-lg`}
+                } bg-white dark:bg-neutral-800 rounded-md shadow-lg`}
               >
                 <div className="flex flex-col">
                   {[
@@ -132,7 +132,7 @@ const Navbar = () => {
                       className={`${
                         activeLink === link.name
                           ? "bg-black text-white"
-                          : "hover:bg-gray-100 dark:hover:bg-gray-700"
+                          : "hover:bg-gray-100  dark:hover:bg-neutral-800"
                       } block px-4 py-2 rounded-md`}
                       onClick={() => handleLinkClick(link.name)}
                     >
@@ -158,7 +158,7 @@ const Navbar = () => {
                 className={`${
                   activeLink === "Accounting"
                     ? "bg-black text-white"
-                    : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+                    : "hover:bg-gray-200 dark:hover:bg-neutral-800 dark:hover:text-gray-100"
                 } w-full text-left block px-4 py-2 rounded-md`}
               >
                 Accounting
@@ -168,7 +168,7 @@ const Navbar = () => {
                   dropdownOpen === 1
                     ? "max-h-[500px] opacity-100 transform scale-y-100"
                     : "max-h-0 opacity-0 transform scale-y-75"
-                } bg-white dark:bg-gray-800 rounded-md shadow-lg`}
+                } bg-white dark:bg-neutral-800 rounded-md shadow-lg`}
               >
                 <div className="flex flex-col">
                   {[
@@ -214,7 +214,7 @@ const Navbar = () => {
             className={`${
               activeLink === "Biz=Deals"
                 ? "bg-black text-white"
-                : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+                : "hover:bg-gray-200 dark:hover:bg-neutral-800 dark:hover:text-gray-100"
             } w-full text-left block px-4 py-2 rounded-md`}
           >
             Biz Deals
@@ -224,7 +224,7 @@ const Navbar = () => {
             className={`${
               activeLink === "Architecture"
                 ? "bg-black text-white"
-                : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+                : "hover:bg-gray-200 dark:hover:bg-neutral-800 dark:hover:text-gray-100"
             } w-full text-left block px-4 py-2 rounded-md`}
           >
             Architecture
@@ -243,7 +243,7 @@ const Navbar = () => {
                 className={`${
                   activeLink === "Interior Design"
                     ? "bg-black text-white"
-                    : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+                    : "hover:bg-gray-200 dark:hover:bg-neutral-800 dark:hover:text-gray-100"
                 } w-full text-left block px-4 py-2 rounded-md`}
               >
                 Interior Design
@@ -253,7 +253,7 @@ const Navbar = () => {
                   dropdownOpen === 2
                     ? "max-h-[500px] opacity-100 transform scale-y-100"
                     : "max-h-0 opacity-0 transform scale-y-75"
-                } bg-white dark:bg-gray-800 rounded-md shadow-lg`}
+                } bg-white dark:bg-neutral-800 rounded-md shadow-lg`}
               >
                 <div className="flex flex-col">
                   {[
@@ -294,7 +294,7 @@ const Navbar = () => {
                 className={`${
                   activeLink === "Furniture"
                     ? "bg-black text-white"
-                    : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+                    : "hover:bg-gray-200 dark:hover:bg-neutral-800 dark:hover:text-gray-100"
                 } w-full text-left block px-4 py-2 rounded-md`}
               >
                 Furniture
@@ -304,7 +304,7 @@ const Navbar = () => {
                   dropdownOpen === 3
                     ? "max-h-[500px] opacity-100 transform scale-y-100"
                     : "max-h-0 opacity-0 transform scale-y-75"
-                } bg-white dark:bg-gray-800 rounded-md shadow-lg`}
+                } bg-white dark:bg-neutral-800 rounded-md shadow-lg`}
               >
                 <div className="flex flex-col">
                   {[
@@ -347,7 +347,7 @@ const Navbar = () => {
                 className={`${
                   activeLink === "Furniture"
                     ? "bg-black text-white"
-                    : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+                    : "hover:bg-gray-200 dark:hover:bg-neutral-800 dark:hover:text-gray-100"
                 } w-full text-left block px-4 py-2 rounded-md`}
               >
                 Decoration Items
@@ -357,7 +357,7 @@ const Navbar = () => {
                   dropdownOpen === 4
                     ? "max-h-[500px] opacity-100 transform scale-y-100"
                     : "max-h-0 opacity-0 transform scale-y-75"
-                } bg-white dark:bg-gray-800 rounded-md shadow-lg`}
+                } bg-white dark:bg-neutral-800 rounded-md shadow-lg`}
               >
                 <div className="flex flex-col">
                   {[
@@ -403,7 +403,7 @@ const Navbar = () => {
                 className={`${
                   activeLink === "Furniture"
                     ? "bg-black text-white"
-                    : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+                    : "hover:bg-gray-200 dark:hover:bg-neutral-800 dark:hover:text-gray-100"
                 } w-full text-left block px-4 py-2 rounded-md`}
               >
                 Horeca Services
@@ -413,7 +413,7 @@ const Navbar = () => {
                   dropdownOpen === 5
                     ? "max-h-[500px] opacity-100 transform scale-y-100"
                     : "max-h-0 opacity-0 transform scale-y-75"
-                } bg-white dark:bg-gray-800 rounded-md shadow-lg`}
+                } bg-white dark:bg-neutral-800 rounded-md shadow-lg`}
               >
                 <div className="flex flex-col">
                   {[
@@ -469,7 +469,7 @@ const Navbar = () => {
                 className={`${
                   activeLink === "Furniture"
                     ? "bg-black text-white"
-                    : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+                    : "hover:bg-gray-200 dark:hover:bg-neutral-800 dark:hover:text-gray-100"
                 } w-full text-left block px-4 py-2 rounded-md`}
               >
                 Packaging & Printing
@@ -479,7 +479,7 @@ const Navbar = () => {
                   dropdownOpen === 6
                     ? "max-h-[500px] opacity-100 transform scale-y-100"
                     : "max-h-0 opacity-0 transform scale-y-75"
-                } bg-white dark:bg-gray-800 rounded-md shadow-lg`}
+                } bg-white dark:bg-neutral-800 rounded-md shadow-lg`}
               >
                 <div className="flex flex-col">
                   {[
@@ -553,7 +553,7 @@ const Navbar = () => {
                 className={`${
                   activeLink === "Furniture"
                     ? "bg-black text-white"
-                    : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+                    : "hover:bg-gray-200 dark:hover:bg-neutral-800 dark:hover:text-gray-100"
                 } w-full text-left block px-4 py-2 rounded-md`}
               >
                 Digital Marketing
@@ -563,7 +563,7 @@ const Navbar = () => {
                   dropdownOpen === 7
                     ? "max-h-[500px] opacity-100 transform scale-y-100"
                     : "max-h-0 opacity-0 transform scale-y-75"
-                } bg-gray-100 dark:bg-gray-800 rounded-md shadow-lg`}
+                } bg-gray-100 dark:bg-neutral-800 rounded-md shadow-lg`}
               >
                 <div className="flex flex-col">
                   {[
@@ -611,7 +611,7 @@ const Navbar = () => {
                 className={`${
                   activeLink === "Furniture"
                     ? "bg-black text-white"
-                    : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+                    : "hover:bg-gray-200 dark:hover:bg-neutral-800 dark:hover:text-gray-100"
                 } w-full text-left block px-4 py-2 rounded-md`}
               >
                 IT & Security
@@ -621,7 +621,7 @@ const Navbar = () => {
                   dropdownOpen === 8
                     ? "max-h-[500px] opacity-100 transform scale-y-100"
                     : "max-h-0 opacity-0 transform scale-y-75"
-                } bg-gray-100 dark:bg-gray-800 rounded-md shadow-lg`}
+                } bg-gray-100 dark:bg-neutral-800 rounded-md shadow-lg`}
               >
                 <div className="flex flex-col">
                   {[
@@ -675,7 +675,7 @@ const Navbar = () => {
                 className={`${
                   activeLink === "Furniture"
                     ? "bg-black text-white"
-                    : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+                    : "hover:bg-gray-200 dark:hover:bg-neutral-800 dark:hover:text-gray-100"
                 } w-full text-left block px-4 py-2 rounded-md`}
               >
                 Product Setup
@@ -685,7 +685,7 @@ const Navbar = () => {
                   dropdownOpen === 9
                     ? "max-h-[500px] opacity-100 transform scale-y-100"
                     : "max-h-0 opacity-0 transform scale-y-75"
-                } bg-gray-100 dark:bg-gray-800 rounded-md shadow-lg`}
+                } bg-gray-100 dark:bg-neutral-800 rounded-md shadow-lg`}
               >
                 <div className="flex flex-col">
                   {[
@@ -739,7 +739,7 @@ const Navbar = () => {
                 className={`${
                   activeLink === "Furniture"
                     ? "bg-black text-white"
-                    : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+                    : "hover:bg-gray-200 dark:hover:bg-neutral-800 dark:hover:text-gray-100"
                 } w-full text-left block px-4 py-2 rounded-md`}
               >
                 Storage & Handling
@@ -749,7 +749,7 @@ const Navbar = () => {
                   dropdownOpen === 10
                     ? "max-h-[500px] opacity-100 transform scale-y-100"
                     : "max-h-0 opacity-0 transform scale-y-75"
-                } bg-gray-100 dark:bg-gray-800 rounded-md shadow-lg`}
+                } bg-gray-100 dark:bg-neutral-800 rounded-md shadow-lg`}
               >
                 <div className="flex flex-col">
                   {[
@@ -787,7 +787,7 @@ const Navbar = () => {
               className={`${
                 activeLink === "Furniture"
                   ? "bg-black text-white"
-                  : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+                  : "hover:bg-gray-200 dark:hover:bg-neutral-800 dark:hover:text-gray-100"
               } w-full text-left block px-4 py-2 rounded-md`}
             >
               About Us
