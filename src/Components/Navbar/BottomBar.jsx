@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IoHomeOutline, IoSunnySharp } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
-import { MdOutlineSupportAgent } from "react-icons/md";
+import { BsWhatsapp } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { CiCalculator1 } from "react-icons/ci";
 import { PiMoonStarsFill } from "react-icons/pi";
@@ -87,7 +87,7 @@ const BottomNavBar = () => {
         } flex flex-col items-center p-4 transition-all duration-300 ease-in-out transform rounded-full`}
         onClick={() => handleLinkClick("Support")}
       >
-        <MdOutlineSupportAgent className="text-md" />
+        <BsWhatsapp className="text-md" />
         <span className="text-xs">Help</span>
       </Link>
 

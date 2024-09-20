@@ -4,48 +4,48 @@ import {
   FiFileText,
   FiUserCheck,
   FiHome,
-  FiImage,
+  FiPaperclip,
   FiMapPin,
-  FiAward,
+  FiClipboard,
 } from "react-icons/fi";
 
-const Requirement = () => {
-  const requirements = [
-    {
-      title: "PAN and Aadhaar Card",
-      description:
-        "Both PAN and Aadhaar Card of all Indian Shareholders and Directors",
-      icon: <FiFileText className="text-green-500 text-2xl mr-3" />,
-    },
+const PLCDocuments = () => {
+  const documents = [
     {
       title: "Identity Proof",
       description:
-        "Either Voter ID, Passport, or Driving License of the Shareholders and Directors.",
+        "Identity proof of all the Directors & Shareholders of the Company.",
       icon: <FiUserCheck className="text-green-500 text-2xl mr-3" />,
     },
     {
-      title: "Proof of Address",
+      title: "Address Proof",
       description:
-        "Copy of the latest Telephone Bill, Electricity Bill, or Bank Account Statement of the Shareholders and Directors.",
+        "Address proof of all the Directors & Shareholders of the Company.",
       icon: <FiHome className="text-green-500 text-2xl mr-3" />,
     },
     {
-      title: "Photographs",
+      title: "AOA & MOA",
       description:
-        "Latest passport size photographs of all the Shareholders and Directors",
-      icon: <FiImage className="text-green-500 text-2xl mr-3" />,
+        "Articles of Association (AOA) and Memorandum of Association (MOA) of the Company.",
+      icon: <FiPaperclip className="text-green-500 text-2xl mr-3" />,
     },
     {
-      title: "Business Address Proof",
+      title: "DIN & DSC",
       description:
-        "Either of the latest Utility Bill (Electricity, Telephone, Gas, Water) or Property Tax Bill of the registered office address.",
+        "Director Identification Number (DIN) and Digital Signature Certificate (DSC) of all the Directors.",
+      icon: <FiFileText className="text-green-500 text-2xl mr-3" />,
+    },
+    {
+      title: "NOC",
+      description:
+        "NOC or No Objection Certificate from the landlord where the office will be located.",
       icon: <FiMapPin className="text-green-500 text-2xl mr-3" />,
     },
     {
-      title: "Incorporation Certificate",
+      title: "Utility Bills",
       description:
-        "Certificate issued by the Ministry of Corporate Affairs post successful company registration.",
-      icon: <FiAward className="text-green-500 text-2xl mr-3" />,
+        "Latest utility bills (not more than 2 months older) of the proposed registered office of the Company.",
+      icon: <FiClipboard className="text-green-500 text-2xl mr-3" />,
     },
   ];
 
@@ -66,11 +66,11 @@ const Requirement = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Documents Required for Private Limited Company Registration Online
+          Documents Required for Public Limited Company Registration in India
         </motion.h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {requirements.map((requirement, index) => (
+        {documents.map((document, index) => (
           <motion.div
             key={index}
             className="bg-white border rounded-md shadow-lg p-6 dark:bg-neutral-900"
@@ -79,13 +79,13 @@ const Requirement = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <div className="flex items-center mb-4">
-              {requirement.icon}
+              {document.icon}
               <h3 className="text-lg font-bold text-green-500">
-                {requirement.title}
+                {document.title}
               </h3>
             </div>
             <p className="text-gray-600 dark:text-gray-100">
-              {requirement.description}
+              {document.description}
             </p>
           </motion.div>
         ))}
@@ -94,4 +94,4 @@ const Requirement = () => {
   );
 };
 
-export default Requirement;
+export default PLCDocuments;
