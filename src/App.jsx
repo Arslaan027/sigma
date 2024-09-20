@@ -35,8 +35,9 @@ const App = () => {
   return (
     <div className={`${isDarkMode ? "dark" : ""}`}>
       <div className="bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text min-h-screen">
+        {/* Dark/Light mode toggle button, hidden on mobile and visible on desktop */}
         <button
-          className="fixed md:bottom-6 right-10 md:right-6 bottom-32 p-4 bg-gray-200 dark:bg-gray-800 z-50 text-black dark:text-yellow-500 rounded-full shadow-md text-2xl"
+          className="fixed bottom-6 right-6 p-4 bg-gray-200 dark:bg-gray-800 z-50 text-black dark:text-yellow-500 rounded-full shadow-md text-2xl lg:block hidden"
           onClick={handleToggleDarkMode}
         >
           {isDarkMode ? <IoSunnySharp /> : <PiMoonStarsFill />}
