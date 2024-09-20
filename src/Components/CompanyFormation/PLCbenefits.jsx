@@ -39,7 +39,7 @@ const PLCbenefits = () => {
           <motion.img
             src={PLC}
             alt="Benefits of Public Limited Company"
-            className="max-w-xl mb-8 md:mb-0 md:mr-8"
+            className="max-w-xl mb-8 md:mb-0 md:mr-8 md:block hidden"
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={fadeIn}

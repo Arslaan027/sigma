@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+// import Tabs from "@mui/material/Tabs";
+// import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -41,9 +41,9 @@ const CompanyFormation = () => {
     };
   }, [dropdownOpen]);
 
-  const handleTabChange = (event, newValue) => {
-    setCurrentTab(newValue);
-  };
+  // const handleTabChange = (event, newValue) => {
+  //   setCurrentTab(newValue);
+  // };
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -150,6 +150,36 @@ const CompanyFormation = () => {
             <PLCDocuments />
             <PLCsteps />
             <PLCbenefits />
+            <PLCFAQs />
+          </div>
+        )}
+        {currentTab === 2 && (
+          <div>
+            <PLCFAQs />
+          </div>
+        )}
+        {currentTab === 3 && (
+          <div>
+            <PLCFAQs />
+          </div>
+        )}
+        {currentTab === 4 && (
+          <div>
+            <PLCFAQs />
+          </div>
+        )}
+        {currentTab === 5 && (
+          <div>
+            <PLCFAQs />
+          </div>
+        )}
+        {currentTab === 6 && (
+          <div>
+            <PLCFAQs />
+          </div>
+        )}
+        {currentTab === 7 && (
+          <div>
             <PLCFAQs />
           </div>
         )}
