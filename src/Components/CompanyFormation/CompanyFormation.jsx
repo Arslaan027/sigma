@@ -16,6 +16,9 @@ import PLCFAQs from "./PLCFAQs";
 import PLCsteps from "./PLCsteps";
 import PLCDocuments from "./PLCDocuments";
 import PLCbenefits from "./PLCbenefits";
+import LLPbenefits from "./LLPbenefits";
+import LLPsteps from "./LLPsteps";
+import LLPDocuments from "./LLPDocuments";
 
 const CompanyFormation = () => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -155,6 +158,9 @@ const CompanyFormation = () => {
         )}
         {currentTab === 2 && (
           <div>
+            <LLPDocuments />
+            <LLPsteps />
+            <LLPbenefits />
             <PLCFAQs />
           </div>
         )}
