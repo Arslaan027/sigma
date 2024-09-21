@@ -19,6 +19,10 @@ import PLCbenefits from "./PLCbenefits";
 import LLPbenefits from "./LLPbenefits";
 import LLPsteps from "./LLPsteps";
 import LLPDocuments from "./LLPDocuments";
+import OPCsteps from "./OPCsteps";
+import OPCRestrictions from "./OPCRestrictions";
+import OPCdocuments from "./OPCdocuments";
+import OPCchecklist from "./OPCchecklist";
 
 const CompanyFormation = () => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -88,10 +92,10 @@ const CompanyFormation = () => {
 
         {/* Mobile Dropdown */}
         <div className="md:hidden flex flex-col w-full">
-          <div className="flex justify-between items-center px-4 py-2 border-b">
+          <div className="flex justify-between items-center px-4 py-2 border-b border-gray-300 dark:border-gray-700">
             <div className="flex items-center">
-              <BusinessIcon className="mr-2 text-gray-800" />
-              <h3 className="text-lg font-semibold text-gray-800">
+              <BusinessIcon className="mr-2 text-gray-800 dark:text-gray-200" />
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
                 Different Companies
               </h3>
             </div>
@@ -101,9 +105,9 @@ const CompanyFormation = () => {
               className={`${dropdownOpen ? "" : "animation-shake"} text-5xl`}
             >
               {dropdownOpen ? (
-                <ArrowDropUpIcon />
+                <ArrowDropUpIcon className="text-gray-800 dark:text-gray-300" />
               ) : (
-                <ArrowDropDownIcon className="text-xl" />
+                <ArrowDropDownIcon className="text-xl text-gray-800 dark:text-gray-300" />
               )}
             </IconButton>
           </div>
@@ -112,9 +116,8 @@ const CompanyFormation = () => {
             className={`transition-max-height duration-300 ease-in-out overflow-hidden ${
               dropdownOpen ? "max-h-screen" : "max-h-0"
             }`}
-            style={dropdownStyles}
           >
-            <div className="p-4 bg-white border-t border-gray-300">
+            <div className="p-4 bg-white dark:bg-neutral-900 border-t border-gray-300 dark:border-gray-700">
               {[
                 "Private Limited Company",
                 "Public Limited Company",
@@ -130,6 +133,7 @@ const CompanyFormation = () => {
                 <MenuItem
                   key={index}
                   onClick={() => handleMenuItemClick(index)}
+                  className="text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700"
                 >
                   {label}
                 </MenuItem>
@@ -166,6 +170,10 @@ const CompanyFormation = () => {
         )}
         {currentTab === 3 && (
           <div>
+            <OPCdocuments />
+            <OPCsteps />
+            <OPCRestrictions />
+            <OPCchecklist />
             <PLCFAQs />
           </div>
         )}

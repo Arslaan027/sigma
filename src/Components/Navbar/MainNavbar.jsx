@@ -4,6 +4,7 @@ import Hamburger from "hamburger-react";
 import { Link } from "react-router-dom";
 import { IoHomeOutline } from "react-icons/io5";
 import PropTypes from "prop-types";
+import { dark } from "@mui/material/styles/createPalette";
 
 const MainNavbar = ({
   isFixed,
@@ -74,7 +75,8 @@ const MainNavbar = ({
             toggled={isSidebarOpen}
             toggle={handleSidebarToggle}
             size={24}
-            color="#000"
+            // color={dark ? "#fff" : "#000"} // White in dark mode, black in light mode
+            className={`transition-colors duration-300 dark:text-white`} // Added dark:text-white here
           />
         </div>
 
