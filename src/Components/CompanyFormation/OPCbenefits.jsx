@@ -2,43 +2,43 @@ import React, { useState } from "react";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const OPCsteps = () => {
+const OPCbenefits = () => {
   const steps = [
     {
       id: 1,
       title: "Eternal Succession",
       content:
-        "Despite the company’s everyday operations being managed by a single person, OPC offers opportunities for eternal succession. Following the death of a company member, the nominee can administer the business.",
+        "Despite the fact that the company’s everyday operations are managed by a single person, OPC offers opportunities for eternal succession. Following the death of a company member, the nominee can administer the business.",
     },
     {
       id: 2,
       title: "Limited Liability",
       content:
-        "A one-person company member has limited liability. As a registered corporation, it is treated as a separate legal entity, providing its members with greater protection. Members’ liability is restricted to their shares, so they are not accountable for losses incurred by the firm.",
+        "A one-person company member has limited liability. OPC is treated as a separate legal entity, providing its members with greater protection. Members’ liability is restricted to their shares.",
     },
     {
       id: 3,
       title: "Single Member Management",
       content:
-        "In a One Person Company, a single member serves as a director and manages the company’s daily operations. There is no need for an executive director, as one member suffices and serves as a shareholder with full responsibility.",
+        "In a One Person Company, a single member serves as a director and is responsible for managing the company’s day-to-day operations. No need for an executive director.",
     },
     {
       id: 4,
-      title: "Ownership of Assets",
+      title: "Property Ownership",
       content:
-        "Because the OPC is a separate legal organization, the individual can possess company property and other assets in their name. The OPC has the legal authority to acquire land directly in its name.",
+        "The OPC is considered a separate legal entity, allowing the individual to possess company property and other assets in their name. The OPC can acquire land directly in its name.",
     },
     {
       id: 5,
       title: "Certificate of Incorporation",
       content:
-        "The ROC issues a certificate of incorporation along with a PAN and TAN.",
+        "The ROC issues a certificate of incorporation with a PAN and TAN, formalizing the registration process.",
     },
     {
       id: 6,
       title: "Open a Bank Account",
       content:
-        "Once incorporated, open a bank account and get your business started.",
+        "After obtaining the certificate of incorporation, open a bank account to get your business started.",
     },
   ];
 
@@ -53,8 +53,7 @@ const OPCsteps = () => {
   return (
     <>
       <h1 className="text-3xl font-bold text-center lg:mb-4 w-full py-8">
-        <span className="text-green-500">One Person Company</span> Registration
-        Steps
+        <span className="text-green-500">One Person Company</span> Benefits
       </h1>
 
       <div className="flex w-full max-w-5xl flex-col lg:flex-row items-start justify-center mx-auto mt-6">
@@ -84,32 +83,33 @@ const OPCsteps = () => {
         <div className="w-full lg:w-2/3 p-4">
           <motion.h2
             className="text-2xl font-bold mb-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {`Step ${activeStep.id}: ${activeStep.title}`}
+            {`Benefit ${activeStep.id}: ${activeStep.title}`}
           </motion.h2>
           <motion.p
             className="text-lg text-gray-600 dark:text-gray-400"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             {activeStep.content}
           </motion.p>
         </div>
       </div>
+
       <div className="flex justify-center items-center mb-10">
         <button
           onClick={handleGetHelp}
           className="mt-4 bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition"
         >
-          Get Support
+          Get Help
         </button>
       </div>
     </>
   );
 };
 
-export default OPCsteps;
+export default OPCbenefits;

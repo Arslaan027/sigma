@@ -19,10 +19,14 @@ import PLCbenefits from "./PLCbenefits";
 import LLPbenefits from "./LLPbenefits";
 import LLPsteps from "./LLPsteps";
 import LLPDocuments from "./LLPDocuments";
-import OPCsteps from "./OPCsteps";
+import OPCbenefits from "./OPCbenefits";
 import OPCRestrictions from "./OPCRestrictions";
 import OPCdocuments from "./OPCdocuments";
 import OPCchecklist from "./OPCchecklist";
+import RaiseQueryForm from "../RaiseQueryForm";
+import OPCsteps from "./OPCsteps";
+import PFadvantages from "./PFadvantages";
+// import RegistrationForm from "../TradeRegistration/RegistrationForm";
 
 const CompanyFormation = () => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -150,6 +154,7 @@ const CompanyFormation = () => {
             <Roadmap />
             <BestBusiness />
             <FAQs />
+            <RaiseQueryForm />
           </div>
         )}
         {currentTab === 1 && (
@@ -158,6 +163,7 @@ const CompanyFormation = () => {
             <PLCsteps />
             <PLCbenefits />
             <PLCFAQs />
+            <RaiseQueryForm />
           </div>
         )}
         {currentTab === 2 && (
@@ -166,35 +172,43 @@ const CompanyFormation = () => {
             <LLPsteps />
             <LLPbenefits />
             <PLCFAQs />
+            <RaiseQueryForm />
           </div>
         )}
         {currentTab === 3 && (
           <div>
             <OPCdocuments />
-            <OPCsteps />
+            <OPCbenefits />
             <OPCRestrictions />
             <OPCchecklist />
+            <OPCsteps />
             <PLCFAQs />
+            <RaiseQueryForm />
           </div>
         )}
         {currentTab === 4 && (
           <div>
+            <PFadvantages />
             <PLCFAQs />
+            <RaiseQueryForm />
           </div>
         )}
         {currentTab === 5 && (
           <div>
             <PLCFAQs />
+            <RaiseQueryForm />
           </div>
         )}
         {currentTab === 6 && (
           <div>
             <PLCFAQs />
+            <RaiseQueryForm />
           </div>
         )}
         {currentTab === 7 && (
           <div>
             <PLCFAQs />
+            <RaiseQueryForm />
           </div>
         )}
       </div>
