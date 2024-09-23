@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import bgvideo from "../../assets/Vedio/bg.mp4";
-import AboutUs from "./AboutUs";
+// import AboutUs from "./AboutUs";
 
 const AboutNav = () => {
   const [isVideoVisible, setIsVideoVisible] = useState(false);
@@ -43,7 +43,6 @@ const AboutNav = () => {
           </div>
         </div>
       </section>
-      <AboutUs />
     </>
   );
 };

@@ -5,10 +5,11 @@ import Home from "./Components/Home/home";
 import Horeca from "./Components/HoReCa/Horeca";
 import TradeRegistration from "./Components/TradeRegistration/TradeRegistration";
 import CompanyFormation from "./Components/CompanyFormation/CompanyFormation";
-import AboutHero from "./Components/AboutUs/AboutHero";
+import AboutUs from "./Components/AboutUs/AboutUs";
 import CostCalculator from "./Components/CostCalculator/CostCalculator";
 import { IoSunnySharp } from "react-icons/io5";
 import { PiMoonStarsFill } from "react-icons/pi";
+import VM from "./Components/AboutUs/Visson-Mission/V&M";
 
 const App = () => {
   // Manage dark mode state
@@ -48,9 +49,10 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path="/trade-registration" element={<TradeRegistration />} />
             <Route path="/company-formation" element={<CompanyFormation />} />
-            <Route path="/about" element={<AboutHero />} />
+            <Route path="/about" element={<AboutUs />} />
             <Route path="/cost-calculator" element={<CostCalculator />} />
             <Route path="/horeca" element={<Horeca />} />
+            <Route path="/vm" element={<VM />} />
           </Route>
         </Routes>
       </div>
