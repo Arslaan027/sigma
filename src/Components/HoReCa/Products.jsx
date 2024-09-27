@@ -217,7 +217,6 @@ const Products = () => {
       title: "Organic Produce",
       description: "Fresh organic vegetables and fruits.",
       icon: <FiTruck className="text-red-500 text-2xl mr-3" />,
-      icon: <FiBox className="text-red-500 text-2xl mr-3" />,
       imageUrl:
         "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSxPeUp-FeNpODI9a9bIkTDduBgzW5aUaNJaqEOafp21el_uugZvhZlvLbFe68DxhcoX4mW4LxiEgFQTDOArPX_qiWu8leRa3fZxjdac2PV&usqp=CAE",
     },
