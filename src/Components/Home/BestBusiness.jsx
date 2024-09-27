@@ -31,7 +31,7 @@ const BestBusiness = () => {
 
   return (
     <div className="py-8 bg-gray-100 dark:bg-neutral-900">
-      <div className="max-w-6xl mx-auto px-4" ref={ref}>
+      <div className="max-w-5xl mx-auto px-4" ref={ref}>
         <motion.div
           className="mb-12 text-center"
           initial={{ opacity: 0, y: -20 }}

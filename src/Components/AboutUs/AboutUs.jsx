@@ -9,7 +9,7 @@ const AboutUs = () => {
     <div>
       <AboutHero />
       <AboutText />
-      <AboutTop />
+      {/* <AboutTop /> */}
       {/* <Vision /> */}
       {/* <Mission /> */}
     </div>

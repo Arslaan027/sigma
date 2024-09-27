@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Experts = () => {
   return (
-    <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center bg-gray-300 p-6 rounded-lg shadow-lg py-16 my-16 dark:bg-neutral-900">
+    <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center bg-gray-300 p-6 rounded-lg shadow-lg py-16 my-16 dark:bg-neutral-900">
       {/* Left Section - Text Content */}
       <motion.div
         className="flex-1 md:mr-6 order-1 md:order-1 mx-auto"

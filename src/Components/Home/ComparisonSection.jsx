@@ -28,7 +28,7 @@ const ComparisonSection = () => {
 
   return (
     <section className="bg-white dark:bg-black py-16" ref={ref}>
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4">
         <motion.h2
           className="text-2xl md:text-4xl font-bold text-gray-800 dark:text-gray-100 mb-8 text-center"
           initial={{ opacity: 0, y: 20 }}

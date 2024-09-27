@@ -48,8 +48,8 @@ const FeatureCard = ({ icon, title, description, bgColor }) => {
 
 const WhyLegalWiz = () => {
   return (
-    <section className="py-16 bg-gray-50 dark:bg-black">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-gray-50 dark:bg-black ">
+      <div className="container mx-auto px-4 max-w-5xl">
         {/* Main Container with Centered Content */}
         <div className="w-full max-w-6xl mx-auto">
           {/* Text Section */}

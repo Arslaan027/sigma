@@ -8,6 +8,7 @@ import ComparisonSection from "./ComparisonSection";
 import BestBusiness from "./BestBusiness";
 import Experts from "./Experts";
 import Partners from "./Partners";
+import AboutTop from "../AboutUs/AboutTop";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <ComparisonSection />
       <BestBusiness />
       <Experts />
+      <AboutTop />
       <Partners />
     </div>
   );

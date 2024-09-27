@@ -920,7 +920,7 @@ const MainNavbar = ({
             </div>
           </div>
 
-          <div className="relative group">
+          {/* <div className="relative group">
             <Link
               to="/about"
               className={`flex items-center space-x-2 px-4 py-2 rounded-md ${
@@ -931,7 +931,7 @@ const MainNavbar = ({
             >
               <span>About Us</span>
             </Link>
-          </div>
+          </div> */}
           <div className="relative group">
             <Link
               to="/cost-calculator"

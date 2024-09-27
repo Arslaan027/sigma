@@ -49,7 +49,7 @@ const Trust = () => {
 
   return (
     <div className="bg-gray-300 py-24 hidden md:block dark:bg-neutral-900">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-32">
           {/* Text Content on the Left */}
           <motion.div
@@ -59,10 +59,10 @@ const Trust = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-xl font-semibold text-gray-800 mb-6 dark:text-gray-100">
+            <h2 className="text-lg font-semibold text-gray-800 mb-6 dark:text-gray-100">
               Hear What Our Customers Have To Say
             </h2>
-            <h3 className="text-4xl font-bold text-gray-800 mb-4 dark:text-gray-100">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4 dark:text-gray-100">
               Sigma
               <span className="text-green-500 dark:text-green-400">
                 Solutions
@@ -70,11 +70,11 @@ const Trust = () => {
               is used by tens of thousands of founders to start, manage, and
               grow their business
             </h3>
-            <p className="text-green-500 text-3xl font-bold mb-4 dark:text-green-400">
+            <p className="text-green-500 text-xl font-bold mb-4 dark:text-green-400">
               {inView ? <CountUp start={0} end={20000} duration={7} /> : "0"}+
               Happy Customers
             </p>
-            <p className="text-gray-600 mb-6 dark:text-gray-300">
+            <p className="text-gray-600 text-md mb-6 dark:text-gray-300">
               We are one of India's highest rated service providers, known for
               completing Business incorporations and other compliance services
               in record time. Don’t just take our word for it—read it for
@@ -87,7 +87,7 @@ const Trust = () => {
 
           {/* Testimonial Box on the Right */}
           <motion.div
-            className="md:w-1/2 flex flex-col items-center md:items-end"
+            className="md:w-2/4 flex flex-col items-center md:items-end"
             initial={{ opacity: 0, scale: 1.5 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.8 }}

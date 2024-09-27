@@ -23,7 +23,7 @@ const AboutText = () => {
   return (
     <div className="bg-transparent">
       <h1 className="text-4xl font-bold text-gray-800 leading-tight mb-4 dark:text-gray-300 text-center my-5">
-        About <span className="text-green-500">SigmaSolution</span>.
+        About Sigma<span className="text-green-500">Solution</span>.
       </h1>
 
       {/* Section 1: Business Partnership */}
