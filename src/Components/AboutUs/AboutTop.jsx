@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 
 const AboutTop = () => {
   return (
-    <section className="w-full bg-white py-12 px-4">
+    <section className="w-full bg-white dark:bg-neutral-900 py-12 px-4">
       <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center lg:justify-between relative">
         {/* Left Content */}
         <div className="lg:w-2/3 text-center lg:text-left mb-8 lg:mb-0 flex flex-col justify-center z-10">
-          <h1 className="text-4xl font-bold text-gray-800 leading-tight mb-4">
+          <h1 className="text-4xl font-bold text-gray-800 leading-tight mb-4 dark:text-gray-300">
             Helping businesses <br />
             <span className="text-green-500">succeed</span> through the power of
             video.
           </h1>
-          <p className="text-lg text-gray-500 mb-6">
+          <p className="text-lg dark:text-white text-gray-500 mb-6">
             Video is the future of business in this digital-focused world. Sigma
             Solutions helps organizations humanize their communications and
             personalize customer experiences.

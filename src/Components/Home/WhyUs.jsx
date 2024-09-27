@@ -60,7 +60,7 @@ const WhyLegalWiz = () => {
             animate="visible"
           >
             <motion.h2
-              className="text-lg font-bold text-green-600 uppercase mb-4"
+              className="text-lg font-bold  uppercase mb-4"
               variants={textVariants}
               transition={{
                 duration: 0.5,
@@ -70,14 +70,15 @@ const WhyLegalWiz = () => {
               Why Sigma Solutions
             </motion.h2>
             <motion.h1
-              className="text-3xl md:text-5xl font-extrabold text-gray-900 dark:text-gray-300 mb-6"
+              className="text-3xl md:text-3xl font-extrabold text-gray-900 dark:text-gray-300 mb-6"
               variants={textVariants}
               transition={{
                 duration: 0.5,
                 ease: "easeOut",
               }}
             >
-              Choosing Sigma Solutions to Make a Difference
+              Choosing <span className="text-green-500">Sigma Solutions</span>{" "}
+              to Make a Difference
             </motion.h1>
             <motion.p
               className="text-gray-700 dark:text-gray-400 mb-12 leading-relaxed"
@@ -94,46 +95,64 @@ const WhyLegalWiz = () => {
 
           {/* Cards Section */}
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-8 text-center mx-5"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
           >
             <FeatureCard
-              icon="🛡️"
-              title="Confidential & Safe"
-              description="All your private information is secure with us."
-              bgColor="bg-red-100 dark:bg-neutral-900"
+              icon="🌐"
+              title="Comprehensive Expertise Across Multiple Sectors"
+              description="Sigma Solutions is a one-stop destination for a wide range of services, including business, commercial, and residential solutions."
+              bgColor="bg-yellow-100 dark:bg-neutral-900"
             />
             <FeatureCard
-              icon="✔️"
-              title="No Hidden Fees"
-              description="Everything is transparent with no hidden charges."
-              bgColor="bg-green-100 dark:bg-neutral-900"
-            />
-            <FeatureCard
-              icon="😊"
-              title="Guaranteed Satisfaction"
-              description="We ensure 100% satisfaction with our services."
+              icon="👥"
+              title="Highly Experienced and Qualified Team"
+              description="Our team comprises industry experts with years of hands-on experience."
               bgColor="bg-blue-100 dark:bg-neutral-900"
             />
             <FeatureCard
-              icon="👨‍⚖️"
-              title="Expert CA/CS Assistance"
-              description="Prompt support from in-house professionals."
+              icon="✅"
+              title="Commitment to Quality and Safety"
+              description="Quality is our top priority, following strict control and safety standards."
+              bgColor="bg-green-100 dark:bg-neutral-900"
+            />
+            <FeatureCard
+              icon="⏰"
+              title="Timely Project Delivery"
+              description="Our team ensures that we meet deadlines without compromising on quality."
               bgColor="bg-purple-100 dark:bg-neutral-900"
             />
             <FeatureCard
-              icon="📹"
-              title="Video Assistance"
-              description="Easy video guidance to keep you on track."
+              icon="💰"
+              title="Competitive Pricing and Value for Money"
+              description="We offer competitive pricing without compromising on quality."
+              bgColor="bg-orange-100 dark:bg-neutral-900"
+            />
+            <FeatureCard
+              icon="📞"
+              title="24/7 Emergency Services"
+              description="Our 24/7 emergency support ensures your critical systems are always protected."
+              bgColor="bg-red-100 dark:bg-neutral-900"
+            />
+            <FeatureCard
+              icon="🔄"
+              title="End-to-End Project Management"
+              description="From concept to completion, we offer full-service project management."
               bgColor="bg-gray-100 dark:bg-neutral-900"
             />
             <FeatureCard
-              icon="🧩"
-              title="Seamless Integration"
-              description="Easily integrates with your existing systems."
-              bgColor="bg-orange-100 dark:bg-neutral-900"
+              icon="🤝"
+              title="High Client Retention and Positive Referrals"
+              description="Many of our clients continue to work with us on multiple projects."
+              bgColor="bg-teal-100 dark:bg-neutral-900"
+            />
+            <FeatureCard
+              icon="🔗"
+              title="Long-Term Partnerships"
+              description="We aim to be your go-to partner for all future needs."
+              bgColor="bg-indigo-100 dark:bg-neutral-900"
             />
           </motion.div>
         </div>
