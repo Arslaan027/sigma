@@ -1,6 +1,6 @@
 import React from "react";
 import Vision from "./Vision";
-import Mission from "./Mission";
+import Mission from "./MIssion";
 import { useNavigate } from "react-router-dom";
 import CoreValue from "./CoreValue";
 
