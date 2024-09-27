@@ -28,7 +28,7 @@ const AboutText = () => {
 
       {/* Section 1: Business Partnership */}
       <motion.div
-        className="flex flex-col-reverse justify-center md:flex-row items-center gap-20 my-10 p-4"
+        className="flex flex-col-reverse justify-center md:flex-row items-center gap-20 my-10 p-4 "
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -40,7 +40,9 @@ const AboutText = () => {
           variants={imageVariants}
         />
         <motion.div className="md:w-1/3" variants={textVariants}>
-          <h2 className="text-2xl font-semibold mb-2">Business Partnership</h2>
+          <h2 className="text-2xl font-semibold mb-2 text-green-500">
+            Business Partnership
+          </h2>
           <p>
             Welcome to Sigma Solutions, your ultimate one-stop destination for
             all business and individual needs in Arunachal Pradesh. We
@@ -66,7 +68,7 @@ const AboutText = () => {
           variants={imageVariants}
         />
         <motion.div className="md:w-1/3" variants={textVariants}>
-          <h2 className="text-2xl font-semibold mb-2">
+          <h2 className="text-2xl font-semibold mb-2  text-green-500">
             Entrepreneurial Journey
           </h2>
           <p>
@@ -93,7 +95,7 @@ const AboutText = () => {
           variants={imageVariants}
         />
         <motion.div className="md:w-1/3" variants={textVariants}>
-          <h2 className="text-2xl font-semibold mb-2">
+          <h2 className="text-2xl font-semibold mb-2  text-green-500">
             Innovative Design Solutions
           </h2>
           <p>
@@ -118,7 +120,7 @@ const AboutText = () => {
           variants={imageVariants}
         />
         <motion.div className="md:w-1/3" variants={textVariants}>
-          <h2 className="text-2xl font-semibold mb-2">
+          <h2 className="text-2xl font-semibold mb-2  text-green-500">
             Civil and Structural Services
           </h2>
           <p>
@@ -143,7 +145,9 @@ const AboutText = () => {
           variants={imageVariants}
         />
         <motion.div className="md:w-1/3" variants={textVariants}>
-          <h2 className="text-2xl font-semibold mb-2">Financial Management</h2>
+          <h2 className="text-2xl font-semibold mb-2  text-green-500">
+            Financial Management
+          </h2>
           <p>
             We take the hassle out of financial management by providing expert
             accounting services and tax compliance support, allowing you to
@@ -166,7 +170,9 @@ const AboutText = () => {
           variants={imageVariants}
         />
         <motion.div className="md:w-1/3" variants={textVariants}>
-          <h2 className="text-2xl font-semibold mb-2">Hospitality Services</h2>
+          <h2 className="text-2xl font-semibold mb-2  text-green-500">
+            Hospitality Services
+          </h2>
           <p>
             For those in the hospitality sector, we offer tailored solutions
             that encompass everything from concept development to operational
@@ -189,7 +195,9 @@ const AboutText = () => {
           variants={imageVariants}
         />
         <motion.div className="md:w-1/3" variants={textVariants}>
-          <h2 className="text-2xl font-semibold mb-2">Project Management</h2>
+          <h2 className="text-2xl font-semibold mb-2  text-green-500">
+            Project Management
+          </h2>
           <p>
             With our project management expertise, we ensure timely delivery and
             high standards while offering ongoing maintenance services to keep
