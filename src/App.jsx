@@ -10,6 +10,7 @@ import CostCalculator from "./Components/CostCalculator/CostCalculator";
 import { IoSunnySharp } from "react-icons/io5";
 import { PiMoonStarsFill } from "react-icons/pi";
 import VM from "./Components/AboutUs/Visson-Mission/V&M";
+import Certificate from "./Components/AboutUs/Certificate";
 
 const App = () => {
   // Manage dark mode state
@@ -53,6 +54,7 @@ const App = () => {
             <Route path="/cost-calculator" element={<CostCalculator />} />
             <Route path="/horeca" element={<Horeca />} />
             <Route path="/vm" element={<VM />} />
+            <Route path="/certificate" element={<Certificate />} />
           </Route>
         </Routes>
       </div>

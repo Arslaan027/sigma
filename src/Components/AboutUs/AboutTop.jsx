@@ -18,12 +18,18 @@ const AboutTop = () => {
             Solutions helps organizations humanize their communications and
             personalize customer experiences.
           </p>
-          <div>
+          <div className="flex gap-5">
             <Link
               to="/vm"
               className="px-6 py-3 bg-green-600 text-white rounded-full text-lg hover:bg-green-700 transition transform hover:scale-105"
             >
               Vision & Mission
+            </Link>
+            <Link
+              to="/certificate"
+              className="px-6 py-3 bg-green-600 text-white rounded-full text-lg hover:bg-green-700 transition transform hover:scale-105"
+            >
+              Our Certificates
             </Link>
           </div>
         </div>
