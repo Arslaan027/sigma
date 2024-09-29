@@ -15,9 +15,7 @@ const Home = () => {
     <div className="min-h-screen bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text">
       <HeroSection />
       <WhyLegalWiz />
-      <div className="hidden md:block">
-        <Trust />
-      </div>
+      <div className="hidden md:block">{/* <Trust /> */}</div>
       <ComparisonSection />
       <BestBusiness />
       <Experts />

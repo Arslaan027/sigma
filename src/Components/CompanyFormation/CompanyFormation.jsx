@@ -27,6 +27,21 @@ import RaiseQueryForm from "../RaiseQueryForm";
 import OPCsteps from "./OPCsteps";
 import PFadvantages from "./PFadvantages";
 // import RegistrationForm from "../TradeRegistration/RegistrationForm";
+import "./CF.css";
+import PFchecklist from "./PFchecklist";
+import PFdocument from "./PFdocument";
+import PFdisadvantages from "./PFdisadvantages";
+import IStype from "./IStype";
+import ISadvantage from "./ISadvantage";
+import IShelp from "./IShelp";
+import IStax from "./IStax";
+import ISstep from "./ISstep";
+import ISchecklist from "./ISchecklist";
+import PCadvantages from "./PCadvantages";
+import PCchecklist from "./PCchecklist";
+import PCtype from "./PCtype";
+import Start from "./Start";
+import Startprocedure from "./Startprocedure";
 
 const CompanyFormation = () => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -69,21 +84,21 @@ const CompanyFormation = () => {
     <div>
       <Box sx={{ width: "100%" }}>
         {/* Desktop Tabs */}
-        <div className="p-4 bg-white dark:bg-neutral-900 flex border-t border-gray-300 space-x-2 rounded-lg hidden md:flex">
+        <div className="p-2 bg-white dark:bg-neutral-900 flex border-t border-gray-300 space-x-1 rounded-lg hidden md:flex max-w-full overflow-x-auto custom-scrollbar">
           {[
-            "Private Limited Company",
-            "Public Limited Company",
+            "Private Limited",
+            "Public Limited",
             "Limited Liability Partnership",
             "One Person Company",
             "Partnership Firm",
-            "Indian Subsidiary Company",
+            "Indian Subsidiary",
             "Producer Company",
             "Startup Scheme",
           ].map((label, index) => (
             <MenuItem
               key={index}
               onClick={() => handleMenuItemClick(index)}
-              className={`flex-1 text-center rounded-lg cursor-pointer transition-colors duration-300 py-1 text-xs ${
+              className={`flex-1 text-center rounded-lg cursor-pointer transition-colors duration-300 py-0.5 text-[5px] ${
                 currentTab === index
                   ? "bg-green-500 text-white dark:bg-green-600 rounded-lg"
                   : "text-gray-800 dark:text-gray-300 dark:hover:text-white"
@@ -147,14 +162,14 @@ const CompanyFormation = () => {
         </div>
       </Box>
 
-      <div className="py-8">
+      <div className="">
         {currentTab === 0 && (
           <div>
             <Requirement />
             <Roadmap />
             <BestBusiness />
-            <FAQs />
             <RaiseQueryForm />
+            <FAQs />
           </div>
         )}
         {currentTab === 1 && (
@@ -162,8 +177,8 @@ const CompanyFormation = () => {
             <PLCDocuments />
             <PLCsteps />
             <PLCbenefits />
-            <PLCFAQs />
             <RaiseQueryForm />
+            <PLCFAQs />
           </div>
         )}
         {currentTab === 2 && (
@@ -171,8 +186,8 @@ const CompanyFormation = () => {
             <LLPDocuments />
             <LLPsteps />
             <LLPbenefits />
-            <PLCFAQs />
             <RaiseQueryForm />
+            <PLCFAQs />
           </div>
         )}
         {currentTab === 3 && (
@@ -182,33 +197,48 @@ const CompanyFormation = () => {
             <OPCRestrictions />
             <OPCchecklist />
             <OPCsteps />
-            <PLCFAQs />
             <RaiseQueryForm />
+            <PLCFAQs />
           </div>
         )}
         {currentTab === 4 && (
           <div>
+            <PFdocument />
+            <PFchecklist />
             <PFadvantages />
-            <PLCFAQs />
+            <PFdisadvantages />
             <RaiseQueryForm />
+            <PLCFAQs />
           </div>
         )}
         {currentTab === 5 && (
           <div>
-            <PLCFAQs />
+            <ISchecklist />
+            <ISadvantage />
+            <IStype />
+            <IShelp />
+            <IStax />
+            <ISstep />
             <RaiseQueryForm />
+            <PLCFAQs />
           </div>
         )}
         {currentTab === 6 && (
           <div>
-            <PLCFAQs />
+            <PCchecklist />
+            <PCadvantages />
+            <PCtype />
             <RaiseQueryForm />
+            <PLCFAQs />
           </div>
         )}
         {currentTab === 7 && (
           <div>
-            <PLCFAQs />
+            <Start />
+            <Startprocedure />
+
             <RaiseQueryForm />
+            <PLCFAQs />
           </div>
         )}
       </div>

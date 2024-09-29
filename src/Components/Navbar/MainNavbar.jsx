@@ -59,7 +59,7 @@ const MainNavbar = ({
           : "relative bg-none"
       }`}
     >
-      <div className="flex items-center justify-between px-4 py-4">
+      <div className="flex items-center justify-between px-4">
         {/* Left Side with Logo */}
         <div className="flex items-center space-x-4 text-sm">
           <img
@@ -260,7 +260,7 @@ const MainNavbar = ({
               <span>Interior & Design</span>
             </button>
 
-            <div className="absolute mt-1 w-64 bg-white dark:bg-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-300">
+            <div className="absolute w-64 bg-white dark:bg-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-300">
               {/* InteriorDesign Dropdown */}
               <div
                 className="relative"

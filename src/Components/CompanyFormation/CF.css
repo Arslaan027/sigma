@@ -1,0 +1,46 @@
+/* Custom Scrollbar for Webkit (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px; /* Thinner vertical scrollbar */
+  height: 2px; /* Thinner horizontal scrollbar */
+}
+
+/* Track (background of the scrollbar) */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f5f5f5; /* Slightly lighter than before for a minimal look in light mode */
+  border-radius: 10px;
+}
+
+.custom-scrollbar.dark::-webkit-scrollbar-track {
+  background: #333; /* Dark mode: darker background for contrast */
+  border-radius: 10px;
+}
+
+/* Handle (the scrollbar thumb) */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #b3b3b3; /* Light grey for the thumb in light mode */
+  border-radius: 20px; /* More rounded for a sleeker look */
+}
+
+.custom-scrollbar.dark::-webkit-scrollbar-thumb {
+  background-color: #666; /* Darker grey thumb for dark mode */
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #999; /* Subtle hover effect for light mode */
+}
+
+.custom-scrollbar.dark::-webkit-scrollbar-thumb:hover {
+  background-color: #444; /* Dark mode hover effect */
+}
+
+/* Edge/IE Scrollbar (Fallback for Firefox and older browsers) */
+.custom-scrollbar {
+  scrollbar-width: thin; /* Makes scrollbar thinner in Firefox */
+  scrollbar-color: #b3b3b3 #f5f5f5; /* Thumb and track color for Firefox in light mode */
+}
+
+.custom-scrollbar.dark {
+  scrollbar-color: #666 #333; /* Thumb and track color for Firefox in dark mode */
+}

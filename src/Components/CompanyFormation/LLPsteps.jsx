@@ -75,8 +75,8 @@ const LLPsteps = () => {
         Registration Steps
       </h1>
 
-      <div className="flex w-full max-w-5xl flex-col lg:flex-row items-start justify-center mx-auto mt-6">
-        <div className="w-auto lg:w-1/3 space-y-2 mb-3 lg:mb-0">
+      <div className="flex w-full max-w-5xl flex-col lg:flex-row items-center justify-center mx-auto mt-6">
+        <div className="w-auto lg:w-1/3 space-y-2 mb-3 lg:mb-0 ">
           {steps.map((step) => (
             <motion.div
               key={step.id}
