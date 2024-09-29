@@ -11,6 +11,7 @@ import { IoSunnySharp } from "react-icons/io5";
 import { PiMoonStarsFill } from "react-icons/pi";
 import VM from "./Components/AboutUs/Visson-Mission/V&M";
 import Certificate from "./Components/AboutUs/Certificate";
+import GSTRegistration from "./Components/GSTRegistration/GSTRegistration";
 
 const App = () => {
   // Manage dark mode state
@@ -50,6 +51,7 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path="/trade-registration" element={<TradeRegistration />} />
             <Route path="/company-formation" element={<CompanyFormation />} />
+            <Route path="/gst-registration" element={<GSTRegistration />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/cost-calculator" element={<CostCalculator />} />
             <Route path="/horeca" element={<Horeca />} />
