@@ -170,7 +170,7 @@ const MainNavbar = ({
                       to="/ngo-society-registrations"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
                     >
-                      NGO/Society Registrations
+                      NGO Registration
                     </Link>
                   </div>
                 )}
