@@ -140,12 +140,12 @@ const AnnualCompliances = () => {
         </p>
 
         {sections.map((section, index) => (
-          <div key={index} className="mb-4 border-b">
+          <div key={index} className="mb-4 border-b w-auto">
             <button
-              className="flex justify-between items-center w-full p-4 text-left dark:bg-neutral-800 bg-gray-100 hover:bg-gray-200 focus:outline-none rounded-lg  dark:text-gray-200"
+              className="flex justify-between items-center md:w-full w-auto p-4 text-left dark:bg-neutral-800 bg-gray-100 hover:bg-gray-200 focus:outline-none rounded-lg  dark:text-gray-200"
               onClick={() => toggleSection(index)}
             >
-              <span className="text-xl font-semibold">{section.title}</span>
+              <span className="text-xl md:font-semibold">{section.title}</span>
               <span
                 className={`ml-4 transition-transform ${
                   openSection === index ? "transform rotate-180" : ""
