@@ -3,6 +3,7 @@ import MainNavbar from "./MainNavbar";
 import { Link } from "react-router-dom";
 import { IoSearchSharp } from "react-icons/io5";
 import BottomBar from "./BottomBar";
+import { FaAngleDown } from "react-icons/fa6";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -85,10 +86,9 @@ const Navbar = () => {
         <div className="mt-4 flex flex-col space-y-2">
           {/* Business Services */}
           <div className="relative">
-            <h3
-              className="font-semibold text-lg mb-2 cursor-pointer"
-              // onClick={() => handleDropdownToggle(0)}
-            >
+            <h3 className="font-semibold text-lg mb-2 cursor-pointer flex items-center">
+              {/* <FaBriefcase className="mr-2 text-gray-600 dark:text-gray-300" />{" "} */}
+              {/* Icon added here */}
               Business Services
             </h3>
             <div className="relative">
@@ -98,9 +98,10 @@ const Navbar = () => {
                   activeLink === "Biz Registrations"
                     ? "bg-black text-white"
                     : "hover:bg-gray-200 dark:hover:bg-neutral-800 dark:hover:text-gray-100"
-                } w-full text-left block px-4 py-2 rounded-md`}
+                } w-full text-left block px-4 py-2 rounded-md flex justify-between items-center`}
               >
                 Biz Registrations
+                <FaAngleDown />
               </button>
               <div
                 className={`transition-all duration-300 ease-in-out overflow-hidden ${
@@ -122,8 +123,12 @@ const Navbar = () => {
                     { name: "ISO Certification", path: "/iso-certification" },
                     { name: "Trademark", path: "/trademark" },
                     {
-                      name: "NGO/Society Registrations",
+                      name: "NGO Registration",
                       path: "/ngo-society-registrations",
+                    },
+                    {
+                      name: "Compliances",
+                      path: "/compliances",
                     },
                   ].map((link, index) => (
                     <Link
@@ -132,7 +137,7 @@ const Navbar = () => {
                       className={`${
                         activeLink === link.name
                           ? "bg-black text-white"
-                          : "hover:bg-gray-100  dark:hover:bg-neutral-800"
+                          : "hover:bg-gray-100 dark:hover:bg-neutral-800"
                       } block px-4 py-2 rounded-md`}
                       onClick={() => handleLinkClick(link.name)}
                     >

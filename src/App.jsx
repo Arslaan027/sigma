@@ -17,6 +17,7 @@ import IEC from "./Components/IEC/IEC";
 import ISO from "./Components/ISO/ISO";
 import Trademark from "./Components/Trademark/Trademark";
 import NGO from "./Components/NGO/NGO";
+import CompliancesHead from "./Components/CompanyFormation/Compliances/CompliancesHead";
 
 const App = () => {
   // Manage dark mode state
@@ -62,6 +63,7 @@ const App = () => {
             <Route path="/iso-certification" element={<ISO />} />
             <Route path="/trademark" element={<Trademark />} />
             <Route path="/ngo-society-registrations" element={<NGO />} />
+            <Route path="/compliances" element={<CompliancesHead />} />
 
             <Route path="/about" element={<AboutUs />} />
             <Route path="/cost-calculator" element={<CostCalculator />} />
