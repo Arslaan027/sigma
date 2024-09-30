@@ -34,6 +34,15 @@ import FSdisadvantages from "../ForeignCompany/FSdisadvantages";
 import SPdocument from "./Soleproprietorship/SPdocument";
 import SPadvantage from "./Soleproprietorship/SPadvantage";
 import SPdisadvantages from "./Soleproprietorship/SPdisadvantages";
+import CSwhat from "./CooperativeSociety/CSwhat";
+import PriLCwhat from "./PriLC/priLCwhat";
+import LLPwhat from "./LLP/LLPwhat";
+import OPCwhat from "./OPCwhat";
+import PFwhat from "./PFwhat";
+import Sec8what from "./Sec8/Sec8what";
+import FCwhat from "../ForeignCompany/FCwhat";
+import SPwhat from "./Soleproprietorship/SPwhat";
+import PLCwhat from "./PubLC/PLCwhat";
 
 //===> Can be Re-used
 // import PLCFAQs from "./PLCFAQs";
@@ -181,6 +190,7 @@ const CompanyFormation = () => {
       <div className="">
         {currentTab === 0 && ( //===>(✔)
           <div>
+            <PriLCwhat />
             <Requirement />
             <PriLCadvantages />
             <PriLCDisadvantage />
@@ -191,6 +201,7 @@ const CompanyFormation = () => {
         )}
         {currentTab === 1 && ( //===>(✔)
           <div>
+            <PLCwhat />
             <PLCDocuments />
             {/* <PLCsteps /> */}
             <PLCbenefits />
@@ -201,6 +212,7 @@ const CompanyFormation = () => {
         )}
         {currentTab === 2 && ( //===>(✔)
           <div>
+            <LLPwhat />
             <LLPDocuments />
             {/* <LLPsteps /> */}
             <LLPbenefits />
@@ -211,6 +223,7 @@ const CompanyFormation = () => {
         )}
         {currentTab === 3 && ( //===>(✔)
           <div>
+            <OPCwhat />
             <OPCdocuments />
             <OPCbenefits />
             <OPCRestrictions />
@@ -222,6 +235,7 @@ const CompanyFormation = () => {
         )}
         {currentTab === 4 && ( //===>(✔)
           <div>
+            <PFwhat />
             <PFdocument />
             {/* <PFchecklist /> */}
             <PFadvantages />
@@ -232,6 +246,7 @@ const CompanyFormation = () => {
         )}
         {currentTab === 5 && ( //===>(✔)
           <div>
+            <Sec8what />
             <Sec8documents />
             <Sec8Advantages />
             <Sec8Disadvantages />
@@ -239,6 +254,7 @@ const CompanyFormation = () => {
         )}
         {currentTab === 6 && ( //===>(✔)
           <div>
+            <CSwhat />
             <CSdocument />
             <CSadvantages />
             <CSdisadvantages />
@@ -246,6 +262,7 @@ const CompanyFormation = () => {
         )}
         {currentTab === 7 && ( //===>(✔)
           <div>
+            <FCwhat />
             <FCdocuments />
             <FSadvantages />
             <FSdisadvantages />
@@ -253,6 +270,7 @@ const CompanyFormation = () => {
         )}
         {currentTab === 8 && ( //===>(✔)
           <div>
+            <SPwhat />
             <SPdocument />
             <SPadvantage />
             <SPdisadvantages />

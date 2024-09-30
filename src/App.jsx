@@ -17,7 +17,7 @@ import IEC from "./Components/IEC/IEC";
 import ISO from "./Components/ISO/ISO";
 import Trademark from "./Components/Trademark/Trademark";
 import NGO from "./Components/NGO/NGO";
-import CompliancesHead from "./Components/CompanyFormation/Compliances/CompliancesHead";
+import CompliancesHead from "./Components/Compliances/CompliancesHead";
 
 const App = () => {
   // Manage dark mode state
