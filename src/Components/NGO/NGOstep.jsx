@@ -42,17 +42,17 @@ const NGOstep = () => {
   return (
     <div className="flex justify-center items-center bg-gray-50 dark:bg-neutral-900 p-8">
       <div className="max-w-5xl mx-auto bg-white dark:bg-neutral-300 rounded-lg shadow-lg p-6">
+        {/* Title Section */}
+        <h3 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-4">
+          Different Domains for <span className="text-green-500">NGO</span>
+        </h3>
+
         {/* Image Section */}
         <img
           src={NGO}
           alt="NGO Steps"
           className="w-full h-auto rounded-lg shadow-md mb-6"
         />
-
-        {/* Title Section */}
-        <h3 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-4">
-          Steps for Incorporation
-        </h3>
 
         {/* Steps Sections */}
         {stepsData.map(({ title, steps }, sectionIndex) => {
