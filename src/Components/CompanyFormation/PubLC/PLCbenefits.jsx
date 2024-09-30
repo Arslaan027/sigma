@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import PLC from "../../assets/Image/steps.png";
+import PLC from "../../../assets/Image/steps.png";
 
 const PLCbenefits = () => {
   const ref = useRef(null);

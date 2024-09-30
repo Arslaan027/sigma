@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import LLP from "../../assets/Image/LLP.png";
+import LLP from "../../../assets/Image/LLP.png";
 
 const LLPbenefits = () => {
   const fadeInUp = {

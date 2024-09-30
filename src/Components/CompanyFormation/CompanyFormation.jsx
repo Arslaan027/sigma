@@ -1,47 +1,63 @@
 import { useState, useEffect } from "react";
-// import Tabs from "@mui/material/Tabs";
-// import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import MenuItem from "@mui/material/MenuItem";
 import BusinessIcon from "@mui/icons-material/Business";
-import "../../index.css"; // Import your global CSS file
-import Requirement from "./Requirement";
-import Roadmap from "./Roadmap";
-import FAQs from "./FAQs";
-import BestBusiness from "../Home/BestBusiness";
-import PLCFAQs from "./PLCFAQs";
-import PLCsteps from "./PLCsteps";
-import PLCDocuments from "./PLCDocuments";
-import PLCbenefits from "./PLCbenefits";
-import LLPbenefits from "./LLPbenefits";
-import LLPsteps from "./LLPsteps";
-import LLPDocuments from "./LLPDocuments";
+import "../../index.css";
+import Requirement from "./PriLC/Requirement";
+import PLCDocuments from "./PubLC/PLCDocuments";
+import PLCbenefits from "./PubLC/PLCbenefits";
+import LLPbenefits from "./LLP/LLPbenefits";
+import LLPDocuments from "./LLP/LLPDocuments";
 import OPCbenefits from "./OPCbenefits";
 import OPCRestrictions from "./OPCRestrictions";
 import OPCdocuments from "./OPCdocuments";
-import OPCchecklist from "./OPCchecklist";
-import RaiseQueryForm from "../RaiseQueryForm";
-import OPCsteps from "./OPCsteps";
-import PFadvantages from "./PFadvantages";
-// import RegistrationForm from "../TradeRegistration/RegistrationForm";
-import "./CF.css";
-import PFchecklist from "./PFchecklist";
 import PFdocument from "./PFdocument";
+import PFadvantages from "./PFadvantages";
+import "./CF.css";
 import PFdisadvantages from "./PFdisadvantages";
-import IStype from "./IStype";
-import ISadvantage from "./ISadvantage";
-import IShelp from "./IShelp";
-import IStax from "./IStax";
-import ISstep from "./ISstep";
-import ISchecklist from "./ISchecklist";
-import PCadvantages from "./PCadvantages";
-import PCchecklist from "./PCchecklist";
-import PCtype from "./PCtype";
-import Start from "./Start";
-import Startprocedure from "./Startprocedure";
+import LLPDisadvantage from "./LLP/LLPDisadvantage";
+import PriLCadvantages from "./PriLC/PriLCadvantages";
+import PriLCDisadvantage from "./PriLC/PriLCDisadvantage";
+import PLCDisadvantages from "./PubLC/PLCDisadvantages";
+import Sec8documents from "./Sec8/Sec8document";
+import Sec8Advantages from "./Sec8/Sec8benefits";
+import Sec8Disadvantages from "./Sec8/Sec8Disadvantages";
+import CSdocument from "./CooperativeSociety/CSdocument";
+import CSadvantages from "./CooperativeSociety/CSadvantages";
+import CSdisadvantages from "./CooperativeSociety/CSdisadvantages";
+import FCdocuments from "../ForeignCompany/FCdocument";
+import FSadvantages from "../ForeignCompany/FSadvantages";
+import FSdisadvantages from "../ForeignCompany/FSdisadvantages";
+import SPdocument from "./Soleproprietorship/SPdocument";
+import SPadvantage from "./Soleproprietorship/SPadvantage";
+import SPdisadvantages from "./Soleproprietorship/SPdisadvantages";
+
+//===> Can be Re-used
+// import PLCFAQs from "./PLCFAQs";
+// import RaiseQueryForm from "../RaiseQueryForm";
+// import IStype from "./IStype";
+// import ISadvantage from "./ISadvantage";
+// import IShelp from "./IShelp";
+// import IStax from "./IStax";
+// import ISstep from "./ISstep";
+// import ISchecklist from "./ISchecklist";
+// import PCadvantages from "./PCadvantages";
+// import PCchecklist from "./PCchecklist";
+// import PCtype from "./PCtype";
+// import Start from "./Start";
+// import Startprocedure from "./Startprocedure";
+// import BestBusiness from "../Home/BestBusiness";
+// import RegistrationForm from "../TradeRegistration/RegistrationForm";
+// import Roadmap from "./Roadmap";
+// import FAQs from "./FAQs";
+// import PLCsteps from "./PLCsteps";
+// import LLPsteps from "./LLPsteps";
+// import OPCchecklist from "./OPCchecklist";
+// import OPCsteps from "./OPCsteps";
+// import PFchecklist from "./PFchecklist";
 
 const CompanyFormation = () => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -91,9 +107,10 @@ const CompanyFormation = () => {
             "Limited Liability Partnership",
             "One Person Company",
             "Partnership Firm",
-            "Indian Subsidiary",
-            "Producer Company",
-            "Startup Scheme",
+            "Section 8 Company",
+            "Cooperative Society",
+            "Foreign Company",
+            "Sole Proprietorship",
           ].map((label, index) => (
             <MenuItem
               key={index}
@@ -138,16 +155,15 @@ const CompanyFormation = () => {
           >
             <div className="p-4 bg-white dark:bg-neutral-900 border-t border-gray-300 dark:border-gray-700">
               {[
-                "Private Limited Company",
-                "Public Limited Company",
-                "Limited Liability Partnership (LLP)",
-                "One Person Company (OPC)",
+                "Private Limited",
+                "Public Limited",
+                "Limited Liability Partnership",
+                "One Person Company",
                 "Partnership Firm",
+                "Section 8 Company",
+                "Cooperative Society",
+                "Foreign Company",
                 "Sole Proprietorship",
-                "Indian Subsidiary Company",
-                "Nidhi Company",
-                "Producer Company",
-                "Startup India Scheme",
               ].map((label, index) => (
                 <MenuItem
                   key={index}
@@ -163,82 +179,83 @@ const CompanyFormation = () => {
       </Box>
 
       <div className="">
-        {currentTab === 0 && (
+        {currentTab === 0 && ( //===>(✔)
           <div>
             <Requirement />
-            <Roadmap />
-            <BestBusiness />
-            <RaiseQueryForm />
-            <FAQs />
+            <PriLCadvantages />
+            <PriLCDisadvantage />
+            {/* <Roadmap /> */}
+            {/* <RaiseQueryForm /> */}
+            {/* <FAQs /> */}
           </div>
         )}
-        {currentTab === 1 && (
+        {currentTab === 1 && ( //===>(✔)
           <div>
             <PLCDocuments />
-            <PLCsteps />
+            {/* <PLCsteps /> */}
             <PLCbenefits />
-            <RaiseQueryForm />
-            <PLCFAQs />
+            <PLCDisadvantages />
+            {/* <RaiseQueryForm /> */}
+            {/* <PLCFAQs /> */}
           </div>
         )}
-        {currentTab === 2 && (
+        {currentTab === 2 && ( //===>(✔)
           <div>
             <LLPDocuments />
-            <LLPsteps />
+            {/* <LLPsteps /> */}
             <LLPbenefits />
-            <RaiseQueryForm />
-            <PLCFAQs />
+            <LLPDisadvantage />
+            {/* <RaiseQueryForm /> */}
+            {/* <PLCFAQs /> */}
           </div>
         )}
-        {currentTab === 3 && (
+        {currentTab === 3 && ( //===>(✔)
           <div>
             <OPCdocuments />
             <OPCbenefits />
             <OPCRestrictions />
-            <OPCchecklist />
-            <OPCsteps />
-            <RaiseQueryForm />
-            <PLCFAQs />
+            {/* <OPCchecklist /> */}
+            {/* <OPCsteps /> */}
+            {/* <RaiseQueryForm /> */}
+            {/* <PLCFAQs /> */}
           </div>
         )}
-        {currentTab === 4 && (
+        {currentTab === 4 && ( //===>(✔)
           <div>
             <PFdocument />
-            <PFchecklist />
+            {/* <PFchecklist /> */}
             <PFadvantages />
             <PFdisadvantages />
-            <RaiseQueryForm />
-            <PLCFAQs />
+            {/* <RaiseQueryForm /> */}
+            {/* <PLCFAQs /> */}
           </div>
         )}
-        {currentTab === 5 && (
+        {currentTab === 5 && ( //===>(✔)
           <div>
-            <ISchecklist />
-            <ISadvantage />
-            <IStype />
-            <IShelp />
-            <IStax />
-            <ISstep />
-            <RaiseQueryForm />
-            <PLCFAQs />
+            <Sec8documents />
+            <Sec8Advantages />
+            <Sec8Disadvantages />
           </div>
         )}
-        {currentTab === 6 && (
+        {currentTab === 6 && ( //===>(✔)
           <div>
-            <PCchecklist />
-            <PCadvantages />
-            <PCtype />
-            <RaiseQueryForm />
-            <PLCFAQs />
+            <CSdocument />
+            <CSadvantages />
+            <CSdisadvantages />
           </div>
         )}
-        {currentTab === 7 && (
+        {currentTab === 7 && ( //===>(✔)
           <div>
-            <Start />
-            <Startprocedure />
-
-            <RaiseQueryForm />
-            <PLCFAQs />
+            <FCdocuments />
+            <FSadvantages />
+            <FSdisadvantages />
+          </div>
+        )}
+        {currentTab === 8 && ( //===>(✔)
+          <div>
+            <SPdocument />
+            <SPadvantage />
+            <SPdisadvantages />
           </div>
         )}
       </div>
@@ -247,3 +264,37 @@ const CompanyFormation = () => {
 };
 
 export default CompanyFormation;
+
+//===> Can be Re-used
+{
+  /* {currentTab === 5 && (
+  <div>
+    <ISchecklist />
+    <ISadvantage />
+    <IStype />
+    <IShelp />
+    <IStax />
+    <ISstep />
+    <RaiseQueryForm />
+    <PLCFAQs />
+  </div>
+)}
+{currentTab === 6 && (
+  <div>
+    <PCchecklist />
+    <PCadvantages />
+    <PCtype />
+    <RaiseQueryForm />
+    <PLCFAQs />
+  </div>
+)}
+{currentTab === 7 && (
+  <div>
+    <Start />
+    <Startprocedure />
+
+    <RaiseQueryForm />
+    <PLCFAQs />
+  </div>
+)} */
+}
