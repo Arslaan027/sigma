@@ -35,7 +35,7 @@ import SPdocument from "./Soleproprietorship/SPdocument";
 import SPadvantage from "./Soleproprietorship/SPadvantage";
 import SPdisadvantages from "./Soleproprietorship/SPdisadvantages";
 import CSwhat from "./CooperativeSociety/CSwhat";
-import PriLCwhat from "./PriLC/priLCwhat";
+import PriLCwhat from "./PriLC/PriLCwhat";
 import LLPwhat from "./LLP/LLPwhat";
 import OPCwhat from "./OPCwhat";
 import PFwhat from "./PFwhat";
