@@ -12,6 +12,10 @@ import { PiMoonStarsFill } from "react-icons/pi";
 import VM from "./Components/AboutUs/Visson-Mission/V&M";
 import Certificate from "./Components/AboutUs/Certificate";
 import GSTRegistration from "./Components/GSTRegistration/GSTRegistration";
+import FSSAI from "./Components/FSSAI/FSSAI";
+import IEC from "./Components/IEC/IEC";
+import ISO from "./Components/ISO/ISO";
+import Trademark from "./Components/Trademark/Trademark";
 
 const App = () => {
   // Manage dark mode state
@@ -52,6 +56,11 @@ const App = () => {
             <Route path="/trade-registration" element={<TradeRegistration />} />
             <Route path="/company-formation" element={<CompanyFormation />} />
             <Route path="/gst-registration" element={<GSTRegistration />} />
+            <Route path="/food-safety" element={<FSSAI />} />
+            <Route path="/import-export-code" element={<IEC />} />
+            <Route path="/iso-certification" element={<ISO />} />
+            <Route path="/trademark" element={<Trademark />} />
+
             <Route path="/about" element={<AboutUs />} />
             <Route path="/cost-calculator" element={<CostCalculator />} />
             <Route path="/horeca" element={<Horeca />} />

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import GST from "../../assets/Image/GSTBG.jpg"; // Importing the background image
+import FSSAI from "../../assets/Image/FSSAI.jpg"; // Make sure the image path is correct
 
-const GSThero = () => {
+const FSSAIhero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Function to open modal
@@ -12,35 +12,31 @@ const GSThero = () => {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div className="relative h-screen flex flex-col justify-center items-center text-center p-8">
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${GST})`,
-        }}
-      >
-        {/* Overlay with opacity */}
-        <div className="absolute inset-0 bg-black opacity-70"></div>
-      </div>
+    <div
+      className="relative h-screen flex flex-col justify-center items-center text-center p-8 bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${FSSAI})`,
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
       {/* Content */}
       <motion.h1
-        className="relative z-10 text-3xl md:text-5xl font-bold text-white dark:text-white mb-4"
+        className="relative z-10 text-5xl font-bold text-white mb-4"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Get Your GST Registration Today!
+        FSSAI Registration
       </motion.h1>
       <motion.p
-        className="relative z-10 text-md  text-white dark:text-neutral-400 mb-6"
+        className="relative z-10 text-lg text-white mb-6"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        Simplify your business with GST registration. Enjoy seamless compliance
-        and take your business to the next level.
+        Secure Your Food Business with Hassle-Free FSSAI Registration!
       </motion.p>
       <motion.button
         onClick={openModal}
@@ -49,72 +45,103 @@ const GSThero = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.4 }}
       >
-        Start Registration
+        Book Now
       </motion.button>
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white dark:bg-neutral-900 p-8 rounded-lg shadow-lg max-w-md w-full">
+        <div className="fixed inset-0 px-5 md:pt-24 bg-black bg-opacity-50 flex justify-center items-center z-50 overflow-y-auto">
+          <div className="bg-white dark:bg-neutral-900 p-8 rounded-lg shadow-lg max-w-md w-full relative z-20">
             <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-              GST Registration Form
+              FSSAI Registration Form
             </h2>
 
-            {/* Registration Form */}
+            {/* FSSAI Registration Form */}
             <form className="space-y-4">
               <div>
                 <label className="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2 text-left">
-                  Business Name
+                  Name*
                 </label>
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-md dark:bg-neutral-800 dark:border-gray-700 dark:text-white"
-                  placeholder="Enter your business name"
+                  placeholder="Type your Good Name"
                   required
                 />
               </div>
               <div>
                 <label className="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2 text-left">
-                  GSTIN (If available)
-                </label>
-                <input
-                  type="text"
-                  className="w-full p-2 border border-gray-300 rounded-md dark:bg-neutral-800 dark:border-gray-700 dark:text-white"
-                  placeholder="Enter your GSTIN"
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2 text-left">
-                  Annual Turnover
-                </label>
-                <input
-                  type="number"
-                  className="w-full p-2 border border-gray-300 rounded-md dark:bg-neutral-800 dark:border-gray-700 dark:text-white"
-                  placeholder="Enter your annual turnover"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2 text-left">
-                  Email
+                  Email Id*
                 </label>
                 <input
                   type="email"
                   className="w-full p-2 border border-gray-300 rounded-md dark:bg-neutral-800 dark:border-gray-700 dark:text-white"
-                  placeholder="Enter your email"
+                  placeholder="Type your Valid Email id"
                   required
                 />
               </div>
               <div>
                 <label className="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2 text-left">
-                  Contact Number
+                  Mobile Number*
                 </label>
                 <input
                   type="tel"
                   className="w-full p-2 border border-gray-300 rounded-md dark:bg-neutral-800 dark:border-gray-700 dark:text-white"
-                  placeholder="Enter your contact number"
+                  placeholder="Type your Valid Mobile Number"
                   required
                 />
+              </div>
+              <div>
+                <label className="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2 text-left">
+                  Are you on WhatsApp?*
+                </label>
+                <div className="flex space-x-4">
+                  <label className="flex items-center">
+                    <input
+                      type="radio"
+                      name="whatsapp"
+                      value="Yes"
+                      className="mr-2"
+                      required
+                    />
+                    Yes
+                  </label>
+                  <label className="flex items-center">
+                    <input
+                      type="radio"
+                      name="whatsapp"
+                      value="No"
+                      className="mr-2"
+                    />
+                    No
+                  </label>
+                </div>
+              </div>
+              <div>
+                <label className="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2 text-left">
+                  Type of License*
+                </label>
+                <select
+                  className="w-full p-2 border border-gray-300 rounded-md dark:bg-neutral-800 dark:border-gray-700 dark:text-white"
+                  required
+                >
+                  <option value="">Select License Type</option>
+                  <option value="Up to 12 lakh">Turnover Up to 12 lakh</option>
+                  <option value="12 lakh to 20 Crore">
+                    12 lakh to 20 Crore
+                  </option>
+                  <option value="20 Crore or More">20 Crore or More</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2 text-left">
+                  About your Business*
+                </label>
+                <textarea
+                  className="w-full p-2 border border-gray-300 rounded-md dark:bg-neutral-800 dark:border-gray-700 dark:text-white"
+                  placeholder="Let us know your nature of business"
+                  required
+                ></textarea>
               </div>
 
               {/* Submit and Close Buttons */}
@@ -140,4 +167,4 @@ const GSThero = () => {
   );
 };
 
-export default GSThero;
+export default FSSAIhero;
