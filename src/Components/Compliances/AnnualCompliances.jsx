@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 
 const AnnualCompliances = () => {
+
+
   const [openSection, setOpenSection] = useState(null);
+  
 
   const toggleSection = (index) => {
     setOpenSection(openSection === index ? null : index);
@@ -138,6 +141,7 @@ const AnnualCompliances = () => {
           Here is a detailed explanation of various annual filings and
           compliance requirements for different types of entities in India.
         </p>
+
 
         {sections.map((section, index) => (
           <div key={index} className="mb-4 border-b w-auto">
