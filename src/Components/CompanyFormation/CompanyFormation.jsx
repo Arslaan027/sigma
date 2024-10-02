@@ -33,7 +33,7 @@ import FSadvantages from "../ForeignCompany/FSadvantages";
 import FSdisadvantages from "../ForeignCompany/FSdisadvantages";
 import SPdocument from "./Soleproprietorship/SPdocument";
 import SPadvantage from "./Soleproprietorship/SPadvantage";
-import SPdisadvantages from "./Soleproprietorship/SPdisadvantages";
+// import SPdisadvantages from "./Soleproprietorship/SPdisadvantage";
 import CSwhat from "./CooperativeSociety/CSwhat";
 import PriLCwhat from "./PriLC/PriLCwhat";
 import LLPwhat from "./LLP/LLPwhat";
@@ -42,46 +42,20 @@ import PFwhat from "./PFwhat";
 import Sec8what from "./Sec8/Sec8what";
 import FCwhat from "../ForeignCompany/FCwhat";
 import SPwhat from "./Soleproprietorship/SPwhat";
-import PLCwhat from "./PubLC/PLCwhat";
 
-//===> Can be Re-used
-// import PLCFAQs from "./PLCFAQs";
-// import RaiseQueryForm from "../RaiseQueryForm";
-// import IStype from "./IStype";
-// import ISadvantage from "./ISadvantage";
-// import IShelp from "./IShelp";
-// import IStax from "./IStax";
-// import ISstep from "./ISstep";
-// import ISchecklist from "./ISchecklist";
-// import PCadvantages from "./PCadvantages";
-// import PCchecklist from "./PCchecklist";
-// import PCtype from "./PCtype";
-// import Start from "./Start";
-// import Startprocedure from "./Startprocedure";
-// import BestBusiness from "../Home/BestBusiness";
-// import RegistrationForm from "../TradeRegistration/RegistrationForm";
-// import Roadmap from "./Roadmap";
-// import FAQs from "./FAQs";
-// import PLCsteps from "./PLCsteps";
-// import LLPsteps from "./LLPsteps";
-// import OPCchecklist from "./OPCchecklist";
-// import OPCsteps from "./OPCsteps";
-// import PFchecklist from "./PFchecklist";
+import BusinessFormation from "./BusinessFormation";
 
 const CompanyFormation = () => {
   const [currentTab, setCurrentTab] = useState(0);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [dropdownStyles, setDropdownStyles] = useState({});
+  const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      setDropdownStyles({
-        position: scrollY > 50 ? "fixed" : "relative",
-        top: "20px", // Adjust based on your header's height
-        zIndex: 1000,
-        width: "100%",
-      });
+
+      // Check for sticky navbar
+      setIsSticky(scrollY > 700);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -90,11 +64,7 @@ const CompanyFormation = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [dropdownOpen]);
-
-  // const handleTabChange = (event, newValue) => {
-  //   setCurrentTab(newValue);
-  // };
+  }, []);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -107,16 +77,22 @@ const CompanyFormation = () => {
 
   return (
     <div>
-      <Box sx={{ width: "100%" }}>
+      {/* Hello Component */}
+      <BusinessFormation />
+
+      <Box
+        sx={{ width: "100%", transition: "top 1s" }}
+        style={isSticky ? { position: "fixed", top: 0, zIndex: 30 } : {}}
+      >
         {/* Desktop Tabs */}
-        <div className="p-2 bg-white dark:bg-neutral-900 flex border-t border-gray-300 space-x-1 rounded-lg hidden md:flex max-w-full overflow-x-auto custom-scrollbar">
+        <div className="p-0.5 bg-gray-200 dark:bg-neutral-900 flex border-t border-gray-300 rounded-lg hidden md:flex max-w-full overflow-x-auto custom-scrollbar">
           {[
             "Private Limited",
             "Public Limited",
             "Limited Liability Partnership",
             "One Person Company",
             "Partnership Firm",
-            "Section 8 Company",
+            "Sec8 Company",
             "Cooperative Society",
             "Foreign Company",
             "Sole Proprietorship",
@@ -124,7 +100,7 @@ const CompanyFormation = () => {
             <MenuItem
               key={index}
               onClick={() => handleMenuItemClick(index)}
-              className={`flex-1 text-center rounded-lg cursor-pointer transition-colors duration-300 py-0.5 text-[5px] ${
+              className={`text-center whitespace-nowrap px-2 py-1 mx-1 rounded-lg cursor-pointer transition-colors duration-300 text-[5px] ${
                 currentTab === index
                   ? "bg-green-500 text-white dark:bg-green-600 rounded-lg"
                   : "text-gray-800 dark:text-gray-300 dark:hover:text-white"
@@ -137,7 +113,7 @@ const CompanyFormation = () => {
 
         {/* Mobile Dropdown */}
         <div className="md:hidden flex flex-col w-full">
-          <div className="flex justify-between items-center px-4 py-2 border-b border-gray-300 dark:border-gray-700">
+          <div className="flex bg-white justify-between items-center px-4 py-2 border-b border-gray-300 dark:border-gray-700">
             <div className="flex items-center">
               <BusinessIcon className="mr-2 text-gray-800 dark:text-gray-200" />
               <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
@@ -162,7 +138,7 @@ const CompanyFormation = () => {
               dropdownOpen ? "max-h-screen" : "max-h-0"
             }`}
           >
-            <div className="p-4 bg-white dark:bg-neutral-900 border-t border-gray-300 dark:border-gray-700">
+            <div className="p-2 bg-white dark:bg-neutral-900 border-t border-gray-300 dark:border-gray-700">
               {[
                 "Private Limited",
                 "Public Limited",
@@ -188,63 +164,47 @@ const CompanyFormation = () => {
       </Box>
 
       <div className="">
-        {currentTab === 0 && ( //===>(✔)
+        {currentTab === 0 && (
           <div>
             <PriLCwhat />
             <Requirement />
             <PriLCadvantages />
             <PriLCDisadvantage />
-            {/* <Roadmap /> */}
-            {/* <RaiseQueryForm /> */}
-            {/* <FAQs /> */}
           </div>
         )}
-        {currentTab === 1 && ( //===>(✔)
+        {currentTab === 1 && (
           <div>
             <PLCwhat />
             <PLCDocuments />
-            {/* <PLCsteps /> */}
             <PLCbenefits />
             <PLCDisadvantages />
-            {/* <RaiseQueryForm /> */}
-            {/* <PLCFAQs /> */}
           </div>
         )}
-        {currentTab === 2 && ( //===>(✔)
+        {currentTab === 2 && (
           <div>
             <LLPwhat />
             <LLPDocuments />
-            {/* <LLPsteps /> */}
             <LLPbenefits />
             <LLPDisadvantage />
-            {/* <RaiseQueryForm /> */}
-            {/* <PLCFAQs /> */}
           </div>
         )}
-        {currentTab === 3 && ( //===>(✔)
+        {currentTab === 3 && (
           <div>
             <OPCwhat />
             <OPCdocuments />
             <OPCbenefits />
             <OPCRestrictions />
-            {/* <OPCchecklist /> */}
-            {/* <OPCsteps /> */}
-            {/* <RaiseQueryForm /> */}
-            {/* <PLCFAQs /> */}
           </div>
         )}
-        {currentTab === 4 && ( //===>(✔)
+        {currentTab === 4 && (
           <div>
             <PFwhat />
             <PFdocument />
-            {/* <PFchecklist /> */}
             <PFadvantages />
             <PFdisadvantages />
-            {/* <RaiseQueryForm /> */}
-            {/* <PLCFAQs /> */}
           </div>
         )}
-        {currentTab === 5 && ( //===>(✔)
+        {currentTab === 5 && (
           <div>
             <Sec8what />
             <Sec8documents />
@@ -252,7 +212,7 @@ const CompanyFormation = () => {
             <Sec8Disadvantages />
           </div>
         )}
-        {currentTab === 6 && ( //===>(✔)
+        {currentTab === 6 && (
           <div>
             <CSwhat />
             <CSdocument />
@@ -260,7 +220,7 @@ const CompanyFormation = () => {
             <CSdisadvantages />
           </div>
         )}
-        {currentTab === 7 && ( //===>(✔)
+        {currentTab === 7 && (
           <div>
             <FCwhat />
             <FCdocuments />
@@ -268,7 +228,7 @@ const CompanyFormation = () => {
             <FSdisadvantages />
           </div>
         )}
-        {currentTab === 8 && ( //===>(✔)
+        {currentTab === 8 && (
           <div>
             <SPwhat />
             <SPdocument />
@@ -282,37 +242,3 @@ const CompanyFormation = () => {
 };
 
 export default CompanyFormation;
-
-//===> Can be Re-used
-{
-  /* {currentTab === 5 && (
-  <div>
-    <ISchecklist />
-    <ISadvantage />
-    <IStype />
-    <IShelp />
-    <IStax />
-    <ISstep />
-    <RaiseQueryForm />
-    <PLCFAQs />
-  </div>
-)}
-{currentTab === 6 && (
-  <div>
-    <PCchecklist />
-    <PCadvantages />
-    <PCtype />
-    <RaiseQueryForm />
-    <PLCFAQs />
-  </div>
-)}
-{currentTab === 7 && (
-  <div>
-    <Start />
-    <Startprocedure />
-
-    <RaiseQueryForm />
-    <PLCFAQs />
-  </div>
-)} */
-}

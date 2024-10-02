@@ -10,12 +10,12 @@ import LogisticsSetupDropdown from "./LogisticsSetupDropdown";
 import CostCalculator from "./CostCalculator";
 import About from "./About";
 import Home from "./Home";
+import Megamenu from "./Megamenu"; // Import the Megamenu component
 
 const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
-  // const [degreeSolution, setDegreeSolution] = useState(false);
-
   const [prevScrollY, setPrevScrollY] = useState(0);
   const [scrollDirection, setScrollDirection] = useState("down");
+  const [isMegamenuOpen, setIsMegamenuOpen] = useState(false); // State for megamenu
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +37,10 @@ const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
     };
   }, [prevScrollY]);
 
+  const toggleMegamenu = () => {
+    setIsMegamenuOpen((prev) => !prev); // Toggle the megamenu on button click
+  };
+
   return (
     <div
       className={`${
@@ -53,7 +57,7 @@ const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
           <img
             src={logo}
             alt="SS Logo"
-            className="h-16 w-auto object-contain" // Increase height to h-20 (or more)
+            className="h-16 w-auto object-contain"
           />
         </div>
 
@@ -63,8 +67,7 @@ const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
             toggled={isSidebarOpen}
             toggle={handleSidebarToggle}
             size={24}
-            // color={dark ? "#fff" : "#000"} // White in dark mode, black in light mode
-            className={`transition-colors duration-300 dark:text-white`} // Added dark:text-white here
+            className={`transition-colors duration-300 dark:text-white`}
           />
         </div>
 
@@ -73,25 +76,28 @@ const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
           {/* Home Link */}
           <Home />
 
-          {/* Business Services Dropdown */}
-          <BusinessServicesDropdown />
+          {/* Services Button */}
+          <button
+            onClick={toggleMegamenu}
+            className="text-gray-800 dark:text-white hover:text-green-500 px-4 py-2"
+          >
+            Services
+          </button>
 
-          {/* Interior & Design Dropdown */}
+          {/* Conditionally Render the Megamenu */}
+          {isMegamenuOpen && (
+            <div className="absolute top-full left-0 w-full flex justify-center mt-2">
+              <Megamenu />
+            </div>
+          )}
+
+          {/* Other Links */}
+          {/* <BusinessServicesDropdown /> */}
           <InteriorDesignDropdown />
-
-          {/* Hospitality Services Dropdown */}
           <HospitalityServicesDropdown />
-
-          {/* Marketing & Technology Dropdown */}
           <MarketingTechnologyDropdown />
-
-          {/* Logistics & Setup Dropdown */}
           <LogisticsSetupDropdown />
-
-          {/* About */}
           <About />
-
-          {/* Cost Calculator */}
           <CostCalculator />
         </div>
       </div>
