@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import Ourservices from "./OurServices";
 import CostCalculator from "./CostCalculator";
 import Home from "./Home";
-import Contact from "./Contact";
+import { Link } from "react-router-dom";
 
 // // not in use can be used
 // import HospitalityServicesDropdown from "./HospitalityServicesDropdown";
@@ -83,14 +83,19 @@ const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
           {/* Other Links */}
           <Ourservices />
 
-          <Contact />
+          <Link
+            to="/contact"
+            className="items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100"
+          >
+            Contact Us
+          </Link>
           <CostCalculator />
 
           {/* Not in Use but dont remove this */}
           {/* <BusinessServicesDropdown /> */}
           {/* <HospitalityServicesDropdown />
-          <LogisticsSetupDropdown />
           <MarketingTechnologyDropdown />
+          <LogisticsSetupDropdown />
           <About /> */}
         </div>
       </div>
