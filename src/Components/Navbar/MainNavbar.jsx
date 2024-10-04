@@ -2,19 +2,20 @@ import { useState, useEffect } from "react";
 import logo from "../../assets/Image/logorbg.png";
 import Hamburger from "hamburger-react";
 import PropTypes from "prop-types";
-import Services2 from "./Services2";
-import HospitalityServicesDropdown from "./HospitalityServicesDropdown";
-import MarketingTechnologyDropdown from "./MarketingTechnologyDropdown";
-import LogisticsSetupDropdown from "./LogisticsSetupDropdown";
+import Ourservices from "./OurServices";
 import CostCalculator from "./CostCalculator";
-import About from "./About";
 import Home from "./Home";
-import Megamenu from "./Megamenu"; // Import the Megamenu component
+import Contact from "./Contact";
+
+// // not in use can be used
+// import HospitalityServicesDropdown from "./HospitalityServicesDropdown";
+// import MarketingTechnologyDropdown from "./MarketingTechnologyDropdown";
+// import LogisticsSetupDropdown from "./LogisticsSetupDropdown";
+// import About from "./About";
 
 const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
   const [prevScrollY, setPrevScrollY] = useState(0);
   const [scrollDirection, setScrollDirection] = useState("down");
-  const [isMegamenuOpen, setIsMegamenuOpen] = useState(false); // State for megamenu
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,10 +36,6 @@ const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollY]);
-
-  const toggleMegamenu = () => {
-    setIsMegamenuOpen((prev) => !prev); // Toggle the megamenu on button click
-  };
 
   return (
     <div
@@ -76,29 +73,24 @@ const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
           <Home />
 
           {/* Services Button */}
-          <button
+          {/* <button
             onClick={toggleMegamenu}
             className="text-gray-800 dark:text-white hover:text-green-500 px-4 py-2"
           >
             Services
-          </button>
-
-          {/* Conditionally Render the Megamenu */}
-          {isMegamenuOpen && (
-            <div className="absolute top-full left-0 w-full flex justify-center mt-2">
-              <Megamenu />
-            </div>
-          )}
+          </button> */}
 
           {/* Other Links */}
-          {/* <BusinessServicesDropdown /> */}
-          <Services2 />
+          <Ourservices />
+
+          <Contact />
           <CostCalculator />
 
           {/* Not in Use but dont remove this */}
+          {/* <BusinessServicesDropdown /> */}
           {/* <HospitalityServicesDropdown />
-          <MarketingTechnologyDropdown />
           <LogisticsSetupDropdown />
+          <MarketingTechnologyDropdown />
           <About /> */}
         </div>
       </div>
