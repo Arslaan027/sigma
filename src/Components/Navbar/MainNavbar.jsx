@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import logo from "../../assets/Image/logorbg.png";
 import Hamburger from "hamburger-react";
 import PropTypes from "prop-types";
-import BusinessServicesDropdown from "./BusinessServicesDropdown";
-import InteriorDesignDropdown from "./InteriorDesignDropdown";
+import Services2 from "./Services2";
 import HospitalityServicesDropdown from "./HospitalityServicesDropdown";
 import MarketingTechnologyDropdown from "./MarketingTechnologyDropdown";
 import LogisticsSetupDropdown from "./LogisticsSetupDropdown";
@@ -72,7 +71,7 @@ const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
         </div>
 
         {/* Right Side */}
-        <div className="space-x-0 text-sm hidden lg:flex items-center z-30">
+        <div className="space-x-2 text-sm hidden lg:flex items-center z-30">
           {/* Home Link */}
           <Home />
 
@@ -93,12 +92,14 @@ const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
 
           {/* Other Links */}
           {/* <BusinessServicesDropdown /> */}
-          <InteriorDesignDropdown />
-          <HospitalityServicesDropdown />
+          <Services2 />
+          <CostCalculator />
+
+          {/* Not in Use but dont remove this */}
+          {/* <HospitalityServicesDropdown />
           <MarketingTechnologyDropdown />
           <LogisticsSetupDropdown />
-          <About />
-          <CostCalculator />
+          <About /> */}
         </div>
       </div>
     </div>

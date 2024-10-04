@@ -9,57 +9,62 @@ const Megamenu = () => {
   };
 
   const businessServices = [
-    { path: "/company-formation", label: "Business Formation" },
-    { path: "/ngo-society-registrations", label: "NGO Registration" },
-    { path: "/", label: "Licensing & Certifications" },
-    { path: "/", label: "Intellectual Property" },
-    { path: "/", label: "International Business Setup" },
-    { path: "/", label: "Exhibition Services" },
-    { path: "/", label: "Business Buying, Selling AND Leasing" },
+    { path: "/company-formation", label: "Private Limited Companies" },
+    {
+      path: "/company-formation",
+      label: "Public Limited Companies (PLC)",
+    },
+    {
+      path: "/company-formation",
+      label: "Limited Liability Partnership (LLP)",
+    },
+    { path: "/company-formation", label: "One Person Company (OPC)" },
+    { path: "/company-formation", label: "Partnership Firm" },
+    { path: "/company-formation", label: "Sole Proprietorship Firm" },
+    { path: "/company-formation", label: "Section 8 Company" },
+    { path: "/company-formation", label: "Cooperative Society" },
+    { path: "/company-formation", label: "Foreign Company" },
   ];
 
   const accountingServices = [
-    { path: "/gst-returns", label: "GST Returns Services" },
-    { path: "/dsc-pan-epf", label: "DSC, PAN, EPF" },
-    { path: "/income-tax", label: "Income Tax Related Services" },
-    { path: "/book-keeping", label: "Book Keeping Services" },
-    { path: "/notice-scrutiny", label: "Notice & Scrutiny" },
-    { path: "/agreements", label: "Agreements" },
-    { path: "/loan-consultancy", label: "Loan Consultancy" },
+    { path: "/gst-returns", label: "ISO Certifications" },
+    { path: "/dsc-pan-epf", label: "GST Registration" },
+    { path: "/income-tax", label: "FSSAI License" },
+    { path: "/book-keeping", label: "Udyam Registration (MSME)" },
+    { path: "/notice-scrutiny", label: "Drug License" },
+    { path: "/agreements", label: "Import Export Certificate (IEC)" },
+    { path: "/loan-consultancy", label: "Startup India Registration" },
+    { path: "/loan-consultancy", label: "Trading License" },
+    { path: "/loan-consultancy", label: "Digital Signature Certificate (DSC)" },
   ];
 
   const products = [
-    { label: "Documentation", path: "/" },
-    { label: "Pricing", path: "/" },
-    { label: "Web", path: "/" },
-    { label: "License", path: "/" },
-  ];
-
-  const resources = [
-    { label: "Blog", path: "/" },
-    { label: "Events", path: "/" },
-    { label: "Industry Tips", path: "/" },
+    { label: "NGO Registration", path: "/" },
+    { label: "International Business Setup", path: "/" },
+    { label: "Intellectual Property", path: "/" },
+    { label: "Exhibition Services", path: "/" },
+    { label: "Business Buying, Selling & Leasing", path: "/" },
   ];
 
   return (
     <>
       {isMenuOpen && ( // Render only if the menu is open
-        <div className="w-screen max-w-4xl bg-white border-t shadow-md p-8 rounded-2xl">
-          <div className="grid grid-cols-4 gap-0">
+        <div className="w-screen max-w-4xl bg-white border-t shadow-md p-8 rounded-2xl dark:bg-neutral-800 ">
+          <div className="grid grid-cols-3 gap-0">
             {/* Business Services Column */}
             <section aria-labelledby="company-heading">
               <h4
                 id="company-heading"
-                className="font-semibold text-gray-800 mb-4"
+                className="font-semibold text-gray-800 mb-4 dark:text-gray-300"
               >
-                Business Services
+                Business Formation
               </h4>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 {businessServices.map((service) => (
                   <li key={service.label}>
                     <Link
                       to={service.path}
-                      className="hover:text-green-500 block"
+                      className="hover:text-green-500 block dark:text-gray-300"
                       onClick={closeMenu} // Close menu on click
                     >
                       {service.label}
@@ -73,16 +78,16 @@ const Megamenu = () => {
             <section aria-labelledby="accounting-heading">
               <h4
                 id="accounting-heading"
-                className="font-semibold text-gray-800 mb-4"
+                className="font-semibold text-gray-800 mb-4 dark:text-gray-300"
               >
-                Accounting Services
+                Licencing & Certification
               </h4>
               <ul className="space-y-2 text-gray-600">
                 {accountingServices.map((service) => (
                   <li key={service.label}>
                     <Link
                       to={service.path}
-                      className="hover:text-green-500 block"
+                      className="hover:text-green-500 block dark:text-gray-300"
                       onClick={closeMenu} // Close menu on click
                     >
                       {service.label}
@@ -96,42 +101,19 @@ const Megamenu = () => {
             <section aria-labelledby="products-heading">
               <h4
                 id="products-heading"
-                className="font-semibold text-gray-800 mb-4"
+                className="font-semibold text-gray-800 mb-4 dark:text-gray-300"
               >
-                Products
+                Others
               </h4>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 {products.map((product) => (
                   <li key={product.label}>
                     <Link
                       to={product.path}
-                      className="hover:text-green-500 block"
+                      className="hover:text-green-500 block dark:text-gray-300"
                       onClick={closeMenu} // Close menu on click
                     >
                       {product.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
-
-            {/* Resources Column */}
-            <section aria-labelledby="resources-heading">
-              <h4
-                id="resources-heading"
-                className="font-semibold text-gray-800 mb-4"
-              >
-                Resources
-              </h4>
-              <ul className="space-y-2 text-gray-600">
-                {resources.map((resource) => (
-                  <li key={resource.label}>
-                    <Link
-                      to={resource.path}
-                      className="hover:text-green-500 block"
-                      onClick={closeMenu} // Close menu on click
-                    >
-                      {resource.label}
                     </Link>
                   </li>
                 ))}

@@ -283,7 +283,7 @@ const Navbar = () => {
                       className={`${
                         activeLink === link.name
                           ? "bg-black text-white"
-                          : "hover:bg-gray-100 dark:hover:bg-gray-700"
+                          : "hover:bg-gray-100 dark:hover:bg-neutral-800"
                       } block px-4 py-2 rounded-md`}
                       onClick={() => handleLinkClick(link.name)}
                     >
