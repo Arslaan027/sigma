@@ -237,16 +237,16 @@ const Footer = () => {
               Terms & Conditions
             </span>
             ,{" "}
-            <span className="text-blue-200 hover:underline cursor-pointer">
+            <span className="text-gray-500 hover:underline cursor-pointer">
               Privacy Policy
             </span>{" "}
             and{" "}
-            <span className="text-blue-200 hover:underline cursor-pointer">
+            <span className="text-gray-500 hover:underline cursor-pointer">
               Refund Policy
             </span>
             .
           </p>
-          <p>© 2024 - Safe Ledger Private Limited. All rights reserved.</p>
+          <p>© 2024 - SigmaSolution Private Limited. All rights reserved.</p>
           <p>
             Please note that we are a facilitating platform enabling access to
             reliable professionals. We are not a law firm and do not provide
