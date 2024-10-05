@@ -8,7 +8,7 @@ const sampleData = [
     name: "Business Formation",
     alternativeNames: ["Company Formation", "Business Setup", "business"], // Array of alternative names
     description: "Details about the Business Formation process.",
-    path: "/business-formation", // Path for navigation
+    path: "/company-formation", // Path for navigation
     component: BusinessFormation,
   },
   {
