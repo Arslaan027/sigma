@@ -18,7 +18,7 @@ const Megamenu2 = () => {
   return (
     <>
       {isMenuOpen && (
-        <div className="w-screen max-w-4xl bg-white border-t shadow-md p-8 rounded-2xl dark:bg-neutral-800">
+        <div className="w-screen max-w-2xl bg-white border-t shadow-md p-8 rounded-2xl dark:bg-neutral-800">
           <div className="grid grid-cols-2 gap-0">
             <section aria-labelledby="furniture-heading">
               <h4

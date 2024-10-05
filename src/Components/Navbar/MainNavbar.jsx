@@ -5,17 +5,13 @@ import PropTypes from "prop-types";
 import Ourservices from "./OurServices";
 import CostCalculator from "./CostCalculator";
 import Home from "./Home";
-import { Link } from "react-router-dom";
-
-// // not in use can be used
-// import HospitalityServicesDropdown from "./HospitalityServicesDropdown";
-// import MarketingTechnologyDropdown from "./MarketingTechnologyDropdown";
-// import LogisticsSetupDropdown from "./LogisticsSetupDropdown";
-// import About from "./About";
+import { Link, useNavigate } from "react-router-dom";
 
 const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
   const [prevScrollY, setPrevScrollY] = useState(0);
   const [scrollDirection, setScrollDirection] = useState("down");
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate(); // Hook for navigation
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +33,22 @@ const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
     };
   }, [prevScrollY]);
 
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value); // Update search term state
+  };
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission
+    if (searchTerm.trim()) {
+      // Check if the search term is not empty
+      console.log("Search for:", searchTerm);
+      // Here you can implement logic to redirect to a search results page
+      // For example:
+      navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
+      setSearchTerm(""); // Clear the search term after submission
+    }
+  };
+
   return (
     <div
       className={`${
@@ -49,7 +61,7 @@ const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
     >
       <div className="flex items-center justify-between px-4">
         {/* Left Side with Logo */}
-        <div className="flex items-center space-x-4 text-sm">
+        <div className="flex items-center space-x-2 text-sm">
           <img
             src={logo}
             alt="SS Logo"
@@ -68,35 +80,40 @@ const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
         </div>
 
         {/* Right Side */}
-        <div className="space-x-2 text-sm hidden lg:flex items-center z-30">
+        <div className="space-x-2 text-sm hidden lg:flex items-center z-30 h-12">
           {/* Home Link */}
           <Home />
-
-          {/* Services Button */}
-          {/* <button
-            onClick={toggleMegamenu}
-            className="text-gray-800 dark:text-white hover:text-green-500 px-4 py-2"
-          >
-            Services
-          </button> */}
-
-          {/* Other Links */}
           <Ourservices />
-
+          {/* Other Links */}
+          <Link className="items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100">
+            Our Company
+          </Link>
+          <Link className="items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100">
+            Portfolio
+          </Link>
+          <Link className="items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100">
+            BLOG
+          </Link>
+          <CostCalculator />
           <Link
             to="/contact"
             className="items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100"
           >
             Contact Us
           </Link>
-          <CostCalculator />
-
-          {/* Not in Use but dont remove this */}
-          {/* <BusinessServicesDropdown /> */}
-          {/* <HospitalityServicesDropdown />
-          <MarketingTechnologyDropdown />
-          <LogisticsSetupDropdown />
-          <About /> */}
+          {/* Search Box */}
+          <form
+            onSubmit={handleSearchSubmit}
+            className="flex items-center border rounded-lg border-gray-300"
+          >
+            <input
+              type="text"
+              placeholder="Search..."
+              value={searchTerm} // Bind the input value to searchTerm state
+              onChange={handleSearchChange} // Handle input changes
+              className="flex-grow py-2 px-4 rounded-l-md outline-none focus:ring-1 focus:ring-green-500 transition duration-200 ease-in-out h-full"
+            />
+          </form>
         </div>
       </div>
     </div>
@@ -107,9 +124,6 @@ MainNavbar.propTypes = {
   isFixed: PropTypes.bool.isRequired,
   handleSidebarToggle: PropTypes.func.isRequired,
   isSidebarOpen: PropTypes.bool.isRequired,
-  handleLinkClick: PropTypes.func.isRequired,
-  handleDropdownToggle: PropTypes.func.isRequired,
-  dropdownOpen: PropTypes.number,
 };
 
 export default MainNavbar;

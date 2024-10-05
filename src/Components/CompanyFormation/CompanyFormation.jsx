@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa"; // Importing React Icons
 import MenuItem from "@mui/material/MenuItem";
 import BusinessIcon from "@mui/icons-material/Business";
 import "../../index.css";
@@ -48,7 +47,7 @@ const CompanyFormation = () => {
   const [currentTab, setCurrentTab] = useState(0);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(true); // Initially sidebar is open
 
   // GSAP Animation for Sidebar
   useGSAP(() => {
@@ -71,7 +70,7 @@ const CompanyFormation = () => {
   }, []);
 
   const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
+    setDropdownOpen((prev) => !prev);
   };
 
   const handleMenuItemClick = (index) => {
@@ -79,12 +78,24 @@ const CompanyFormation = () => {
     setDropdownOpen(false);
   };
 
+  const toggleSidebar = () => {
+    setSidebarOpen((prev) => !prev);
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      toggleSidebar();
+    }
+  };
+
   return (
-    <div className="flex">
+    <div className="flex" onKeyPress={handleKeyPress} tabIndex={0}>
       {/* Sidebar for Navigation */}
       <div
         id="sidebar"
-        className={`hidden md:block w-auto h-auto bg-transparent shadow-lg fixed top-20 rounded-se-3xl rounded-ee-3xl left-0 z-10 flex flex-col justify-center transition-transform duration-300 rounded-sm border border-gray-300`}
+        className={`hidden md:block w-auto h-auto bg-transparent shadow-lg fixed top-20 rounded-se-3xl rounded-ee-3xl left-0 z-10 flex flex-col justify-center transition-transform duration-300 rounded-sm border border-gray-300 ${
+          sidebarOpen ? "translate-x-0" : "-translate-x-full"
+        }`} // Apply translate based on sidebarOpen state
         aria-expanded={sidebarOpen} // Add aria-expanded
       >
         <div className="p-2 text-black flex flex-col justify-between gap-5 h-full">
@@ -125,7 +136,6 @@ const CompanyFormation = () => {
           </ul>
         </div>
       </div>
-
       {/* Main Content */}
       <div className="w-full ml-auto">
         {/* Mobile Dropdown */}
@@ -143,13 +153,13 @@ const CompanyFormation = () => {
               </div>
               <IconButton
                 onClick={toggleDropdown}
-                aria-label="more"
+                aria-label="toggle dropdown"
                 className={`${dropdownOpen ? "" : "animation-shake"} text-5xl`}
               >
                 {dropdownOpen ? (
-                  <ArrowDropUpIcon className="text-gray-800" />
+                  <FaAngleUp className="text-gray-800" />
                 ) : (
-                  <ArrowDropDownIcon className="text-xl text-gray-800" />
+                  <FaAngleDown className="text-xl text-gray-800" />
                 )}
               </IconButton>
             </div>
@@ -185,7 +195,7 @@ const CompanyFormation = () => {
         </Box>
 
         {/* Main Content */}
-        <div className="p-4 mt-10">
+        <div>
           {currentTab === 0 && (
             <div>
               <BusinessFormation />
@@ -197,7 +207,6 @@ const CompanyFormation = () => {
           )}
           {currentTab === 1 && (
             <div>
-              <BusinessFormation />
               <PLCDocuments />
               <PLCbenefits />
               <PLCDisadvantages />
@@ -205,7 +214,6 @@ const CompanyFormation = () => {
           )}
           {currentTab === 2 && (
             <div>
-              <BusinessFormation />
               <LLPwhat />
               <LLPDocuments />
               <LLPbenefits />
@@ -214,7 +222,6 @@ const CompanyFormation = () => {
           )}
           {currentTab === 3 && (
             <div>
-              <BusinessFormation />
               <OPCwhat />
               <OPCdocuments />
               <OPCbenefits />
@@ -223,7 +230,6 @@ const CompanyFormation = () => {
           )}
           {currentTab === 4 && (
             <div>
-              <BusinessFormation />
               <PFwhat />
               <PFdocument />
               <PFadvantages />
@@ -232,7 +238,6 @@ const CompanyFormation = () => {
           )}
           {currentTab === 5 && (
             <div>
-              <BusinessFormation />
               <Sec8what />
               <Sec8documents />
               <Sec8Advantages />
@@ -241,7 +246,6 @@ const CompanyFormation = () => {
           )}
           {currentTab === 6 && (
             <div>
-              <BusinessFormation />
               <CSwhat />
               <CSdocument />
               <CSadvantages />
@@ -250,7 +254,6 @@ const CompanyFormation = () => {
           )}
           {currentTab === 7 && (
             <div>
-              <BusinessFormation />
               <FCwhat />
               <FCdocuments />
               <FSadvantages />
@@ -259,7 +262,6 @@ const CompanyFormation = () => {
           )}
           {currentTab === 8 && (
             <div>
-              <BusinessFormation />
               <SPwhat />
               <SPdocument />
               <SPadvantage />

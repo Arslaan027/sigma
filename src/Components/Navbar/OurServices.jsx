@@ -43,7 +43,7 @@ const Ourservices = ({ activeLink }) => {
 
             {isMenuOpen && (
               <div
-                className="absolute top-0 right-full mt-2"
+                className="absolute top-0 left-full mt-2"
                 onMouseEnter={() => handleMouseEnter("business")}
                 onMouseLeave={() => handleMouseLeave("business")}
               >
@@ -63,7 +63,7 @@ const Ourservices = ({ activeLink }) => {
 
             {isMenu2Open && (
               <div
-                className="absolute top-0 right-full mt-2"
+                className="absolute top-0 left-full mt-2"
                 onMouseEnter={() => handleMouseEnter("furniture")}
                 onMouseLeave={() => handleMouseLeave("furniture")}
               >
