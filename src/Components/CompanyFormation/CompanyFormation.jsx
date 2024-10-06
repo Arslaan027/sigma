@@ -93,16 +93,16 @@ const CompanyFormation = () => {
       {/* Sidebar for Navigation */}
       <div
         id="sidebar"
-        className={`hidden md:block w-auto h-auto bg-transparent shadow-lg fixed top-20 rounded-se-3xl rounded-ee-3xl left-0 z-10 flex flex-col justify-center transition-transform duration-300 rounded-sm border border-gray-300 ${
+        className={`hidden md:block w-auto h-auto bg-transparent hover:dark:bg-neutral-800 dark:text-gray-200 shadow-lg fixed top-20 rounded-se-3xl rounded-ee-3xl left-0 z-10 flex flex-col justify-center transition-transform duration-300 rounded-sm border border-gray-300 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`} // Apply translate based on sidebarOpen state
         aria-expanded={sidebarOpen} // Add aria-expanded
       >
         <div className="p-2 text-black flex flex-col justify-between gap-5 h-full">
-          <h2 className="text-lg font-semibold text-center text-gray-700">
+          <h2 className="text-lg font-semibold text-center text-gray-700  dark:text-gray-200">
             Company Types
           </h2>
-          <ul className="flex flex-col text-left w-auto">
+          <ul className="flex flex-col text-left w-auto  dark:text-gray-200">
             {[
               "Private Limited Company",
               "Public Limited Company",
@@ -125,8 +125,8 @@ const CompanyFormation = () => {
                 aria-pressed={currentTab === index}
                 className={`cursor-pointer p-2 text-sm rounded-md w-full flex items-center transition-colors duration-200 ease-in-out ${
                   currentTab === index
-                    ? "bg-green-300 text-white"
-                    : "hover:bg-green-200"
+                    ? "bg-green-300 dark:bg-neutral-700 text-white"
+                    : "hover:bg-green-200 dark:hover:bg-neutral-900"
                 }`}
               >
                 <span className="mr-2"></span>
@@ -147,14 +147,14 @@ const CompanyFormation = () => {
             <div className="flex bg-white justify-between items-center px-4 py-2 border-b border-gray-300">
               <div className="flex items-center">
                 <BusinessIcon className="mr-2 text-gray-800" />
-                <h3 className="text-lg font-semibold text-gray-800">
-                  Different Companies
+                <h3 className="text-md  font-serif text-gray-800">
+                  See More Company Options
                 </h3>
               </div>
               <IconButton
                 onClick={toggleDropdown}
                 aria-label="toggle dropdown"
-                className={`${dropdownOpen ? "" : "animation-shake"} text-5xl`}
+                className={`${dropdownOpen ? "" : ""} text-5xl`}
               >
                 {dropdownOpen ? (
                   <FaAngleUp className="text-gray-800" />

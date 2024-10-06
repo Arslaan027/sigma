@@ -1,5 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import BusinessFormation from "./CompanyFormation/BusinessFormation";
+import Contact from "./Navbar/Contact";
+
 // Import other components as needed
 
 const sampleData = [
@@ -13,11 +15,19 @@ const sampleData = [
   },
   {
     id: 2,
-    name: "Product A",
-    alternativeNames: ["Item A", "Product Alpha"], // Array of alternative names
-    description: "Details about Product A.",
-    path: "/product-a", // Path for navigation
-    component: null, // Replace with actual component if needed
+    name: "Contact Us",
+    alternativeNames: [
+      "Contact",
+      "Phone",
+      "Phone Number",
+      "Email",
+      "Help",
+      "business",
+    ], // Array of alternative names
+    description: "Click the link to contact us.",
+
+    path: "/contact", // Path for navigation
+    component: Contact, // Replace with actual component if needed
   },
   {
     id: 3,
@@ -68,7 +78,7 @@ const SearchResults = () => {
                 {item.path && (
                   <Link
                     to={item.path}
-                    className="mt-4 inline-block text-blue-600 hover:underline"
+                    className="mt-4 inline-block text-white bg-green-500 hover:bg-green-700 px-4 py-2 rounded-full"
                   >
                     View {item.name}
                   </Link>

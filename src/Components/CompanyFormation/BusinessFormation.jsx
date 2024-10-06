@@ -4,7 +4,7 @@ import BF from "../../assets/Image/BF.jpg"; // Ensure the image path is correct
 
 const BusinessFormation = () => {
   return (
-    <div className="flex justify-center items-center h-[60vh] bg-white dark:bg-neutral-900">
+    <div className="flex justify-center items-center h-screen md:h-[60vh] bg-white dark:bg-neutral-900">
       <div className="dark:bg-neutral-900 p-8 mx-auto max-w-5xl">
         {/* Heading */}
         <motion.h2

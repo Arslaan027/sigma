@@ -8,7 +8,7 @@ const Home = ({ activeLink, handleLinkClick }) => {
       <Link
         to="/"
         onClick={() => handleLinkClick("Home")}
-        className={`flex dark:bg-gray-800 dark:text-gray-100 items-center space-x-2 px-4 py-2 rounded-md ${
+        className={`flex dark:bg-neutral-800 dark:text-gray-100 items-center space-x-2 px-4 py-2 rounded-md ${
           activeLink === "Home" ? "bg-gray-200 text-black" : "hover:bg-gray-200"
         }`}
       >

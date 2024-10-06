@@ -20,6 +20,9 @@ import NGO from "./Components/NGO/NGO";
 import Compliances from "./Components/Compliances/Compliances";
 import Contact from "./Components/Navbar/Contact";
 import SearchResults from "./Components/SearchResults.jsx";
+import RefundPolicy from "./Components/Footer/RefundPolicy.jsx";
+import PrivacyPolicy from "./Components/Footer/PrivacyPolicy.jsx";
+import Terms from "./Components/Footer/Terms.jsx";
 
 const App = () => {
   // Manage dark mode state
@@ -74,6 +77,9 @@ const App = () => {
             <Route path="/horeca" element={<Horeca />} />
             <Route path="/vm" element={<VM />} />
             <Route path="/certificate" element={<Certificate />} />
+            <Route path="/Refund-Policy" element={<RefundPolicy />} />
+            <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
+            <Route path="/Terms-Conditions" element={<Terms />} />
           </Route>
         </Routes>
       </div>

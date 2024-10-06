@@ -25,16 +25,16 @@ const Ourservices = ({ activeLink }) => {
           className={`flex items-center space-x-2 px-4 py-2 rounded-md ${
             activeLink === "InteriorDesign"
               ? "bg-black text-white"
-              : "hover:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+              : "hover:bg-gray-200 dark:hover:bg-neutral-800 dark:hover:text-gray-100"
           }`}
         >
           <span>Our Services</span>
         </button>
 
-        <div className="absolute w-44 bg-white dark:bg-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-300">
+        <div className="absolute w-44 bg-white dark:bg-neutral-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-300">
           <div className="relative">
             <button
-              className="block px-4 py-2 w-full text-left hover:bg-gray-100 dark:hover:bg-gray-700"
+              className="block px-4 py-2 w-full text-left hover:bg-gray-100 dark:hover:bg-neutral-700"
               onMouseEnter={() => handleMouseEnter("business")}
               onMouseLeave={() => handleMouseLeave("business")}
             >
@@ -54,7 +54,7 @@ const Ourservices = ({ activeLink }) => {
 
           <div className="relative">
             <button
-              className="block px-4 py-2 w-full text-left hover:bg-gray-100 dark:hover:bg-gray-700"
+              className="block px-4 py-2 w-full text-left hover:bg-gray-100 dark:hover:bg-neutral-700"
               onMouseEnter={() => handleMouseEnter("furniture")}
               onMouseLeave={() => handleMouseLeave("furniture")}
             >
@@ -75,7 +75,7 @@ const Ourservices = ({ activeLink }) => {
           <div className="relative">
             <Link
               to="/decor-items"
-              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-700"
             >
               Services 3
             </Link>

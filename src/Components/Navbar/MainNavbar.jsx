@@ -85,19 +85,19 @@ const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
           <Home />
           <Ourservices />
           {/* Other Links */}
-          <Link className="items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100">
+          <Link className="items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-200 hover:dark:bg-neutral-800  dark:text-gray-100">
             Our Company
           </Link>
-          <Link className="items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100">
+          <Link className="items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-200 hover:dark:bg-neutral-800 dark:text-gray-100">
             Portfolio
           </Link>
-          <Link className="items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100">
+          <Link className="items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-200 hover:dark:bg-neutral-800 dark:text-gray-100">
             BLOG
           </Link>
           <CostCalculator />
           <Link
             to="/contact"
-            className="items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100"
+            className="items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-200 hover:dark:bg-neutral-800 dark:text-gray-100"
           >
             Contact Us
           </Link>
@@ -111,7 +111,7 @@ const MainNavbar = ({ isFixed, handleSidebarToggle, isSidebarOpen }) => {
               placeholder="Search..."
               value={searchTerm} // Bind the input value to searchTerm state
               onChange={handleSearchChange} // Handle input changes
-              className="flex-grow py-2 px-4 rounded-l-md outline-none focus:ring-1 focus:ring-green-500 transition duration-200 ease-in-out h-full"
+              className="flex-grow py-2 px-4 dark:bg-neutral-800 rounded-l-md focus:ring-1 focus:ring-green-500 transition duration-200 ease-in-out h-full"
             />
           </form>
         </div>

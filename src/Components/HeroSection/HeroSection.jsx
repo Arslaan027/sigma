@@ -56,7 +56,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black opacity-50" />
 
       {/* Hero Content */}
-      <div className="relative z-10 container mx-auto text-center">
+      <div className="relative z-10 container mx-auto text-center ">
         <motion.h1
           className="text-4xl lg:text-6xl font-bold mb-4 text-white"
           initial={{ opacity: 0, y: -50 }}
