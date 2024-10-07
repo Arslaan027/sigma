@@ -5,15 +5,17 @@ import WhyLegalWiz from "./WhyUs";
 import AboutTop from "../AboutUs/AboutTop";
 import BLOG from "./BLOG";
 import Services from "./AllServiceMegaPage/Services";
+import Certification from "./Certification";
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text">
       <HeroSection />
-      <WhyLegalWiz />
-      <BLOG />
       <Services />
       <AboutTop />
+      <WhyLegalWiz />
+      <Certification />
+      <BLOG />
     </div>
   );
 };
