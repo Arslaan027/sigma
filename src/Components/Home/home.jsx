@@ -2,7 +2,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import HeroSection from "../HeroSection/HeroSection";
 import WhyLegalWiz from "./WhyUs";
-import Experts from "./Experts";
 import AboutTop from "../AboutUs/AboutTop";
 import BLOG from "./BLOG";
 import Services from "./AllServiceMegaPage/Services";

@@ -1,9 +1,8 @@
-import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Import icons
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { BsArrowRightCircle } from "react-icons/bs";
 
 // Sample blog data
@@ -80,7 +79,7 @@ const BlogPost = ({ post }) => {
 const NextArrow = ({ onClick }) => {
   return (
     <div
-      className="absolute -right-12 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer p-2 bg-white rounded-full shadow hover:bg-gray-200"
+      className=" hidden md:block absolute -right-12 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer p-2 bg-white rounded-full shadow hover:bg-gray-200"
       onClick={onClick}
     >
       <FaChevronRight className="text-gray-700" />
@@ -91,7 +90,7 @@ const NextArrow = ({ onClick }) => {
 const PrevArrow = ({ onClick }) => {
   return (
     <div
-      className="absolute -left-12 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer p-2 bg-white rounded-full shadow hover:bg-gray-200"
+      className="hidden md:block  absolute -left-12 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer p-2 bg-white rounded-full shadow hover:bg-gray-200"
       onClick={onClick}
     >
       <FaChevronLeft className="text-gray-700" />
