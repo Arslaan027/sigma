@@ -5,6 +5,7 @@ import WhyLegalWiz from "./WhyUs";
 import Experts from "./Experts";
 import AboutTop from "../AboutUs/AboutTop";
 import BLOG from "./BLOG";
+import Services from "./AllServiceMegaPage/Services";
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
       <HeroSection />
       <WhyLegalWiz />
       <BLOG />
-      <Experts />
+      <Services />
       <AboutTop />
     </div>
   );

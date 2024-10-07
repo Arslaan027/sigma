@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Import icons
+import { BsArrowRightCircle } from "react-icons/bs";
 
 // Sample blog data
 const blogPosts = [
@@ -41,7 +42,7 @@ const blogPosts = [
     excerpt:
       "This section will guide you through the different forms you need to fill out and the information you must provide, including samples of how you plan to use the trademark. After successfully registering your brand name.",
     imageUrl:
-      "https://images.pexels.com/photos/10924140/pexels-photo-10924140.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/7103084/pexels-photo-7103084.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     id: 5,
@@ -50,7 +51,7 @@ const blogPosts = [
     excerpt:
       "This section will guide you through the different forms you need to fill out and the information you must provide, including samples of how you plan to use the trademark. After successfully registering your brand name, it’s important to understand how to maintain it.",
     imageUrl:
-      "https://images.pexels.com/photos/10924140/pexels-photo-10924140.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/7339620/pexels-photo-7339620.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
 ];
 
@@ -67,9 +68,10 @@ const BlogPost = ({ post }) => {
       <p className="text-gray-800 mt-1 text-sm">{post.excerpt}</p>
       <a
         href="#"
-        className="text-white text-xs px-4 py-2 bg-green-500 rounded-full mt-2 inline-block"
+        className="flex justify-center items-center w-auto text-white text-xs px-4 py-2 bg-green-500 rounded-full mt-2 inline-block"
       >
         Read More
+        <BsArrowRightCircle className="ml-2" />
       </a>
     </div>
   );
