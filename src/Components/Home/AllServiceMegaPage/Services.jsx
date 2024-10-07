@@ -21,7 +21,7 @@ const Services = () => {
         <p className="text-xs text-gray-600 mt-1">{option.description}</p>
         <Link to={option.path}>
           <button className="mt-2 w-full bg-green-500 text-xs rounded-full text-white py-1 hover:bg-green-600">
-            View More
+            Register
           </button>
         </Link>
       </div>

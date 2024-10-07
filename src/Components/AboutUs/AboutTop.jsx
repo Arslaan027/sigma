@@ -31,12 +31,6 @@ const AboutTop = () => {
             >
               Vision & Mission
             </Link>
-            <Link
-              to="/certificate"
-              className="px-3 py-2 bg-green-600 text-white rounded-full text-xs hover:bg-green-700 transition transform hover:scale-105"
-            >
-              Our Certificates
-            </Link>
           </div>
         </div>
 
