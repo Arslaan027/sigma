@@ -15,25 +15,89 @@ const NGOFAQs = () => {
     {
       question:
         "What are the different types of NGOs that can be registered in India?",
-      answer:
-        "NGOs can be registered as:\n• Trusts (under the Indian Trusts Act, 1882)\n• Societies (under the Societies Registration Act, 1860)\n• Section 8 Companies (under the Companies Act, 2013)\nSigma Solutions offers expert guidance on selecting the right type of NGO structure based on your goals and operational plans.",
+      answer: (
+        <>
+          <p>NGOs can be registered as:</p>
+          <ul className="list-disc ml-6">
+            <li>Trusts (under the Indian Trusts Act, 1882)</li>
+            <li>Societies (under the Societies Registration Act, 1860)</li>
+            <li>Section 8 Companies (under the Companies Act, 2013)</li>
+          </ul>
+          <p>
+            Sigma Solutions offers expert guidance on selecting the right type
+            of NGO structure based on your goals and operational plans.
+          </p>
+        </>
+      ),
     },
+
     {
       question:
         "How do I decide which type of NGO is best for my organization?",
-      answer:
-        "Each type has its advantages:\n• Trusts: Suitable for long-term charitable work.\n• Societies: Ideal for cultural, scientific, and charitable initiatives.\n• Section 8 Companies: Best for organizations that require a corporate structure with stringent compliance.\nAt Sigma Solutions, we assess your organization's objectives and suggest the best structure accordingly.",
+      answer: (
+        <>
+          <p>Each type has its advantages:</p>
+          <ul className="list-disc ml-6">
+            <li>Trusts: Suitable for long-term charitable work.</li>
+            <li>
+              Societies: Ideal for cultural, scientific, and charitable
+              initiatives.
+            </li>
+            <li>
+              Section 8 Companies: Best for organizations that require a
+              corporate structure with stringent compliance.
+            </li>
+          </ul>
+          <p>
+            At Sigma Solutions, we assess your organization's objectives and
+            suggest the best structure accordingly.
+          </p>
+        </>
+      ),
     },
     {
       question: "What documents are required for NGO registration?",
-      answer:
-        "The required documents include:\n• For Trust: Trust deed, ID proofs of trustees, and office address proof.\n• For Society: Memorandum of Association, list of members, and bylaws.\n• For Section 8 Company: Memorandum and Articles of Association, Digital Signatures, and Director Identification Numbers (DINs).\nSigma Solutions assists in preparing and verifying all necessary documents to avoid delays.",
+      answer: (
+        <>
+          <p>The required documents include:</p>
+          <ul className="list-disc ml-6">
+            <li>
+              For Trust: Trust deed, ID proofs of trustees, and office address
+              proof.
+            </li>
+            <li>
+              For Society: Memorandum of Association, list of members, and
+              bylaws.
+            </li>
+            <li>
+              For Section 8 Company: Memorandum and Articles of Association,
+              Digital Signatures, and Director Identification Numbers (DINs).
+            </li>
+          </ul>
+          <p>
+            Sigma Solutions assists in preparing and verifying all necessary
+            documents to avoid delays.
+          </p>
+        </>
+      ),
     },
     {
       question:
         "How long does the NGO registration process take with Sigma Solutions?",
-      answer:
-        "The timeframe depends on the type of NGO:\n• Trust: 15-30 days\n• Society: 20-30 days\n• Section 8 Company: 30-45 days. Sigma Solutions expedites the process by ensuring that all documentation and procedures are completed correctly from the start.",
+      answer: (
+        <>
+          <p>The timeframe depends on the type of NGO:</p>
+          <ul className="list-disc ml-6">
+            <li>Trust: 15-30 days</li>
+            <li>Society: 20-30 days</li>
+            <li>Section 8 Company: 30-45 days</li>
+          </ul>
+          <p>
+            Sigma Solutions expedites the process by ensuring that all
+            documentation and procedures are completed correctly from the start.
+          </p>
+        </>
+      ),
     },
     {
       question: "Can I start fundraising as soon as my NGO is registered?",
@@ -135,12 +199,12 @@ const NGOFAQs = () => {
           {faqs.map((faq, index) => (
             <Accordion key={index} className="bg-white dark:bg-neutral-700">
               <AccordionSummary expandIcon={<ArrowDownwardIcon />}>
-                <Typography className="font-semibold">
+                <Typography className="font-bold text-black">
                   {faq.question}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>{faq.answer}</Typography>
+                <Typography className="text-black">{faq.answer}</Typography>
               </AccordionDetails>
             </Accordion>
           ))}

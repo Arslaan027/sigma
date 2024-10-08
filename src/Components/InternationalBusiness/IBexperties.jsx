@@ -46,7 +46,7 @@ const IBexperties = () => {
             ].map((item, index) => (
               <motion.li
                 key={index}
-                className="bg-white dark:bg-neutral-800 p-3 rounded-lg shadow-md"
+                className="bg-white dark:bg-neutral-800 p-3 min-w-4xl rounded-lg shadow-md"
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 variants={fadeIn}
