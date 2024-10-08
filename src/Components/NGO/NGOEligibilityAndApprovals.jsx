@@ -91,6 +91,36 @@ const NGOEligibilityAndApprovals = () => {
         </>
       ),
     },
+    {
+      title: "CSR Registration",
+      description: (
+        <>
+          <p>
+            <strong>Purpose:</strong> Enables NGOs to receive funds from
+            Corporate Social Responsibility (CSR) initiatives.
+          </p>
+          <p>
+            <strong>Eligibility:</strong> NGOs must ensure compliance with the
+            Companies Act, 2013.
+          </p>
+        </>
+      ),
+    },
+    {
+      title: "State-Level Approvals",
+      description: (
+        <>
+          <p>
+            <strong>Purpose:</strong> Depending on the state, NGOs may need
+            additional registrations or approvals related to local laws.
+          </p>
+          <p>
+            <strong>Eligibility:</strong> Compliance with specific state
+            regulations is necessary.
+          </p>
+        </>
+      ),
+    },
   ];
 
   return (
@@ -166,7 +196,10 @@ const NGOEligibilityAndApprovals = () => {
         <p className="text-gray-600 dark:text-gray-200">
           These steps may vary slightly based on the state and specific
           circumstances, so it's advisable to consult with a legal expert for
-          tailored guidance.
+          tailored guidance. These registrations not only help in building trust
+          with donors but also ensure that the NGO operates within the legal
+          framework, promoting transparency and accountability in its financial
+          dealings.
         </p>
       </div>
     </div>

@@ -6,6 +6,7 @@ import NGOstep from "./NGOstep";
 import NGOdocument from "./NGOdocument";
 import NGOEligibilityAndApprovals from "./NGOEligibilityAndApprovals";
 import NGOFAQs from "./NGOFAQs";
+import NGOTips from "./NGOtip";
 
 const NGO = () => {
   return (
@@ -16,6 +17,7 @@ const NGO = () => {
       <NGOstep />
       <NGOdocument />
       <NGOEligibilityAndApprovals />
+      <NGOTips />
       <NGOFAQs />
     </div>
   );

@@ -29,6 +29,9 @@ import Copyright from "./Components/IntellectualProperty/Copyright/Copyright.jsx
 import Patent from "./Components/IntellectualProperty/Patent/Patent.jsx";
 import Trademark from "./Components/IntellectualProperty/Trademark/Trademark.jsx";
 import InternationalBusiness from "./Components/InternationalBusiness/InternationalBusiness.jsx";
+import Trust from "./Components/NGO/Trust.jsx";
+import Society from "./Components/NGO/Society.jsx";
+import Sec8 from "./Components/NGO/Sec8.jsx";
 
 const App = () => {
   // Manage dark mode state
@@ -87,6 +90,10 @@ const App = () => {
             <Route path="/trademark" element={<Trademark />} />
             <Route path="/copyright" element={<Copyright />} />
             <Route path="/patent" element={<Patent />} />
+
+            <Route path="/trusts" element={<Trust />} />
+            <Route path="/societies" element={<Society />} />
+            <Route path="/section8" element={<Sec8 />} />
 
             <Route path="/about" element={<AboutUs />} />
             <Route path="/cost-calculator" element={<CostCalculator />} />
