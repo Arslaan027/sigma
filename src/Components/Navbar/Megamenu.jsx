@@ -41,7 +41,7 @@ const Megamenu = () => {
   const products = [
     { label: "NGO Registration", path: "/ngo-society-registrations" },
     { label: "International Business Setup", path: "/" },
-    { label: "Intellectual Property", path: "/" },
+    { label: "Intellectual Property", path: "/Intellectual-Property" },
     { label: "Exhibition Services", path: "/Exhibition-Services" },
     { label: "Business Buying, Selling & Leasing", path: "/BBSL" },
   ];

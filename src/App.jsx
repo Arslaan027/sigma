@@ -15,7 +15,6 @@ import GSTRegistration from "./Components/GSTRegistration/GSTRegistration";
 import FSSAI from "./Components/FSSAI/FSSAI";
 import IEC from "./Components/IEC/IEC";
 import ISO from "./Components/ISO/ISO";
-import Trademark from "./Components/Trademark/Trademark";
 import NGO from "./Components/NGO/NGO";
 import Compliances from "./Components/Compliances/Compliances";
 import Contact from "./Components/Navbar/Contact";
@@ -25,6 +24,10 @@ import PrivacyPolicy from "./Components/Footer/PrivacyPolicy.jsx";
 import Terms from "./Components/Footer/Terms.jsx";
 import BBSL from "./Components/BBSL/BBSL.jsx";
 import ES from "./Components/ExhibitionServices/ES.jsx";
+import IP from "./Components/IntellectualProperty/IP.jsx";
+import Copyright from "./Components/IntellectualProperty/Copyright/Copyright.jsx";
+import Patent from "./Components/IntellectualProperty/Patent/Patent.jsx";
+import Trademark from "./Components/IntellectualProperty/Trademark/Trademark.jsx";
 
 const App = () => {
   // Manage dark mode state
@@ -68,13 +71,17 @@ const App = () => {
             <Route path="/food-safety" element={<FSSAI />} />
             <Route path="/import-export-code" element={<IEC />} />
             <Route path="/iso-certification" element={<ISO />} />
-            <Route path="/trademark" element={<Trademark />} />
             <Route path="/ngo-society-registrations" element={<NGO />} />
             <Route path="/compliances" element={<Compliances />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/search" element={<SearchResults />} />
             <Route path="/BBSL" element={<BBSL />} />
             <Route path="/Exhibition-Services" element={<ES />} />
+            <Route path="/Intellectual-Property" element={<IP />} />
+
+            <Route path="/trademark" element={<Trademark />} />
+            <Route path="/copyright" element={<Copyright />} />
+            <Route path="/patent" element={<Patent />} />
 
             <Route path="/about" element={<AboutUs />} />
             <Route path="/cost-calculator" element={<CostCalculator />} />
