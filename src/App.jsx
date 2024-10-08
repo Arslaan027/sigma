@@ -28,6 +28,7 @@ import IP from "./Components/IntellectualProperty/IP.jsx";
 import Copyright from "./Components/IntellectualProperty/Copyright/Copyright.jsx";
 import Patent from "./Components/IntellectualProperty/Patent/Patent.jsx";
 import Trademark from "./Components/IntellectualProperty/Trademark/Trademark.jsx";
+import InternationalBusiness from "./Components/InternationalBusiness/InternationalBusiness.jsx";
 
 const App = () => {
   // Manage dark mode state
@@ -78,6 +79,10 @@ const App = () => {
             <Route path="/BBSL" element={<BBSL />} />
             <Route path="/Exhibition-Services" element={<ES />} />
             <Route path="/Intellectual-Property" element={<IP />} />
+            <Route
+              path="/International-Business-Setup"
+              element={<InternationalBusiness />}
+            />
 
             <Route path="/trademark" element={<Trademark />} />
             <Route path="/copyright" element={<Copyright />} />

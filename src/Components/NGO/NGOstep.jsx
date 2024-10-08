@@ -44,7 +44,7 @@ const NGOstep = () => {
       <div className="max-w-5xl mx-auto bg-white dark:bg-neutral-300 rounded-lg shadow-lg p-6">
         {/* Title Section */}
         <h3 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-4">
-          Different Domains for <span className="text-green-500">NGO</span>
+          Types of <span className="text-green-500">NGOs</span> in India
         </h3>
 
         {/* Image Section */}

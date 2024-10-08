@@ -53,7 +53,7 @@ const TrademarkRectification = () => {
         </div>
 
         {/* Right Image with Unique Shape */}
-        <div className="lg:w-1/3 flex justify-center mb-8 lg:mb-0 md:block">
+        <div className="lg:w-1/3 flex justify-center mb-8 lg:mb-0 hidden md:block">
           <div
             className="relative z-0 w-full overflow-hidden shadow-lg transition-transform transform"
             style={{
