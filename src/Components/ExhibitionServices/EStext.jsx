@@ -224,7 +224,7 @@ const EStext = () => {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <h1 className="text-2xl font-bold text-center mb-8">
+      <h1 className="text-4xl text-center font-bold text-gray-800 leading-tight mb-7 dark:text-gray-300">
         Key Aspects of{" "}
         <span className="text-green-500">Exhibition Stand Services</span>
       </h1>
