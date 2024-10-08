@@ -12,7 +12,9 @@ const IBexperties = () => {
 
   return (
     <div className="py-16 px-4 bg-gray-100 dark:bg-black">
-      <div className="max-w-6xl mx-auto text-center" ref={ref}>
+      <div className="max-w-7xl mx-auto text-center" ref={ref}>
+        {" "}
+        {/* Increased max-width here */}
         <motion.h2
           className="text-4xl font-bold text-gray-800 dark:text-gray-200 mb-4"
           initial="hidden"
@@ -34,9 +36,11 @@ const IBexperties = () => {
           provides end-to-end international business setup services designed to
           support your growth.
         </motion.p>
-        <div className="flex flex-col min-w-4xl md:flex-row items-center justify-center">
+        <div className="flex flex-col md:flex-row items-center justify-center">
           {/* List Section */}
-          <ul className="text-left mx-auto space-y-4 min-w-4xl text-gray-600 dark:text-gray-400">
+          <ul className="text-left mx-auto space-y-4 w-full md:w-3/4 text-gray-600 dark:text-gray-400">
+            {" "}
+            {/* Increased width for list */}
             {[
               "Business setup in the UAE, UK, and USA",
               "Multinational company expansion",
@@ -46,7 +50,7 @@ const IBexperties = () => {
             ].map((item, index) => (
               <motion.li
                 key={index}
-                className="bg-white dark:bg-neutral-800 p-3 min-w-4xl rounded-lg shadow-md"
+                className="bg-white dark:bg-neutral-800 p-3 rounded-lg shadow-md"
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 variants={fadeIn}

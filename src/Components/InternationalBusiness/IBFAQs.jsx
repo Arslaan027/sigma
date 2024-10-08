@@ -76,8 +76,22 @@ const IBFAQs = () => {
     {
       question:
         "What are the benefits of setting up a business in the USA, UK, and UAE with Sigma Solutions?",
-      answer:
-        "Each country offers unique advantages: USA: Access to a large consumer market and innovation hub. UK: Gateway to Europe and global financial center. UAE: Tax-free zones and a strategic location for global trade. Sigma Solutions helps you leverage these benefits by providing tailored business setup solutions.",
+      answer: (
+        <>
+          <p>Each country offers unique advantages:</p>
+          <ul className="list-disc ml-6">
+            <li>USA: Access to a large consumer market and innovation hub.</li>
+            <li>UK: Gateway to Europe and global financial center.</li>
+            <li>
+              UAE: Tax-free zones and a strategic location for global trade.
+            </li>
+          </ul>
+          <p>
+            Sigma Solutions helps you leverage these benefits by providing
+            tailored business setup solutions.
+          </p>
+        </>
+      ),
     },
     {
       question:
