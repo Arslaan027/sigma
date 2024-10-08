@@ -27,23 +27,23 @@ const Megamenu = () => {
   ];
 
   const accountingServices = [
-    { path: "/gst-returns", label: "ISO Certifications" },
-    { path: "/dsc-pan-epf", label: "GST Registration" },
-    { path: "/income-tax", label: "FSSAI License" },
+    { path: "/iso-certification", label: "ISO Certifications" },
+    { path: "/gst-registration", label: "GST Registration" },
+    { path: "/food-safety", label: "FSSAI License" },
     { path: "/book-keeping", label: "Udyam Registration (MSME)" },
     { path: "/notice-scrutiny", label: "Drug License" },
-    { path: "/agreements", label: "Import Export Certificate (IEC)" },
+    { path: "/import-export-code", label: "Import Export Certificate (IEC)" },
     { path: "/loan-consultancy", label: "Startup India Registration" },
     { path: "/loan-consultancy", label: "Trading License" },
     { path: "/loan-consultancy", label: "Digital Signature Certificate (DSC)" },
   ];
 
   const products = [
-    { label: "NGO Registration", path: "/" },
+    { label: "NGO Registration", path: "/ngo-society-registrations" },
     { label: "International Business Setup", path: "/" },
     { label: "Intellectual Property", path: "/" },
-    { label: "Exhibition Services", path: "/" },
-    { label: "Business Buying, Selling & Leasing", path: "/" },
+    { label: "Exhibition Services", path: "/Exhibition-Services" },
+    { label: "Business Buying, Selling & Leasing", path: "/BBSL" },
   ];
 
   return (

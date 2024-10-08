@@ -23,6 +23,8 @@ import SearchResults from "./Components/SearchResults.jsx";
 import RefundPolicy from "./Components/Footer/RefundPolicy.jsx";
 import PrivacyPolicy from "./Components/Footer/PrivacyPolicy.jsx";
 import Terms from "./Components/Footer/Terms.jsx";
+import BBSL from "./Components/BBSL/BBSL.jsx";
+import ES from "./Components/ExhibitionServices/ES.jsx";
 
 const App = () => {
   // Manage dark mode state
@@ -71,6 +73,8 @@ const App = () => {
             <Route path="/compliances" element={<Compliances />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/search" element={<SearchResults />} />
+            <Route path="/BBSL" element={<BBSL />} />
+            <Route path="/Exhibition-Services" element={<ES />} />
 
             <Route path="/about" element={<AboutUs />} />
             <Route path="/cost-calculator" element={<CostCalculator />} />

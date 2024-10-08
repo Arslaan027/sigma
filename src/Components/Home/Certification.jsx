@@ -69,7 +69,7 @@ const CertificationSlide = ({ cert }) => {
 
 const NextArrow = ({ onClick }) => (
   <div
-    className="absolute -right-8 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer p-2 bg-white rounded-full shadow hover:bg-gray-200"
+    className="hidden md:block absolute -right-8 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer p-2 bg-white rounded-full shadow hover:bg-gray-200"
     onClick={onClick}
   >
     <FaChevronRight className="text-gray-700" />
@@ -78,7 +78,7 @@ const NextArrow = ({ onClick }) => (
 
 const PrevArrow = ({ onClick }) => (
   <div
-    className="absolute -left-8 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer p-2 bg-white rounded-full shadow hover:bg-gray-200"
+    className="hidden md:block absolute -left-8 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer p-2 bg-white rounded-full shadow hover:bg-gray-200"
     onClick={onClick}
   >
     <FaChevronLeft className="text-gray-700" />

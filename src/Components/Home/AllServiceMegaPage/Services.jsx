@@ -18,7 +18,9 @@ const Services = () => {
           {option.icon}
           <h4 className="text-left font-medium text-xs">{option.name}</h4>
         </div>
-        <p className="text-xs text-gray-600 mt-1">{option.description}</p>
+        <p className="text-xs text-gray-600 mt-1 text-center">
+          {option.description}
+        </p>
         <Link to={option.path}>
           <button className="mt-2 w-full bg-green-500 text-xs rounded-full text-white py-1 hover:bg-green-600">
             Register
@@ -30,14 +32,11 @@ const Services = () => {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-gray-50">
-      <h1 className="text-2xl md:text-3xl font-bold mb-2">
-        Our <span className="text-green-500">Services</span>
-      </h1>{" "}
       {/* Added Heading */}
-      <div className="max-w-6xl w-full flex flex-col md:flex-row my-10 shadow-lg rounded-lg overflow-hidden bg-white">
+      <div className="max-w-6xl w-full flex flex-col md:flex-row shadow-lg rounded-lg overflow-hidden bg-white">
         <div className="w-full md:w-1/3 border-r">
-          <h3 className="text-lg font-bold text-center p-4 border-b">
-            Services
+          <h3 className="text-2xl font-bold text-center p-4 border-b">
+            Our <span className="text-green-500">Services</span>
           </h3>
           <ul className="flex flex-col">
             {Object.keys(servicesData["BUSINESS SERVICES"]).map(

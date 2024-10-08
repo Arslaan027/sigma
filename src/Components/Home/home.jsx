@@ -11,9 +11,9 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text">
       <HeroSection />
+      <WhyLegalWiz />
       <Services />
       <AboutTop />
-      <WhyLegalWiz />
       <Certification />
       <BLOG />
     </div>
