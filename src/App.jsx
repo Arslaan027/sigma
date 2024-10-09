@@ -34,6 +34,9 @@ import Society from "./Components/NGO/Society.jsx";
 import Sec8 from "./Components/NGO/Sec8.jsx";
 import UdyamRegistration from "./Components/UdyamRegistration/UdyamRegistration.jsx";
 import DrugLicense from "./Components/DrugLicense/DrugLicense.jsx";
+import DigitalSignature from "./Components/DigitalSignature/DigitalSignature.jsx";
+import Trading from "./Components/TradingLicense/Trading.jsx";
+import Startup from "./Components/StartupIndia/Startup.jsx";
 
 const App = () => {
   // Manage dark mode state
@@ -86,6 +89,9 @@ const App = () => {
             <Route path="/Intellectual-Property" element={<IP />} />
             <Route path="/udyam-registration" element={<UdyamRegistration />} />
             <Route path="/drug-license" element={<DrugLicense />} />
+            <Route path="/DSC" element={<DigitalSignature />} />
+            <Route path="/Trading" element={<Trading />} />
+            <Route path="/Startup" element={<Startup />} />
             <Route
               path="/International-Business-Setup"
               element={<InternationalBusiness />}

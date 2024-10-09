@@ -33,9 +33,9 @@ const Megamenu = () => {
     { path: "/udyam-registration", label: "Udyam Registration (MSME)" },
     { path: "/drug-license", label: "Drug License" },
     { path: "/import-export-code", label: "Import Export Certificate (IEC)" },
-    { path: "/loan-consultancy", label: "Startup India Registration" },
-    { path: "/loan-consultancy", label: "Trading License" },
-    { path: "/loan-consultancy", label: "Digital Signature Certificate (DSC)" },
+    { path: "/Startup", label: "Startup India Registration" },
+    { path: "/Trading", label: "Trading License" },
+    { path: "/DSC", label: "Digital Signature Certificate (DSC)" },
   ];
 
   const products = [
