@@ -5,53 +5,34 @@ import { FiFileText, FiHome, FiClipboard, FiMapPin } from "react-icons/fi"; // A
 const GSTdocument = () => {
   const documents = [
     {
-      title: "Sole Proprietorship Firm",
-      description: (
-        <>
-          <p>– PAN Card and Address Proof of the proprietor.</p>
-          <p>
-            – Any other firm registration certificate like MSME Registration,
-            etc.
-          </p>
-        </>
-      ),
+      title: "PAN Card of the Business",
+      description:
+        "A valid PAN card of the business entity is required for GST registration.",
       icon: <FiFileText className="text-green-500 text-2xl mr-3" />,
     },
     {
-      title: "Partnership Firm",
-      description: (
-        <>
-          <p>– PAN card of the Partnership Firm with the deed.</p>
-          <p>
-            – Partnership registration certificate & partners' ID & address
-            proof.
-          </p>
-        </>
-      ),
+      title: "Business Registration Proof",
+      description:
+        "Certificate of Incorporation, Partnership Deed, or any other relevant business registration document.",
       icon: <FiClipboard className="text-green-500 text-2xl mr-3" />,
     },
     {
-      title: "Private Limited Company / One Person Company",
-      description: (
-        <>
-          <p>
-            – PAN Card of the Company, Certificate of Incorporation (COI), MOA &
-            AOA of Company.
-          </p>
-          <p>– Board Resolution with Directors' ID & Address Proof.</p>
-        </>
-      ),
+      title: "Proof of Business Address",
+      description:
+        "Documents like rent agreement or utility bills to verify the business address.",
       icon: <FiHome className="text-green-500 text-2xl mr-3" />,
     },
     {
-      title: "Limited Liability Partnership (LLP)",
-      description: (
-        <>
-          <p>– Certificate of Incorporation (COI) & PAN Card of Company.</p>
-          <p>– Deed + Partners' ID & Address Proof.</p>
-        </>
-      ),
+      title: "Bank Account Details",
+      description:
+        "Details of the business bank account, including a copy of the account statement.",
       icon: <FiMapPin className="text-green-500 text-2xl mr-3" />,
+    },
+    {
+      title: "Photographs of Proprietor/Partners/Directors",
+      description:
+        "Recent passport-sized photographs of the business owners or directors.",
+      icon: <FiFileText className="text-green-500 text-2xl mr-3" />,
     },
   ];
 
@@ -75,7 +56,7 @@ const GSTdocument = () => {
           Documents Required for GST Registration in India
         </motion.h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {documents.map((document, index) => (
           <motion.div
             key={index}

@@ -31,18 +31,18 @@ const GSTwhat = () => {
             className="md:w-2/3 w-auto h-auto rounded-lg"
           />
         </motion.div>
-        <div className="flex-1">
+        <div className="flex-1 justify-center items-center my-auto">
           <motion.p
             className="text-lg text-gray-600 dark:text-neutral-400 mb-4"
             initial={{ opacity: 0, y: 20 }} // Initial state for paragraph animation
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Animate based on view
             transition={{ duration: 0.5, delay: 0.3 }} // Animation duration with a slight delay
           >
-            GST Registration was introduced in India in July 2017. It is a
-            combination of indirect taxes such as VAT and Service Tax. GST
-            registration is required when your turnover or sales exceed 40 lakh
-            rupees in a year (10 lakh for Northeastern and Hill States) as per
-            the latest amendment from 1st April 2019.
+            <strong>Goods and Services Tax (GST)</strong> registration is
+            mandatory for businesses in India with a turnover exceeding the
+            prescribed limit (usually INR 20 lakhs for services and INR 40 lakhs
+            for goods). GST enables the collection of taxes on the sale of goods
+            and services.
           </motion.p>
           <motion.p
             className="text-lg text-gray-600 dark:text-neutral-400 mb-4"
@@ -50,20 +50,13 @@ const GSTwhat = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Animate based on view
             transition={{ duration: 0.5, delay: 0.4 }} // Animation duration with a slight delay
           >
-            For some specific businesses, registration is mandatory without
-            crossing the turnover limit. For example, if you are running an
-            e-commerce business, you must obtain GST registration from the start
-            of your business.
-          </motion.p>
-          <motion.p
-            className="text-lg text-gray-600 dark:text-neutral-400 mb-4"
-            initial={{ opacity: 0, y: 20 }} // Initial state for paragraph animation
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Animate based on view
-            transition={{ duration: 0.5, delay: 0.5 }} // Animation duration with a slight delay
-          >
-            We at SigmaSolution help you with GST Registration online, which
-            takes only 2-3 working days to obtain verified GST certification
-            with login details sent directly to your email inbox.
+            <strong>
+              GSTIN (Goods and Services Tax Identification Number)
+            </strong>{" "}
+            is a unique 15-digit identification number assigned to businesses
+            and individuals who are registered under the Goods and Services Tax
+            (GST) system in India. It serves as a legal identity for taxpayers
+            and is essential for the collection and payment of GST.
           </motion.p>
         </div>
       </div>

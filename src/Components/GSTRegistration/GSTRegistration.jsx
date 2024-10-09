@@ -1,20 +1,31 @@
-import React from "react";
 import GSThero from "./GSThero";
 import GSTwhat from "./GSTwhat";
 import GSTdocument from "./GSTdocument";
-import GSTSteps from "./GSTSteps";
 import GSTbenefits from "./GSTbenefits";
-import GSTfeature from "./GSTfeature";
+import GSTFAQs from "./GSTFAQs";
+import GSTconclusion from "./GSTconclusion";
+import GSTonlineprocess from "./GSTonlineprocess";
+import GSTIN from "./GSTIN";
+import GSTLUT from "./GSTLUT";
+import GSTCancellation from "./GSTCancellation";
+import GSTAdvisoryServices from "./GSTAdvisoryServices";
+import GSTAnnualReturnFiling from "./GSTAnnualReturnFiling";
 
 const GSTRegistration = () => {
   return (
     <div>
       <GSThero />
       <GSTwhat />
+      <GSTIN />
       <GSTdocument />
-      {/* <GSTSteps /> */}
+      <GSTonlineprocess />
       <GSTbenefits />
-      <GSTfeature />
+      <GSTLUT />
+      <GSTCancellation />
+      <GSTAdvisoryServices />
+      <GSTAnnualReturnFiling />
+      <GSTconclusion />
+      <GSTFAQs />
     </div>
   );
 };
