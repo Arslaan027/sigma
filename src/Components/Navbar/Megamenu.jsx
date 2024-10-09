@@ -31,7 +31,7 @@ const Megamenu = () => {
     { path: "/gst-registration", label: "GST Registration" },
     { path: "/food-safety", label: "FSSAI License" },
     { path: "/udyam-registration", label: "Udyam Registration (MSME)" },
-    { path: "/notice-scrutiny", label: "Drug License" },
+    { path: "/drug-license", label: "Drug License" },
     { path: "/import-export-code", label: "Import Export Certificate (IEC)" },
     { path: "/loan-consultancy", label: "Startup India Registration" },
     { path: "/loan-consultancy", label: "Trading License" },

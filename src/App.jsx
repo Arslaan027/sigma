@@ -33,6 +33,7 @@ import Trust from "./Components/NGO/Trust.jsx";
 import Society from "./Components/NGO/Society.jsx";
 import Sec8 from "./Components/NGO/Sec8.jsx";
 import UdyamRegistration from "./Components/UdyamRegistration/UdyamRegistration.jsx";
+import DrugLicense from "./Components/DrugLicense/DrugLicense.jsx";
 
 const App = () => {
   // Manage dark mode state
@@ -84,6 +85,7 @@ const App = () => {
             <Route path="/Exhibition-Services" element={<ES />} />
             <Route path="/Intellectual-Property" element={<IP />} />
             <Route path="/udyam-registration" element={<UdyamRegistration />} />
+            <Route path="/drug-license" element={<DrugLicense />} />
             <Route
               path="/International-Business-Setup"
               element={<InternationalBusiness />}
