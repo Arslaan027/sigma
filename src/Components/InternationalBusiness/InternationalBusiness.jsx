@@ -1,4 +1,3 @@
-import React from "react";
 import IBheadtext from "./IBheadtext";
 import IBhero from "./IBhero";
 import IBFAQs from "./IBFAQs";
