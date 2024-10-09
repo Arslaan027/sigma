@@ -128,8 +128,7 @@ const ESFAQs = () => {
           <h3 className="text-4xl font-extrabold text-gray-800 dark:text-gray-200">
             Frequently Asked <span className="text-green-500">Questions</span>
           </h3>
-
-          <p className="text-lg text-gray-600 mb-8 dark:text-gray-200">
+          <p className="text-lg text-gray-600 mb-8 dark:text-gray-300">
             Here are some common questions and answers about our services. If
             you have more questions, feel free to contact us!
           </p>
@@ -137,16 +136,25 @@ const ESFAQs = () => {
 
         <div className="space-y-6">
           {faqs.map((faq, index) => (
-            <Accordion key={index}>
+            <Accordion
+              key={index}
+              className="bg-white dark:bg-neutral-900 shadow-md rounded-md"
+            >
               <AccordionSummary
-                expandIcon={<ArrowDownwardIcon />}
-                aria-controls={`panel${index + 1}a-content`}
-                id={`panel${index + 1}a-header`}
+                expandIcon={
+                  <ArrowDownwardIcon className="text-gray-800 dark:text-gray-200" />
+                }
+                aria-controls={`panel${index + 1}-content`}
+                id={`panel${index + 1}-header`}
               >
-                <Typography>{faq.question}</Typography>
+                <Typography className="text-gray-800 dark:text-gray-200 font-medium">
+                  {faq.question}
+                </Typography>
               </AccordionSummary>
-              <AccordionDetails>
-                <Typography>{faq.answer}</Typography>
+              <AccordionDetails className="bg-gray-50 dark:bg-neutral-800">
+                <Typography className="text-gray-700 dark:text-gray-300">
+                  {faq.answer}
+                </Typography>
               </AccordionDetails>
             </Accordion>
           ))}

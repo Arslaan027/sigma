@@ -32,6 +32,7 @@ import InternationalBusiness from "./Components/InternationalBusiness/Internatio
 import Trust from "./Components/NGO/Trust.jsx";
 import Society from "./Components/NGO/Society.jsx";
 import Sec8 from "./Components/NGO/Sec8.jsx";
+import UdyamRegistration from "./Components/UdyamRegistration/UdyamRegistration.jsx";
 
 const App = () => {
   // Manage dark mode state
@@ -82,6 +83,7 @@ const App = () => {
             <Route path="/BBSL" element={<BBSL />} />
             <Route path="/Exhibition-Services" element={<ES />} />
             <Route path="/Intellectual-Property" element={<IP />} />
+            <Route path="/udyam-registration" element={<UdyamRegistration />} />
             <Route
               path="/International-Business-Setup"
               element={<InternationalBusiness />}

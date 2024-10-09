@@ -30,7 +30,7 @@ const Megamenu = () => {
     { path: "/iso-certification", label: "ISO Certifications" },
     { path: "/gst-registration", label: "GST Registration" },
     { path: "/food-safety", label: "FSSAI License" },
-    { path: "/book-keeping", label: "Udyam Registration (MSME)" },
+    { path: "/udyam-registration", label: "Udyam Registration (MSME)" },
     { path: "/notice-scrutiny", label: "Drug License" },
     { path: "/import-export-code", label: "Import Export Certificate (IEC)" },
     { path: "/loan-consultancy", label: "Startup India Registration" },

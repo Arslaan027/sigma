@@ -1,4 +1,3 @@
-import React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -134,23 +133,27 @@ const FSSAIFAQs = () => {
               Frequently Asked <span className="text-green-500">Questions</span>
             </h3>
 
-            <p className="text-lg text-gray-600 mb-8 dark:text-gray-200">
+            <p className="text-lg text-gray-600 mb-8 dark:text-gray-300">
               Here are some common questions and answers about our FSSAI
               License.
             </p>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-6 ">
             {faqs.map((faq, index) => (
-              <Accordion key={index}>
+              <Accordion key={index} className="dark:bg-neutral-900">
                 <AccordionSummary
-                  expandIcon={<ArrowDownwardIcon />}
+                  expandIcon={<ArrowDownwardIcon className="text-white" />}
                   aria-controls={`panel${index}-content`}
                   id={`panel${index}-header`}
                 >
-                  <Typography>{faq.question}</Typography>
+                  <Typography className="dark:text-white text-black">
+                    {faq.question}
+                  </Typography>
                 </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>{faq.answer}</Typography>
+                <AccordionDetails className="dark:bg-neutral-800 bg-white">
+                  <Typography className="text-gray-200 dark:text-white">
+                    {faq.answer}
+                  </Typography>
                 </AccordionDetails>
               </Accordion>
             ))}
