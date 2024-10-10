@@ -12,7 +12,7 @@ const Startuphero = () => {
 
       {/* Content Container */}
       <div className="relative flex flex-col justify-center items-center h-full text-white">
-        <h1 className="text-5xl font-bold mb-4">
+        <h1 className="md:text-5xl text-4xl text-center font-bold mb-4">
           Welcome to Your Startup Journey
         </h1>
         <p className="text-lg mb-8">

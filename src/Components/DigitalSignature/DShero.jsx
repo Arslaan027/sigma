@@ -12,7 +12,7 @@ const DShero = () => {
 
       {/* Content Container */}
       <div className="relative flex flex-col justify-center items-center h-full text-white">
-        <h1 className="text-5xl font-bold mb-4">
+        <h1 className="md:text-5xl text-3xl tect-center font-bold mb-4">
           Discover Your Dream Solutions
         </h1>
         <p className="text-lg mb-8">

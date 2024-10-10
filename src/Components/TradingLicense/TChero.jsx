@@ -12,10 +12,10 @@ const TChero = () => {
 
       {/* Content Container */}
       <div className="relative flex flex-col justify-center items-center h-full text-white">
-        <h1 className="text-5xl font-bold mb-4">
+        <h1 className="md:text-5xl text-3xl text-center font-bold mb-4">
           Unlock Your Trading Potential
         </h1>
-        <p className="text-lg mb-8">
+        <p className="text-lg mb-8 text-center">
           Join us for insights, strategies, and tools for successful trading.
         </p>
         <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
