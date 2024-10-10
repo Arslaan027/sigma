@@ -1,4 +1,3 @@
-import React from "react";
 import IEChero from "./IEChero";
 import IECFAQs from "./IECFAQs";
 

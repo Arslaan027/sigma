@@ -161,11 +161,11 @@ const Footer = () => {
         {/* Social Media Links */}
         <div className="flex justify-between space-x-6 mt-2 mb-2">
           <div className="flex gap-3">
-            <FaFacebookF className="text-gray-400 hover:text-green-500 text-xl cursor-pointer" />
-            <FaInstagram className="text-gray-400 hover:text-green-500 text-xl cursor-pointer" />
-            <FaTwitter className="text-gray-400 hover:text-green-500 text-xl cursor-pointer" />
-            <FaLinkedinIn className="text-gray-400 hover:text-green-500 text-xl cursor-pointer" />
-            <FaYoutube className="text-gray-400 hover:text-green-500 text-xl cursor-pointer" />
+            <FaFacebookF className="text-gray-400 hover:text-green-500 md:text-xl text-sm cursor-pointer" />
+            <FaInstagram className="text-gray-400 hover:text-green-500 md:text-xl text-sm cursor-pointer" />
+            <FaTwitter className="text-gray-400 hover:text-green-500 md:text-xl text-sm cursor-pointer" />
+            <FaLinkedinIn className="text-gray-400 hover:text-green-500 md:text-xl text-sm cursor-pointer" />
+            <FaYoutube className="text-gray-400 hover:text-green-500 md:text-xl text-sm cursor-pointer" />
           </div>
           <div className="flex gap-3 text-gray-400 text-xs">
             <Link>Blog</Link> <Link>About Us</Link> <Link>Career</Link>{" "}
