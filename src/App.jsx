@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  HashRouter,
+} from "react-router-dom";
 import Layout from "./Components/Layout";
 import Home from "./Components/Home/home";
 import Horeca from "./Components/HoReCa/Horeca";
@@ -70,51 +75,58 @@ const App = () => {
         >
           {isDarkMode ? <IoSunnySharp /> : <PiMoonStarsFill />}
         </button>
+        <HashRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route
+                path="/trade-registration"
+                element={<TradeRegistration />}
+              />
+              <Route path="/company-formation" element={<CompanyFormation />} />
+              <Route path="/gst-registration" element={<GSTRegistration />} />
+              <Route path="/food-safety" element={<FSSAI />} />
+              <Route path="/import-export-code" element={<IEC />} />
+              <Route path="/iso-certification" element={<ISO />} />
+              <Route path="/ngo-society-registrations" element={<NGO />} />
+              <Route path="/compliances" element={<Compliances />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/search" element={<SearchResults />} />
+              <Route path="/BBSL" element={<BBSL />} />
+              <Route path="/Exhibition-Services" element={<ES />} />
+              <Route path="/Intellectual-Property" element={<IP />} />
+              <Route
+                path="/udyam-registration"
+                element={<UdyamRegistration />}
+              />
+              <Route path="/drug-license" element={<DrugLicense />} />
+              <Route path="/DSC" element={<DigitalSignature />} />
+              <Route path="/Trading" element={<Trading />} />
+              <Route path="/Startup" element={<Startup />} />
+              <Route
+                path="/International-Business-Setup"
+                element={<InternationalBusiness />}
+              />
 
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="/trade-registration" element={<TradeRegistration />} />
-            <Route path="/company-formation" element={<CompanyFormation />} />
-            <Route path="/gst-registration" element={<GSTRegistration />} />
-            <Route path="/food-safety" element={<FSSAI />} />
-            <Route path="/import-export-code" element={<IEC />} />
-            <Route path="/iso-certification" element={<ISO />} />
-            <Route path="/ngo-society-registrations" element={<NGO />} />
-            <Route path="/compliances" element={<Compliances />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/search" element={<SearchResults />} />
-            <Route path="/BBSL" element={<BBSL />} />
-            <Route path="/Exhibition-Services" element={<ES />} />
-            <Route path="/Intellectual-Property" element={<IP />} />
-            <Route path="/udyam-registration" element={<UdyamRegistration />} />
-            <Route path="/drug-license" element={<DrugLicense />} />
-            <Route path="/DSC" element={<DigitalSignature />} />
-            <Route path="/Trading" element={<Trading />} />
-            <Route path="/Startup" element={<Startup />} />
-            <Route
-              path="/International-Business-Setup"
-              element={<InternationalBusiness />}
-            />
+              <Route path="/trademark" element={<Trademark />} />
+              <Route path="/copyright" element={<Copyright />} />
+              <Route path="/patent" element={<Patent />} />
 
-            <Route path="/trademark" element={<Trademark />} />
-            <Route path="/copyright" element={<Copyright />} />
-            <Route path="/patent" element={<Patent />} />
+              <Route path="/trusts" element={<Trust />} />
+              <Route path="/societies" element={<Society />} />
+              <Route path="/section8" element={<Sec8 />} />
 
-            <Route path="/trusts" element={<Trust />} />
-            <Route path="/societies" element={<Society />} />
-            <Route path="/section8" element={<Sec8 />} />
-
-            <Route path="/about" element={<AboutUs />} />
-            <Route path="/cost-calculator" element={<CostCalculator />} />
-            <Route path="/horeca" element={<Horeca />} />
-            <Route path="/vm" element={<VM />} />
-            <Route path="/certificate" element={<Certificate />} />
-            <Route path="/Refund-Policy" element={<RefundPolicy />} />
-            <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
-            <Route path="/Terms-Conditions" element={<Terms />} />
-          </Route>
-        </Routes>
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/cost-calculator" element={<CostCalculator />} />
+              <Route path="/horeca" element={<Horeca />} />
+              <Route path="/vm" element={<VM />} />
+              <Route path="/certificate" element={<Certificate />} />
+              <Route path="/Refund-Policy" element={<RefundPolicy />} />
+              <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
+              <Route path="/Terms-Conditions" element={<Terms />} />
+            </Route>
+          </Routes>
+        </HashRouter>
       </div>
     </div>
   );
