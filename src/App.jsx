@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  HashRouter,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
+
 import Layout from "./Components/Layout";
 import Home from "./Components/Home/home";
 import Horeca from "./Components/HoReCa/Horeca";
